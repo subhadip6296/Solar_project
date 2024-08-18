@@ -6,6 +6,7 @@ import ServicesPage from "./pages/ServicesPage";
 import ContactPage from "./pages/ContactPage";
 import Navbar from "./components/default/Navbar";
 import Footer from "./components/default/Footer";
+import ProductPage from "./pages/ProductPage";
 
 // A component to set the page title
 const SetPageTitle = ({ title }) => {
@@ -18,7 +19,7 @@ const SetPageTitle = ({ title }) => {
 
 const App = () => {
   return (
-    <div>
+    <div className="bg-black w-[90%] m-auto">
       <Navbar />
       <Router>
         <Routes>
@@ -37,6 +38,15 @@ const App = () => {
               <>
                 <SetPageTitle title="About Us | GW Infra Solutions" />
                 <AboutPage />
+              </>
+            }
+          />
+          <Route
+            path="/products"
+            element={
+              <>
+                <SetPageTitle title="Products | GW Infra Solutions" />
+                <ProductPage />
               </>
             }
           />
