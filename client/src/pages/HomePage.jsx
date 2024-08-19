@@ -3,7 +3,7 @@ import React from "react";
 const HomePage = () => {
   return (
     <>
-      <div>HomePage</div>
+      <div className="h-[100vh] ">HomePage</div>
     </>
   );
 };

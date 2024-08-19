@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ServicesPage from "./pages/ServicesPage";
@@ -19,9 +19,9 @@ const SetPageTitle = ({ title }) => {
 
 const App = () => {
   return (
-    <div className="bg-black w-[90%] m-auto">
+    <>
       <Navbar />
-      <Router>
+      <main className="w-[80%] m-auto">
         <Routes>
           <Route
             path="/"
@@ -69,9 +69,9 @@ const App = () => {
             }
           />
         </Routes>
-      </Router>
+      </main>
       <Footer />
-    </div>
+    </>
   );
 };
 
