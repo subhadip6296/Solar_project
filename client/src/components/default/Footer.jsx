@@ -16,12 +16,12 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="w-[90vw] mx-auto bg-[#008076] my-5 md:my-10 py-6 md:py-12 rounded-lg md:rounded-xl">
+    <footer className="w-[90vw] mx-auto bg-[#009A8D] my-5 md:my-10 py-6 md:py-12 rounded-lg md:rounded-xl">
       <div className="w-[80vw] mx-auto grid gap-y-10 gap-x-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 text-white">
+        {/* about us */}
         <div>
-          {/* about us */}
           <h4 className="text-lg font-medium pb-1">About Us</h4>
-          <p className="text-[16px] leading-[1.15] opacity-85 pb-3">
+          <p className="text-[16px] leading-[1.15] opacity-95 pb-3">
             GW Infra Solutions offers innovative solar PV installations for
             residential, commercial, and industrial clients, ensuring
             sustainable energy solutions.
