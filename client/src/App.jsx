@@ -1,12 +1,14 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import AboutPage from "./pages/AboutPage";
-import ServicesPage from "./pages/ServicesPage";
-import ContactPage from "./pages/ContactPage";
 import Navbar from "./components/default/Navbar";
 import Footer from "./components/default/Footer";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
 import ProductPage from "./pages/ProductPage";
+import ServicesPage from "./pages/ServicesPage";
+import UpdatesPage from "./pages/UpdatesPage";
+import EventPage from "./pages/EventPage";
+import ContactPage from "./pages/ContactPage";
 
 // A component to set the page title
 const SetPageTitle = ({ title }) => {
@@ -56,6 +58,24 @@ const App = () => {
               <>
                 <SetPageTitle title="Our Services | GW Infra Solutions" />
                 <ServicesPage />
+              </>
+            }
+          />
+          <Route
+            path="/update"
+            element={
+              <>
+                <SetPageTitle title="Contact Us | GW Infra Solutions" />
+                <UpdatesPage />
+              </>
+            }
+          />
+          <Route
+            path="/events"
+            element={
+              <>
+                <SetPageTitle title="Contact Us | GW Infra Solutions" />
+                <EventPage />
               </>
             }
           />
