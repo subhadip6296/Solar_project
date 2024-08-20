@@ -20,7 +20,7 @@ const Navbar = () => {
   const products = [
     {
       title: "Alert Dialog",
-      href: "/docs/primitives/alert-dialog",
+      href: "/products",
       description:
         "A modal dialog that interrupts the user with important content and expects a response.",
     },
@@ -28,7 +28,7 @@ const Navbar = () => {
   const services = [
     {
       title: "Alert Dialog",
-      href: "/docs/primitives/alert-dialog",
+      href: "/services",
       description:
         "A modal dialog that interrupts the user with important content and expects a response.",
     },
@@ -48,7 +48,7 @@ const Navbar = () => {
                     <NavigationMenuLink asChild>
                       <a
                         className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                        href="/">
+                        href="/about">
                         <img src={images.logo} className="pr-6" alt="" />
                         <div className="mb-2 mt-4 text-[15px] font-medium">
                           GW Infra Solutions
@@ -61,16 +61,16 @@ const Navbar = () => {
                       </a>
                     </NavigationMenuLink>
                   </li>
-                  <ListItem href="/about/partner" title="Channel Partner">
+                  <ListItem href="/about" title="Channel Partner">
                     Collaborating with trusted partners to deliver high-quality,
                     efficient, and innovative solar energy solutions.
                   </ListItem>
-                  <ListItem href="/about/partner" title="Licence">
+                  <ListItem href="/about" title="Licence">
                     Guidelines on obtaining licenses and compliance standards
                     for solar energy projects, ensuring smooth and legal
                     installations.
                   </ListItem>
-                  <ListItem href="/about/partner" title="Awards">
+                  <ListItem href="/about" title="Awards">
                     Recognition for our excellence in delivering sustainable
                     energy solutions and commitment to environmental impact.
                   </ListItem>
