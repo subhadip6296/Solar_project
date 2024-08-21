@@ -82,105 +82,126 @@ const Navbar = () => {
     },
   ];
   return (
-    <nav className="w-full bg-white sticky top-0 shadow">
+    <nav className="w-full bg-white sticky top-0 shadow z-10">
       <div className="w-[80vw] mx-auto flex justify-between py-3">
-        <img src={images.logo} className="h-10" alt="" />
-        <NavigationMenu>
-          <NavigationMenuList>
-            {/* about us */}
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>About Us</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                  <li className="row-span-3">
-                    <NavigationMenuLink asChild>
-                      <a
-                        className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                        href="/about">
-                        <img src={images.logo} className="pr-6" alt="" />
-                        <div className="mb-2 mt-4 text-[15px] font-medium">
-                          GW Infra Solutions
-                        </div>
-                        <p className="text-[13px] leading-tight text-muted-foreground">
-                          specializes in cutting-edge solar PV installations,
-                          delivering sustainable energy solutions tailored for
-                          residential, commercial, and industrial needs.
-                        </p>
-                      </a>
-                    </NavigationMenuLink>
-                  </li>
-                  <ListItem href="/about" title="Channel Partner">
-                    Collaborating with trusted partners to deliver high-quality,
-                    efficient, and innovative solar energy solutions.
-                  </ListItem>
-                  <ListItem href="/about" title="Licence">
-                    Guidelines on obtaining licenses and compliance standards
-                    for solar energy projects, ensuring smooth and legal
-                    installations.
-                  </ListItem>
-                  <ListItem href="/about" title="Awards">
-                    Recognition for our excellence in delivering sustainable
-                    energy solutions and commitment to environmental impact.
-                  </ListItem>
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-            {/* products */}
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>Products</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                  {products.map((component) => (
-                    <ListItem
-                      key={component.title}
-                      title={component.title}
-                      href={component.href}>
-                      {component.description}
+        <img src={images.logo} className="h-9 md:h-10" alt="" />
+        {/* navbar-menu-button */}
+        <svg
+          className="lg:hidden h-9"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          stroke="#009A8D"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round">
+          <path
+            className="fill-none hover:fill-gray-500"
+            stroke="none"
+            d="M0 0h24v24H0z"></path>
+          <path d="M4 6l16 0"></path>
+          <path d="M4 12l16 0"></path>
+          <path d="M4 18l16 0"></path>
+        </svg>
+        {/* navbar-menu */}
+        <div className="hidden lg:flex">
+          <NavigationMenu>
+            <NavigationMenuList>
+              {/* about us */}
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>About Us</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                    <li className="row-span-3">
+                      <NavigationMenuLink asChild>
+                        <a
+                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                          href="/about">
+                          <img src={images.logo} className="pr-6" alt="" />
+                          <div className="mb-2 mt-4 text-[15px] font-medium">
+                            GW Infra Solutions
+                          </div>
+                          <p className="text-[13px] leading-tight text-muted-foreground">
+                            specializes in cutting-edge solar PV installations,
+                            delivering sustainable energy solutions tailored for
+                            residential, commercial, and industrial needs.
+                          </p>
+                        </a>
+                      </NavigationMenuLink>
+                    </li>
+                    <ListItem href="/about" title="Channel Partner">
+                      Collaborating with trusted partners to deliver
+                      high-quality, efficient, and innovative solar energy
+                      solutions.
                     </ListItem>
-                  ))}
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-            {/* services */}
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>Services</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                  {services.map((component) => (
-                    <ListItem
-                      key={component.title}
-                      title={component.title}
-                      href={component.href}>
-                      {component.description}
+                    <ListItem href="/about" title="Licence">
+                      Guidelines on obtaining licenses and compliance standards
+                      for solar energy projects, ensuring smooth and legal
+                      installations.
                     </ListItem>
-                  ))}
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-            {/* news and updates */}
-            <NavigationMenuItem>
-              <Link to="/update" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  News & Updates
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
-            {/* events */}
-            <NavigationMenuItem>
-              <Link to="/events" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Events
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
-            {/* contact us */}
-            <NavigationMenuItem>
-              <Link to="/contact" legacyBehavior passHref>
-                <Button variant="default">Contact Us</Button>
-              </Link>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu>
+                    <ListItem href="/about" title="Awards">
+                      Recognition for our excellence in delivering sustainable
+                      energy solutions and commitment to environmental impact.
+                    </ListItem>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+              {/* products */}
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Products</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                    {products.map((component) => (
+                      <ListItem
+                        key={component.title}
+                        title={component.title}
+                        href={component.href}>
+                        {component.description}
+                      </ListItem>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+              {/* services */}
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Services</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                    {services.map((component) => (
+                      <ListItem
+                        key={component.title}
+                        title={component.title}
+                        href={component.href}>
+                        {component.description}
+                      </ListItem>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+              {/* news and updates */}
+              <NavigationMenuItem>
+                <Link to="/update" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    News & Updates
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+              {/* events */}
+              <NavigationMenuItem>
+                <Link to="/events" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Events
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+              {/* contact us */}
+              <NavigationMenuItem>
+                <Link to="/contact" legacyBehavior passHref>
+                  <Button variant="default">Contact Us</Button>
+                </Link>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+        </div>
       </div>
     </nav>
   );
