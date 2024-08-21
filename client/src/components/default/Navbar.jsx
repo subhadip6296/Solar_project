@@ -25,7 +25,7 @@ const Navbar = () => {
         "Harness solar energy from your rooftop for clean, renewable power.",
     },
     {
-      title: "Off-grid Sola",
+      title: "Off-grid Solar",
       href: "/products",
       description:
         "Power your home independently with a standalone solar system.",
