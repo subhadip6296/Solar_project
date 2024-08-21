@@ -19,18 +19,66 @@ import {
 const Navbar = () => {
   const products = [
     {
-      title: "Alert Dialog",
+      title: "Rooftop Solar",
       href: "/products",
       description:
-        "A modal dialog that interrupts the user with important content and expects a response.",
+        "Harness solar energy from your rooftop for clean, renewable power.",
+    },
+    {
+      title: "Off-grid Sola",
+      href: "/products",
+      description:
+        "Power your home independently with a standalone solar system.",
+    },
+    {
+      title: "On-grid Solar",
+      href: "/products",
+      description:
+        "Integrate with the grid for efficient solar power usage and potential savings.",
+    },
+    {
+      title: "Solar Inverter",
+      href: "/products",
+      description:
+        "Convert solar energy into usable electricity for your home or business.",
+    },
+    {
+      title: "Solar Battery",
+      href: "/products",
+      description:
+        "Store excess solar power for use during nighttime or outages.",
+    },
+    {
+      title: "Solar Pump",
+      href: "/products",
+      description:
+        "Efficiently pump water using solar energy, ideal for agricultural needs.",
     },
   ];
   const services = [
     {
-      title: "Alert Dialog",
+      title: "Residential Installation",
       href: "/services",
       description:
-        "A modal dialog that interrupts the user with important content and expects a response.",
+        "Custom solar solutions tailored for homes to reduce energy bills.",
+    },
+    {
+      title: "Commercial Installation",
+      href: "/services",
+      description:
+        "Scalable solar systems designed for businesses to optimize energy costs.",
+    },
+    {
+      title: "Service Department",
+      href: "/services",
+      description:
+        "Expert maintenance and support to keep your solar systems running smoothly.",
+    },
+    {
+      title: "Back-Up Power",
+      href: "/services",
+      description:
+        "Reliable backup power solutions to ensure energy availability during outages.",
     },
   ];
   return (
