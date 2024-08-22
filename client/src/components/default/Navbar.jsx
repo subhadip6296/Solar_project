@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { images } from "../../assets/Assets";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 import {
   NavigationMenu,
@@ -17,6 +18,7 @@ import {
 } from "@/components/ui/navigation-menu";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const products = [
     {
       title: "Rooftop Solar",
@@ -84,7 +86,14 @@ const Navbar = () => {
   return (
     <nav className="w-full bg-white sticky top-0 shadow z-10">
       <div className="w-[80vw] mx-auto flex justify-between py-3">
-        <img src={images.logo} className="h-9 md:h-10" alt="" />
+        <img
+          onClick={() => {
+            navigate("/");
+          }}
+          src={images.logo}
+          className="h-9 md:h-10 hover:cursor-pointer"
+          alt=""
+        />
         {/* navbar-menu-button */}
         <svg
           className="lg:hidden h-9"

@@ -22,9 +22,9 @@ const Hero = () => {
                 <a
                   href="#"
                   title=""
-                  className="inline-flex items-center px-6 py-4 mt-8 font-semibold text-black transition-all duration-200 bg-yellow-300 rounded-full lg:mt-16 hover:bg-yellow-400 focus:bg-yellow-400"
+                  className="inline-flex items-center px-6 py-4 mt-8 font-semibold text-white transition-all duration-200 bg-pcolor rounded-lg lg:mt-16"
                   role="button">
-                  Join for free
+                  Enquire Now
                   <svg
                     className="w-6 h-6 ml-8 -mr-2"
                     xmlns="http://www.w3.org/2000/svg"
@@ -39,18 +39,7 @@ const Hero = () => {
                     />
                   </svg>
                 </a>
-
-                <p className="mt-5 text-gray-600">
-                  Already joined us?{" "}
-                  <a
-                    href="#"
-                    title=""
-                    className="text-black transition-all duration-200 hover:underline">
-                    Log in
-                  </a>
-                </p>
               </div>
-
               <div>
                 <img className="w-full" src={images.hero_image} alt="" />
               </div>
