@@ -44,7 +44,7 @@ const Cta = () => {
                     className="flex items-center justify-center w-full px-4 py-4 mt-8 text-base font-semibold text-white transition-all duration-200 bg-[#009A8D] border-2 border-transparent rounded-md hover:bg-[#009A8D]/90"
                     role="button"
                   >
-                    Create your first website
+                    SHIFT TO SOLAR ENERGY
                   </a>
 
                   <a
