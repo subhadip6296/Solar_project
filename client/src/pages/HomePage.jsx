@@ -1,5 +1,4 @@
 import Cta from "@/components/homeCompo/Cta";
-import Gallery from "@/components/homeCompo/Gallery";
 import Hero from "@/components/homeCompo/Hero";
 import Number from "@/components/homeCompo/Number";
 import Partner from "@/components/homeCompo/Partner";
@@ -12,7 +11,6 @@ const HomePage = () => {
   return (
     <main className="w-full">
       <Hero />
-      <Gallery />
       <Services />
       <Products />
       <Partner />
