@@ -87,7 +87,7 @@ const Testimonial = () => {
               Don't just take our word for it...
             </h2>
             <p className="mt-4 text-gray-700">
-             Hear what our satisfied customers have to say about their
+              Hear what our satisfied customers have to say about their
               experiences with our solar solutions. Your trust and satisfaction
               drive us to deliver the best!
             </p>
@@ -95,7 +95,7 @@ const Testimonial = () => {
               <button
                 aria-label="Previous slide"
                 id="keen-slider-previous"
-                className="rounded-full border border-rose-600 p-3 text-rose-600 transition hover:bg-rose-600 hover:text-white"
+                className="rounded-full border border-pcolor p-3 text-pcolor transition hover:bg-pcolor hover:text-white"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -115,7 +115,7 @@ const Testimonial = () => {
               <button
                 aria-label="Next slide"
                 id="keen-slider-next"
-                className="rounded-full border border-rose-600 p-3 text-rose-600 transition hover:bg-rose-600 hover:text-white"
+                className="rounded-full border border-pcolor p-3 text-pcolor transition hover:bg-pcolor hover:text-white"
               >
                 <svg
                   className="size-5 rtl:rotate-180"
@@ -147,7 +147,7 @@ const Testimonial = () => {
                             <svg
                               key={idx}
                               className="size-5"
-                              fill="currentColor"
+                              fill="#009A8D"
                               viewBox="0 0 20 20"
                               xmlns="http://www.w3.org/2000/svg"
                             >
@@ -157,7 +157,7 @@ const Testimonial = () => {
                         )}
                       </div>
                       <div className="mt-4">
-                        <p className="text-2xl font-bold text-rose-600 sm:text-3xl">
+                        <p className="text-2xl font-bold text-black sm:text-3xl">
                           {testimonial.name}
                         </p>
                         <p className="mt-4 leading-relaxed text-gray-700">
