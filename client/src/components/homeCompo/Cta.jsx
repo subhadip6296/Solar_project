@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "../ui/button";
+import { Link } from "react-router-dom";
 const Cta = () => {
   return (
     <>
@@ -40,23 +41,23 @@ const Cta = () => {
                     your needs. Let us help you make the switch today.
                   </p>
 
-                  <a
-                    href="#"
+                  <Link
+                    to={"/contact"}
                     title=""
                     className="flex items-center justify-center w-full px-4 py-4 mt-8 text-base font-semibold text-white transition-all duration-200 bg-[#009A8D] border-2 border-transparent rounded-md hover:bg-[#009A8D]/90"
                     role="button"
                   >
                     Consult with Us
-                  </a>
+                  </Link>
 
-                  <a
-                    href="#"
+                  <Link
+                    to={"/services"}
                     title=""
                     className="flex items-center justify-center w-full px-4 py-4 mt-4 text-base font-semibold text-black transition-all duration-200 bg-transparent border-2 border-black rounded-md hover:bg-black focus:bg-black hover:text-white focus:text-white"
                     role="button"
                   >
                     View Our Services
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
