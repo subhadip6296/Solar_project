@@ -1,10 +1,9 @@
 import React from "react";
-import { Button } from "../ui/button";
 import { Link } from "react-router-dom";
 const Cta = () => {
   return (
     <>
-      <section className="py-10 bg-gray-100 sm:py-16 lg:py-24 rounded-lg">
+      <section className="py-10 bg-emerald-50 sm:py-16 lg:py-24 rounded-lg">
         <div className="max-w-5xl px-4 mx-auto sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-16 lg:gap-x-24 gap-y-10">
             <div>
