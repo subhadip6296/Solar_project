@@ -14,16 +14,18 @@ const Cta = () => {
               />
               <blockquote>
                 <p className="mt-6 text-xl leading-relaxed text-black">
-                  “Amet minim mollit non deserunt ullamco est sit aliqua dolor
-                  do amet sint. Velit officia consequat duis enim velit mollit.
-                  Exercitation veniam consequat sunt nostrud amet.”
+                  “At GW Infra Solutions, we are dedicated to providing
+                  cutting-edge solar solutions that drive innovation and
+                  sustainability. Our mission is to empower our clients with
+                  energy-efficient systems that not only meet their needs but
+                  exceed their expectations.”
                 </p>
               </blockquote>
               <p className="mt-6 text-base font-semibold text-black">
-                Jenny Wilson
+                — Deepansh Singh (Managing Director)
               </p>
-              <p className="mt-1 text-base text-gray-600">
-                Project Manager at Microsoft
+              <p className="mt-1 text-base text-gray-600 pl-5">
+                 GW Infra Solutions
               </p>
             </div>
 
@@ -31,11 +33,11 @@ const Cta = () => {
               <div className="overflow-hidden bg-white">
                 <div className="p-8 lg:px-12 lg:py-10">
                   <h3 className="text-2xl font-semibold text-black">
-                    Join 5,482 other developers
+                    Holistic Solar Solutions{" "}
                   </h3>
                   <p className="mt-4 text-base text-gray-600">
-                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
-                    do amet sint. Velit officia consequat duis.
+                    Discover affordable and reliable solar solutions tailored to
+                    your needs. Let us help you make the switch today.
                   </p>
 
                   <a
@@ -44,7 +46,7 @@ const Cta = () => {
                     className="flex items-center justify-center w-full px-4 py-4 mt-8 text-base font-semibold text-white transition-all duration-200 bg-[#009A8D] border-2 border-transparent rounded-md hover:bg-[#009A8D]/90"
                     role="button"
                   >
-                    SHIFT TO SOLAR ENERGY
+                    Consult with Us
                   </a>
 
                   <a
@@ -53,7 +55,7 @@ const Cta = () => {
                     className="flex items-center justify-center w-full px-4 py-4 mt-4 text-base font-semibold text-black transition-all duration-200 bg-transparent border-2 border-black rounded-md hover:bg-black focus:bg-black hover:text-white focus:text-white"
                     role="button"
                   >
-                    Talk to sales
+                    View Our Services
                   </a>
                 </div>
               </div>
