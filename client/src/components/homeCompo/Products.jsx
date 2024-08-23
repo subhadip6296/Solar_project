@@ -51,7 +51,11 @@ const Products = () => {
           {products.map((product, index) => (
             <div key={index}>
               <div className="p-5 duration-300 transform bg-white border rounded shadow-sm hover:-translate-y-2">
-                <img className="rounded-md mb-4" src={product.icon} alt="" />
+                <img
+                  className="rounded md:rounded-md mb-4"
+                  src={product.icon}
+                  alt=""
+                />
                 <h6 className="mb-2 text-xl font-bold leading-5">
                   {product.productname}
                 </h6>
