@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { videos } from "@/assets/Assets";
 
 const Services = () => {
+  const videoRef = useRef(null); // Create a ref to access the video element
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 2; // Set the playback speed to 2x
+    }
+  }, []);
+
   const services = [
     {
       servicename: "Residential Installation",
@@ -31,7 +39,7 @@ const Services = () => {
     },
     {
       servicename: "Service Department",
-      desc: " Expert maintenance and support to keep your solar systems running smoothly.",
+      desc: "Expert maintenance and support to keep your solar systems running smoothly.",
       icon: (
         <polygon
           strokeWidth="3"
@@ -42,7 +50,6 @@ const Services = () => {
         />
       ),
     },
-
     {
       servicename: "Back-up Power",
       desc: "Reliable backup power solutions to ensure energy availability during outages.",
@@ -57,6 +64,7 @@ const Services = () => {
       ),
     },
   ];
+
   return (
     <>
       <div className="px-4 pt-16 pb-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
@@ -95,13 +103,15 @@ const Services = () => {
           ))}
         </div>
         <div className="pointer-events-none flex justify-center items-center">
-          <div className="flex relative w-[75vw] md:w-[55vw] ">
+          <div className="flex relative w-[75vw] md:w-[55vw]">
             <video
               className="mt-8 md:mt-16 rounded-md w-full object-cover -z-[1]"
               autoPlay
               muted
               loop
-              playsInline>
+              playsInline
+              ref={videoRef} // Attach the ref here
+            >
               <source src={videos.animation} type="video/mp4" />
             </video>
           </div>
