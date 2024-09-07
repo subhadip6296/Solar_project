@@ -28,7 +28,7 @@ const App = () => {
         />
         {/* Admin route */}
         <Route
-          path="/admin"
+          path="/admin/*"
           element={
             <>
               <SetPageTitle title="Admin | GW Infra Solutions" />
@@ -37,7 +37,15 @@ const App = () => {
           }
         />
         {/* User routes nested under /user */}
-        <Route path="/user/*" element={<User />} />
+        <Route
+          path="/user/*"
+          element={
+            <>
+              <SetPageTitle title="User | GW Infra Solutions" />
+              <User />
+            </>
+          }
+        />
       </Routes>
     </div>
   );
