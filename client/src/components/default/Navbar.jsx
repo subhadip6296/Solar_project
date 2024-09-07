@@ -22,37 +22,37 @@ const Navbar = () => {
   const products = [
     {
       title: "Rooftop Solar",
-      href: "/products",
+      href: "/user/products",
       description:
         "Harness solar energy from your rooftop for clean, renewable power.",
     },
     {
       title: "Off-grid Solar",
-      href: "/products",
+      href: "/user/products",
       description:
         "Power your home independently with a standalone solar system.",
     },
     {
       title: "On-grid Solar",
-      href: "/products",
+      href: "/user/products",
       description:
         "Integrate with the grid for efficient solar power usage and potential savings.",
     },
     {
       title: "Solar Inverter",
-      href: "/products",
+      href: "/user/products",
       description:
         "Convert solar energy into usable electricity for your home or business.",
     },
     {
       title: "Solar Battery",
-      href: "/products",
+      href: "/user/products",
       description:
         "Store excess solar power for use during nighttime or outages.",
     },
     {
       title: "Solar Pump",
-      href: "/products",
+      href: "/user/products",
       description:
         "Efficiently pump water using solar energy, ideal for agricultural needs.",
     },
@@ -60,25 +60,25 @@ const Navbar = () => {
   const services = [
     {
       title: "Residential Installation",
-      href: "/services",
+      href: "/user/services",
       description:
         "Custom solar solutions tailored for homes to reduce energy bills.",
     },
     {
       title: "Commercial Installation",
-      href: "/services",
+      href: "/user/services",
       description:
         "Scalable solar systems designed for businesses to optimize energy costs.",
     },
     {
       title: "Service Department",
-      href: "/services",
+      href: "/user/services",
       description:
         "Expert maintenance and support to keep your solar systems running smoothly.",
     },
     {
       title: "Back-Up Power",
-      href: "/services",
+      href: "/user/services",
       description:
         "Reliable backup power solutions to ensure energy availability during outages.",
     },
@@ -124,7 +124,7 @@ const Navbar = () => {
                       <NavigationMenuLink asChild>
                         <a
                           className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                          href="/about">
+                          href="/user/about">
                           <img src={images.logo} className="pr-6" alt="" />
                           <div className="mb-2 mt-4 text-[15px] font-medium">
                             GW Infra Solutions
@@ -137,17 +137,17 @@ const Navbar = () => {
                         </a>
                       </NavigationMenuLink>
                     </li>
-                    <ListItem href="/about" title="Channel Partner">
+                    <ListItem href="/user/about" title="Channel Partner">
                       Collaborating with trusted partners to deliver
                       high-quality, efficient, and innovative solar energy
                       solutions.
                     </ListItem>
-                    <ListItem href="/about" title="Licence">
+                    <ListItem href="/user/about" title="Licence">
                       Guidelines on obtaining licenses and compliance standards
                       for solar energy projects, ensuring smooth and legal
                       installations.
                     </ListItem>
-                    <ListItem href="/about" title="Awards">
+                    <ListItem href="/user/about" title="Awards">
                       Recognition for our excellence in delivering sustainable
                       energy solutions and commitment to environmental impact.
                     </ListItem>
@@ -188,7 +188,7 @@ const Navbar = () => {
               </NavigationMenuItem>
               {/* news and updates */}
               <NavigationMenuItem>
-                <Link to="/update" legacyBehavior passHref>
+                <Link to="/user/update" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     News & Updates
                   </NavigationMenuLink>
@@ -196,7 +196,7 @@ const Navbar = () => {
               </NavigationMenuItem>
               {/* events */}
               <NavigationMenuItem>
-                <Link to="/events" legacyBehavior passHref>
+                <Link to="/user/events" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     Events
                   </NavigationMenuLink>
@@ -204,7 +204,7 @@ const Navbar = () => {
               </NavigationMenuItem>
               {/* contact us */}
               <NavigationMenuItem>
-                <Link to="/contact" legacyBehavior passHref>
+                <Link to="/user/contact" legacyBehavior passHref>
                   <Button variant="default">Contact Us</Button>
                 </Link>
               </NavigationMenuItem>

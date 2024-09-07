@@ -3,16 +3,16 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   const services = [
-    { service: "Residential Installation", link: "/services" },
-    { service: "Commercial Installation", link: "/services" },
-    { service: "Service Department", link: "/services" },
-    { service: "Back-Up Power", link: "/services" },
+    { service: "Residential Installation", link: "/user/services" },
+    { service: "Commercial Installation", link: "/user/services" },
+    { service: "Service Department", link: "/user/services" },
+    { service: "Back-Up Power", link: "/user/services" },
   ];
   const events = [
-    { event: "Latest News", link: "/events" },
-    { event: "Blog and Articles", link: "/events" },
-    { event: "Upcoming Events", link: "/events" },
-    { event: "Media Gallery", link: "/events" },
+    { event: "Latest News", link: "/user/events" },
+    { event: "Blog and Articles", link: "/user/events" },
+    { event: "Upcoming Events", link: "/user/events" },
+    { event: "Media Gallery", link: "/user/events" },
   ];
 
   return (
