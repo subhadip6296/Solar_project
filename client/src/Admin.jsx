@@ -1,42 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Login from "./pages/Admin/Login";
-import { Routes, Route } from "react-router-dom";
 import Dashboard from "./pages/Admin/Dashboard";
 
-// A component to set the page title
-const SetPageTitle = ({ title }) => {
-  React.useEffect(() => {
-    document.title = title;
-  }, [title]);
-
-  return null;
-};
-
 const Admin = () => {
-  return (
-    <>
-      <Routes>
-        <Route
-          path="/login"
-          element={
-            <>
-              <SetPageTitle title="Admin Login" />
-              <Login />
-            </>
-          }
-        />
-        <Route
-          path="/dashboard"
-          element={
-            <>
-              <SetPageTitle title="Dashboard" />
-              <Dashboard />
-            </>
-          }
-        />
-      </Routes>
-    </>
-  );
+  const [token, setToken] = useState(null);
+
+  useEffect(() => {
+    const storedToken = localStorage.getItem("token");
+    setToken(storedToken);
+  }, []);
+
+  return token ? <Dashboard /> : <Login />;
 };
 
 export default Admin;

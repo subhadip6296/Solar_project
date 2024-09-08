@@ -28,7 +28,7 @@ const App = () => {
         />
         {/* Admin route */}
         <Route
-          path="/admin/*"
+          path="/admin"
           element={
             <>
               <SetPageTitle title="Admin | GW Infra Solutions" />

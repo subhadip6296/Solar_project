@@ -62,13 +62,6 @@ const Login = () => {
     }
   };
 
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-    if (token) {
-      navigate("/admin/dashboard");
-    }
-  }, [navigate]);
-
   return (
     <div className="w-[100vw] h-[100vh] flex items-center justify-center">
       <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 items-center">

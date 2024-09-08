@@ -69,7 +69,7 @@ const Footer = () => {
             </div>
           </div>
           <Button variant="outline">
-            <Link to={"/admin/login"}>Admin Access</Link>{" "}
+            <Link to={"/admin"}>Admin Access</Link>{" "}
           </Button>
         </div>
         {/* Services */}
