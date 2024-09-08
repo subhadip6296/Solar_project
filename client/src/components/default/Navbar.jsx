@@ -84,7 +84,7 @@ const Navbar = () => {
     },
   ];
   return (
-    <nav className="w-full bg-white sticky top-0 shadow z-10">
+    <nav className="w-full bg-white sticky top-0 shadow z-40">
       <div className="w-[80vw] mx-auto flex justify-between py-3">
         <img
           onClick={() => {
