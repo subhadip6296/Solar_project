@@ -7,26 +7,26 @@ const Login = () => {
   const { url, setToken } = useContext(StoreContext);
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    login: "",
+    email: "", // changed from 'login' to 'email'
     password: "",
   });
   const [errors, setErrors] = useState({
-    loginError: "",
+    emailError: "",
     passwordError: "",
   });
 
-  const { login, password } = formData;
-  const { loginError, passwordError } = errors;
+  const { email, password } = formData;
+  const { emailError, passwordError } = errors;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
 
-    if (name === "login") {
-      const loginRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (name === "email") {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       setErrors({
         ...errors,
-        loginError: loginRegex.test(value)
+        emailError: emailRegex.test(value)
           ? ""
           : "Please enter a valid email address.",
       });
@@ -45,13 +45,20 @@ const Login = () => {
   const onLogin = async (event) => {
     event.preventDefault();
     const newUrl = `${url}/api/user/login`;
-    const response = await axios.post(newUrl, formData);
-    if (response.data.success) {
-      setToken(response.data.token);
-      localStorage.setItem("token", response.data.token);
-      navigate("/dashboard");
-    } else {
-      alert(response.data.message);
+    try {
+      const response = await axios.post(newUrl, formData); // this will send email and password
+      if (response.data.success) {
+        setToken(response.data.token);
+        localStorage.setItem("token", response.data.token);
+      } else {
+        setErrors({ ...errors, emailError: response.data.message });
+      }
+    } catch (error) {
+      console.error("Login failed:", error);
+      setErrors({
+        ...errors,
+        emailError: "An error occurred during login. Please try again.",
+      });
     }
   };
 
@@ -67,19 +74,19 @@ const Login = () => {
       <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 items-center">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-            Sign in to your account
+            Enter the Credentials
           </h2>
         </div>
 
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
           <form onSubmit={onLogin} className="space-y-6">
             <InputField
-              id="login"
+              id="email"
               label="Email"
               type="text"
-              value={login}
+              value={email}
               onChange={handleChange}
-              error={loginError}
+              error={emailError} // changed from loginError to emailError
             />
             <InputField
               id="password"
@@ -114,7 +121,7 @@ const InputField = ({ id, label, type, value, onChange, error }) => (
     <div className="mt-2">
       <input
         id={id}
-        name={id}
+        name={id} // Ensure that the input 'name' matches the state property ('email', 'password')
         type={type}
         value={value}
         onChange={onChange}

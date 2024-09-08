@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Button } from "../../components/ui/button";
 
 const Footer = () => {
   const services = [
@@ -27,7 +28,7 @@ const Footer = () => {
             sustainable energy solutions.
           </p>
           <h4 className="text-lg font-medium pb-2">Follow us</h4>
-          <div className="flex gap-3">
+          <div className="flex gap-3 mb-4">
             <div className="w-7 h-7 rounded border border-zinc-300 flex justify-center items-center icon-hover">
               <svg
                 className="w-4 fill-white svg-hover"
@@ -67,6 +68,9 @@ const Footer = () => {
               </svg>
             </div>
           </div>
+          <Button variant="outline">
+            <Link to={"/admin/login"}>Admin Access</Link>{" "}
+          </Button>
         </div>
         {/* Services */}
         <div className="flex flex-col gap-2">
