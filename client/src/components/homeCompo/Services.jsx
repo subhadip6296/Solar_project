@@ -1,124 +1,90 @@
-import React, { useRef, useEffect } from "react";
-import { videos } from "@/assets/Assets";
+"use client";
+import React from "react";
+import { WobbleCard } from "../ui/wobble-card";
 
-const Services = () => {
-  const videoRef = useRef(null); // Create a ref to access the video element
-
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.playbackRate = 2; // Set the playback speed to 2x
-    }
-  }, []);
-
-  const services = [
-    {
-      servicename: "Residential Installation",
-      desc: "Custom solar solutions tailored for homes to reduce energy bills.",
-      icon: (
-        <polygon
-          strokeWidth="3"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          fill="none"
-          points="29 13 14 29 25 29 23 39 38 23 27 23"
-        />
-      ),
-    },
-    {
-      servicename: "Commercial Installation",
-      desc: "Scalable solar systems designed for businesses to optimize energy costs.",
-      icon: (
-        <polygon
-          strokeWidth="3"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          fill="none"
-          points="29 13 14 29 25 29 23 39 38 23 27 23"
-        />
-      ),
-    },
-    {
-      servicename: "Service Department",
-      desc: "Expert maintenance and support to keep your solar systems running smoothly.",
-      icon: (
-        <polygon
-          strokeWidth="3"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          fill="none"
-          points="29 13 14 29 25 29 23 39 38 23 27 23"
-        />
-      ),
-    },
-    {
-      servicename: "Back-up Power",
-      desc: "Reliable backup power solutions to ensure energy availability during outages.",
-      icon: (
-        <polygon
-          strokeWidth="3"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          fill="none"
-          points="29 13 14 29 25 29 23 39 38 23 27 23"
-        />
-      ),
-    },
-  ];
-
+export function WobbleCardDemo() {
   return (
-    <>
-      <div className="px-4 pt-16 pb-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-        <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-          <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
-            <span className="relative inline-block">Our Services</span>
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full">
+      <WobbleCard
+        containerClassName="col-span-1 lg:col-span-2 h-full bg-pcolor min-h-[500px] lg:min-h-[300px]"
+        className=""
+      >
+        <div className="max-w-xs">
+          <h2 className="text-left text-balance text-[20px] md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+            Residential Solar Installation
           </h2>
-          <p className="text-base text-gray-700 md:text-lg">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque rem aperiam, eaque ipsa quae.
+          <p className="mt-4 text-left  text-base/6 text-neutral-200">
+            Transform your home into an energy-efficient powerhouse with our
+            custom solar solutions.
           </p>
         </div>
-        <div className="grid max-w-screen-lg gap-8 row-gap-10 mx-auto lg:grid-cols-2">
-          {services.map((service, index) => (
-            <div key={index}>
-              <div className="flex flex-col max-w-md sm:mx-auto sm:flex-row">
-                <div className="mr-4">
-                  <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-emerald-100">
-                    <svg
-                      className="w-10 h-10 text-deep-purple-accent-400"
-                      stroke="currentColor"
-                      color="#009a8d"
-                      viewBox="0 0 52 52">
-                      {service.icon}
-                    </svg>
-                  </div>
-                </div>
-                <div>
-                  <h6 className="mb-3 text-xl font-bold leading-5">
-                    {service.servicename}
-                  </h6>
-                  <p className="mb-3 text-sm text-gray-900">{service.desc}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-        <div className="pointer-events-none flex justify-center items-center">
-          <div className="flex relative w-[75vw] md:w-[55vw]">
-            <video
-              className="mt-8 md:mt-16 rounded-md w-full object-cover -z-[1]"
-              autoPlay
-              muted
-              loop
-              playsInline
-              ref={videoRef} // Attach the ref here
-            >
-              <source src={videos.animation} type="video/mp4" />
-            </video>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
+        <img
+          src="https://tse1.mm.bing.net/th?id=OIP.O1ksNmE6G9P1S1LSUjwErwHaE8&pid=Api&P=0&h=180"
+          width={500}
+          height={500}
+          alt="linear demo image"
+          className="absolute -right-4 lg:-right-[20%] md:-bottom-10 -bottom-[0%] object-contain rounded-2xl"
+        />
+      </WobbleCard>
+      <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-[#FFF9E6]">
+        <h2 className="max-w-80  text-left text-balance text-[20px] text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-gray-800">
+          Expert Solar Maintenance & Support
+        </h2>
+        <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-500">
+          Ensure your solar systems are always performing at their best with our
+          comprehensive service department.{" "}
+        </p>
+      </WobbleCard>
+      <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-[#FFF9E6]">
+        <h2 className="max-w-80  text-left text-balance text-[20px] md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-gray-800">
+          Reliable Backup Power Solutions
+        </h2>
+        <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-500">
+          Never worry about power outages again with our robust backup power
+          systems.{" "}
+        </p>
+      </WobbleCard>
 
-export default Services;
+      <WobbleCard
+        containerClassName="col-span-1 lg:col-span-2 h-full bg-pcolor min-h-[500px] lg:min-h-[300px]"
+        className=""
+      >
+        <div className="max-w-xs">
+          <h2 className="text-left text-balance text-[20px] md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+            Commercial Solar Solutions
+          </h2>
+          <p className="mt-4 text-left  text-base/6 text-neutral-200">
+            Optimize energy costs and enhance sustainability with our scalable
+            solar systems designed for businesses.
+          </p>
+        </div>
+        <img
+          src="https://tse1.mm.bing.net/th?id=OIP.kCQSDj4fpnBPCNvmWA2jeAHaDe&pid=Api&P=0&h=180"
+          width={500}
+          height={500}
+          alt="linear demo image"
+          className="absolute -right-4 lg:-right-[20%] md:-bottom-10 bottom-[10%] object-contain rounded-2xl"
+        />
+      </WobbleCard>
+      {/* <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-cyan-500 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
+        <div className="max-w-sm">
+          <h2 className="max-w-sm md:max-w-lg  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+            Signup for blazing-fast cutting-edge state of the art Gippity AI
+            wrapper today!
+          </h2>
+          <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
+            With over 100,000 mothly active bot users, Gippity AI is the most
+            popular AI platform for developers.
+          </p>
+        </div>
+        <img
+          src="https://tse1.mm.bing.net/th?id=OIP.kCQSDj4fpnBPCNvmWA2jeAHaDe&pid=Api&P=0&h=180"
+          width={500}
+          height={500}
+          alt="linear demo image"
+          className="absolute -right-10 md:-right-[40%] lg:-right-[5%] -bottom-[8%] object-contain rounded-2xl"
+        />
+      </WobbleCard> */}
+    </div>
+  );
+}
