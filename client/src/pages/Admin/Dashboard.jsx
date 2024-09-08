@@ -62,7 +62,7 @@ const Admin = () => {
           <div>
             <SidebarLink
               link={{
-                label: "Manu Arora",
+                label: "Deepansh Singh",
                 href: "#",
                 icon: (
                   <img
