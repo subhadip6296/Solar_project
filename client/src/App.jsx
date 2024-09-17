@@ -1,7 +1,8 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Route, Routes, Navigate } from "react-router-dom";
 import User from "./User";
-import Admin from "./Admin";
+import Admin from "./pages/Admin/Admin";
+import Dashboard from "./pages/Admin/Dashboard";
 
 // A component to set the page title
 const SetPageTitle = ({ title }) => {
@@ -13,6 +14,13 @@ const SetPageTitle = ({ title }) => {
 };
 
 const App = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    setIsAuthenticated(!!token);
+  }, []);
+
   return (
     <div>
       <Routes>
@@ -30,11 +38,16 @@ const App = () => {
         <Route
           path="/admin"
           element={
-            <>
-              <SetPageTitle title="Admin | GW Infra Solutions" />
-              <Admin />
-            </>
+            isAuthenticated ? (
+              <Navigate to="/dashboard" />
+            ) : (
+              <Admin setIsAuthenticated={setIsAuthenticated} />
+            )
           }
+        />
+        <Route
+          path="/dashboard"
+          element={isAuthenticated ? <Dashboard /> : <Navigate to="/admin" />}
         />
         {/* User routes nested under /user */}
         <Route
