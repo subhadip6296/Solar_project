@@ -5,6 +5,7 @@ import hero_image from './Images/hero_image.png'
 import Waree_Logo from './Images/Waaree_Logo.jpg'
 import animation from './Videos/animation.mp4'
 import avatar from './Images/avatar.jpeg'
+import contact from './Images/contact.webp'
 
 
 export const images = {
@@ -14,6 +15,7 @@ export const images = {
   hero_image,
   Waree_Logo,
   avatar,
+  contact,
 }
 export const videos = {
   animation,
