@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { Sidebar, SidebarBody, SidebarLink } from "../../components/ui/sidebar";
+import { useNavigate } from "react-router-dom";
 import {
   IconArrowLeft,
   IconBrandTabler,
@@ -10,8 +11,16 @@ import {
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { images } from "@/assets/Assets";
 
-const Admin = () => {
+const Dashboard = () => {
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    navigate("/admin");
+    window.location.reload();
+  };
+
   const links = [
     {
       label: "Dashboard",
@@ -36,7 +45,7 @@ const Admin = () => {
     },
     {
       label: "Logout",
-      href: "#",
+      onClick: handleLogout,
       icon: (
         <IconArrowLeft className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
@@ -55,7 +64,11 @@ const Admin = () => {
             {open ? <Logo /> : <LogoIcon />}
             <div className="mt-8 flex flex-col gap-2">
               {links.map((link, idx) => (
-                <SidebarLink key={idx} link={link} />
+                <SidebarLink
+                  key={idx}
+                  link={link}
+                  onClick={link.onClick} // Added this line
+                />
               ))}
             </div>
           </div>
@@ -66,7 +79,7 @@ const Admin = () => {
                 href: "#",
                 icon: (
                   <img
-                    src="https://assets.aceternity.com/manu.png"
+                    src={images.avatar}
                     className="h-7 w-7 flex-shrink-0 rounded-full"
                     width={50}
                     height={50}
@@ -78,24 +91,24 @@ const Admin = () => {
           </div>
         </SidebarBody>
       </Sidebar>
-      <Dashboard />
+      <DashboardContent />
     </div>
   );
 };
 
-export default Admin;
+export default Dashboard;
 
 export const Logo = () => {
   return (
     <Link
-      href="#"
+      to="#"
       className="font-normal flex space-x-2 items-center text-sm text-black py-1 relative z-20">
-      <div className="h-5 w-6 bg-black dark:bg-white rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm flex-shrink-0" />
+      <img className="w-8" src={images.logo_green} alt="" />
       <motion.span
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         className="font-medium text-black dark:text-white whitespace-pre">
-        Acet Labs
+        GW Infra Solutions
       </motion.span>
     </Link>
   );
@@ -103,15 +116,15 @@ export const Logo = () => {
 export const LogoIcon = () => {
   return (
     <Link
-      href="#"
+      to="#"
       className="font-normal flex space-x-2 items-center text-sm text-black py-1 relative z-20">
-      <div className="h-5 w-6 bg-black dark:bg-white rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm flex-shrink-0" />
+      <img className="w-8" src={images.logo_green} alt="" />
     </Link>
   );
 };
 
 // Dummy dashboard component with content
-const Dashboard = () => {
+const DashboardContent = () => {
   return (
     <div className="flex flex-1">
       <div className="p-2 md:p-10 rounded-tl-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 flex flex-col gap-2 flex-1 w-full h-full">

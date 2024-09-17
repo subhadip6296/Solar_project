@@ -126,6 +126,7 @@ export const SidebarLink = ({ link, className, ...props }) => {
       {...props}>
       {link.icon}
       <motion.span
+        onClick={link.onClick}
         animate={{
           display: animate ? (open ? "inline-block" : "none") : "inline-block",
           opacity: animate ? (open ? 1 : 0) : 1,
