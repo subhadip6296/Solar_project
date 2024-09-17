@@ -13,7 +13,6 @@ const HomePage = () => {
       <Hero />
       <WobbleCardDemo />
       <Products />
-      <Partner />
       <Testimonial />
       <Number />
       <Cta />
