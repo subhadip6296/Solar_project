@@ -23,7 +23,7 @@ const User = () => {
   return (
     <>
       <Navbar />
-      <main className="w-[80%] m-auto">
+      <main className="w-[90%] m-auto">
         <Routes>
           <Route
             path="/"

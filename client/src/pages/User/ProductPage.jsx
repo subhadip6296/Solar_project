@@ -1,9 +1,11 @@
 import React from "react";
-
+import { images} from "../../assets/Assets";
 const ProductPage = () => {
   return (
     <>
-      <div>ProductPage</div>
+      <div className="top w-full">
+        <img className="w-[100%]  " src={images.rooftopsolar} alt="" />
+      </div>
     </>
   );
 };
