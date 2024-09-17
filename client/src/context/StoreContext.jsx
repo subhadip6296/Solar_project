@@ -3,7 +3,10 @@ import { createContext, useState } from "react";
 export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
-  const url = "http://localhost:4000";
+  // localhost
+  // const url = "http://localhost:4000";
+  // online
+  const url = "https://gwinfra-server.onrender.com";
   const [token, setToken] = useState("");
   const contextValue = {
     url,
