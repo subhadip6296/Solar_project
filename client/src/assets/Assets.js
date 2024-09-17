@@ -11,6 +11,7 @@ import commercialinst from "./Images/commercialinst.jpg";
 import backuppower from "./Images/backuppower.jpg";
 import services from "./Images/services.jpg";
 import avatar from "./Images/avatar.jpeg";
+import contact from "./Images/contact.webp";
 
 export const images = {
   logo_green,
@@ -25,6 +26,7 @@ export const images = {
   commercialinst,
   backuppower,
   services,
+  contact,
 };
 export const videos = {
   animation,

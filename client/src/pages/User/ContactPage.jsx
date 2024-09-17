@@ -1,9 +1,12 @@
+import { CompanyAddressComponent } from "@/components/contactCompo/company-address";
+import { ContactFormComponent } from "@/components/contactCompo/contact-form";
 import React from "react";
 
 const ContactPage = () => {
   return (
     <>
-      <div>ContactPage</div>
+      <ContactFormComponent />
+      <CompanyAddressComponent />
     </>
   );
 };

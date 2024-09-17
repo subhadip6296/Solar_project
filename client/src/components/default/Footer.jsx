@@ -68,7 +68,7 @@ const Footer = () => {
               </svg>
             </div>
           </div>
-          <Button variant="outline">
+          <Button>
             <Link to={"/admin"}>Admin Access</Link>{" "}
           </Button>
         </div>
