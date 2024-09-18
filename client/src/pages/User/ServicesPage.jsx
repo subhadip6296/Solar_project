@@ -139,7 +139,7 @@ const ServicesPage = () => {
               </h2>
               <blockquote>
                 <p className="mt-6 text-[1rem] leading-relaxed text-black">
-                  At [Your Company Name], we understand that the efficiency and
+                  At GW Infrasolutions, we understand that the efficiency and
                   longevity of your solar power system depend on regular
                   maintenance and expert support. Our dedicated service
                   department offers comprehensive maintenance solutions designed
