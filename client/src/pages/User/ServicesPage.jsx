@@ -5,20 +5,27 @@ import { Link } from "react-router-dom";
 const ServicesPage = () => {
   return (
     <>
-      <div className="  p-[3vw] w-[100%] h-[300px] z-10 absolute top-12 flex flex-col items-start justify-center overflow-hidden">
-        <h2 className="font-bold text-left text-[36px] text-[#d8d8d8]">
-          Our Services
-        </h2>
-        <p className=" text-[#d8d8d8] font-normal w-[80%]">
-          Powering homes and businesses with clean, sustainable energy. From
-          residential rooftops to large commercial projects, our expert solar
-          installation services deliver efficiency and savings for every
-          property
-        </p>
+      <div className="relative flex flex-col gap-4">
+        <div className="top-image w-full h-[280px] relative overflow-hidden">
+          <img
+            className="w-full h-full object-cover"
+            src={images.rooftop_solar}
+            alt="Rooftop Solar"
+          />
+        </div>
+        <div className="absolute inset-0 flex flex-col items-start justify-center p-4 bg-gradient-to-t from-black/60 to-transparent text-[#d8d8d8]">
+          <h2 className="font-bold text-[24px] md:text-[36px] leading-tight">
+            Our Services
+          </h2>
+          <p className="text-base md:text-lg mt-2 max-w-[90%] md:max-w-[80%]">
+            Powering homes and businesses with clean, sustainable energy. From
+            residential rooftops to large commercial projects, our expert solar
+            installation services deliver efficiency and savings for every
+            property.
+          </p>
+        </div>
       </div>
-      <div className="top-image w-[100%] h-[280px] relative overflow-hidden">
-        <img className="w-full " src={images.rooftop_solar} alt="" />
-      </div>
+
       <section className="py-10 bg-emerald-50 sm:py-16 lg:py-24 rounded-lg">
         <div className="max-w-5xl px-4 mx-auto sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-16 lg:gap-x-24 gap-y-10">
@@ -132,7 +139,7 @@ const ServicesPage = () => {
               </h2>
               <blockquote>
                 <p className="mt-6 text-[1rem] leading-relaxed text-black">
-                  At [Your Company Name], we understand that the efficiency and
+                  At GW Infrasolutions, we understand that the efficiency and
                   longevity of your solar power system depend on regular
                   maintenance and expert support. Our dedicated service
                   department offers comprehensive maintenance solutions designed
