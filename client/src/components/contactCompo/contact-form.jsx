@@ -13,7 +13,7 @@ import {
 } from "../ui/form";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
-import { useToast } from "../../hooks/use-toast";
+import { useToast } from "../ui/use-toast";
 import { images } from "../../assets/Assets";
 
 const formSchema = z.object({

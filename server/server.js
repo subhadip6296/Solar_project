@@ -1,30 +1,37 @@
-import express from 'express'
-import cors from 'cors'
-import { ConnectDB } from './config/db.js'
-import userRouter from './routes/userRoute.js'
-import 'dotenv/config'
+import express from 'express';
+import cors from 'cors';
+import { ConnectDB } from './config/db.js';
+import userRouter from './routes/userRoute.js';
+import blogRouter from './routes/blogRoute.js';
+import eventRouter from './routes/eventRoute.js';
+import 'dotenv/config';
 
-
-// app config
-const app = express()
+const app = express();
 const port = process.env.PORT || 4000;
 
-// middleware
-app.use(express.json())
-app.use(cors())
+// Middleware
+app.use(express.json());
+app.use(cors());
 
-// db connection
+// Database connection
 ConnectDB();
 
-// api endpints
-app.use("/api/user", userRouter)
+// Routes
+app.use("/api/user", userRouter);
+app.use("/api/blogs", blogRouter);
+app.use("/api/events", eventRouter);
 
-
+// Base route
 app.get("/", (req, res) => {
-  res.send("API Working")
-})
+  res.send("API Working");
+});
+
+// Error handling middleware
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({ success: false, message: "Something broke!" });
+});
 
 app.listen(port, () => {
-  console.log(`Server Started on http://localhost:${port}`)
-})
-
+  console.log(`Server Started on http://localhost:${port}`);
+});
