@@ -1,7 +1,7 @@
 // src/services/api.js
 import axios from 'axios';
 
-const API_URL = import.meta.env.VITE_API_URL;
+const API_URL = "http://localhost:4000";
 
 const api = axios.create({
   baseURL: API_URL,
@@ -31,6 +31,14 @@ api.interceptors.response.use(
   }
 );
 
+api.interceptors.response.use(
+  (response) => response.data,
+  (error) => {
+    console.error('API Error:', error.response?.data);
+    return Promise.reject(error.response?.data || error);
+  }
+);
+
 export const authAPI = {
   login: (credentials) => api.post('/api/user/login', credentials),
   register: (userData) => api.post('/api/user/register', userData),
@@ -50,13 +58,164 @@ export const blogAPI = {
 };
 
 export const eventAPI = {
-  getAll: () => api.get('/api/admin/events'),
-  getOne: (id) => api.get(`/api/admin/events/${id}`),
-  create: (data) => api.post('/api/admin/events', data),
-  update: (id, data) => api.put(`/api/admin/events/${id}`, data),
-  delete: (id) => api.delete(`/api/admin/events/${id}`),
-  getUpcoming: () => api.get('/api/admin/events/upcoming'),
-  getPast: () => api.get('/api/admin/events/past'),
+  // Public endpoints
+  getAll: (params = {}) =>
+    api.get('/api/events', { params }),
+
+  getById: (id) =>
+    api.get(`/api/events/${id}`),
+
+  getGallery: (id) =>
+    api.get(`/api/events/gallery/${id}`),
+
+  // Filtered queries with enhanced filtering
+  getFiltered: (filters = {}) => {
+    const {
+      status,
+      past,
+      search,
+      startDate,
+      endDate,
+      limit = 10,
+      page = 1,
+      sortBy,
+      sortOrder
+    } = filters;
+
+    return api.get('/api/events', {
+      params: {
+        ...(status && { status }),
+        ...(past !== undefined && { past }),
+        ...(search && { search }),
+        ...(startDate && { startDate }),
+        ...(endDate && { endDate }),
+        ...(sortBy && { sortBy }),
+        ...(sortOrder && { sortOrder }),
+        limit,
+        page
+      }
+    });
+  },
+
+  getUpcoming: (params = {}) =>
+    api.get('/api/events', {
+      params: {
+        ...params,
+        past: false,
+        status: 'upcoming'
+      }
+    }),
+
+  getPast: (params = {}) =>
+    api.get('/api/events', {
+      params: {
+        ...params,
+        past: true,
+        status: 'completed'
+      }
+    }),
+
+  // Protected endpoints (require auth)
+  create: (data) => {
+    const { title, description, date, location, images, status } = data;
+    return api.post('/api/events', {
+      title,
+      description,
+      date,
+      location,
+      mainImage: images.main,
+      galleryImages: images.gallery || [],
+      status: status || 'upcoming'
+    });
+  },
+
+  update: (id, data) => {
+    // Only include fields that are actually being updated
+    const updateData = {};
+
+    if (data.title) updateData.title = data.title;
+    if (data.description) updateData.description = data.description;
+    if (data.date) updateData.date = data.date;
+    if (data.location) updateData.location = data.location;
+    if (data.status) updateData.status = data.status;
+    if (data.images?.main) updateData.mainImage = data.images.main;
+    if (data.images?.gallery) updateData.galleryImages = data.images.gallery;
+
+    return api.put(`/api/events/${id}`, updateData);
+  },
+
+  delete: (id) => api.delete(`/api/events/${id}`),
+
+  // Utility functions
+  validateEventData: (data) => {
+    const errors = [];
+
+    if (!data.title?.trim()) errors.push('Title is required');
+    if (!data.description?.trim()) errors.push('Description is required');
+    if (!data.date) errors.push('Date is required');
+    if (!data.location?.trim()) errors.push('Location is required');
+    if (!data.images?.main?.trim()) errors.push('Main image is required');
+    if (data.images?.gallery && data.images.gallery.length > 4) {
+      errors.push('Maximum 4 gallery images allowed');
+    }
+
+    return {
+      isValid: errors.length === 0,
+      errors
+    };
+  },
+
+  formatEventData: (formData) => {
+    return {
+      title: formData.title?.trim(),
+      description: formData.description?.trim(),
+      date: formData.date,
+      location: formData.location?.trim(),
+      mainImage: formData.images?.main?.trim(),
+      galleryImages: formData.images?.gallery?.filter(url => url?.trim()) || [],
+      status: formData.status || 'upcoming'
+    };
+  },
+
+  handleApiError: (error) => {
+    console.error('Event API Error:', {
+      message: error.message,
+      response: error.response?.data,
+      status: error.response?.status
+    });
+
+    return {
+      success: false,
+      message: error.response?.data?.message || 'An unexpected error occurred',
+      status: error.response?.status,
+      error
+    };
+  },
+
+  // Date helper functions
+  isEventPast: (eventDate) => new Date(eventDate) < new Date(),
+
+  formatEventDate: (date) => {
+    try {
+      return new Date(date).toISOString();
+    } catch (error) {
+      console.error('Date formatting error:', error);
+      return date;
+    }
+  },
+
+  // Sorting helper
+  getSortedEvents: (events, { sortBy = 'date', sortOrder = 'asc' } = {}) => {
+    return [...events].sort((a, b) => {
+      const aValue = a[sortBy];
+      const bValue = b[sortBy];
+
+      if (sortOrder === 'asc') {
+        return aValue > bValue ? 1 : -1;
+      }
+      return aValue < bValue ? 1 : -1;
+    });
+  }
 };
 
 export const productAPI = {
