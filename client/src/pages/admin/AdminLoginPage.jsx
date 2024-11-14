@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { images } from "../../assets/Assets";
 import { useAuth } from "../../context/AuthContext";
@@ -8,7 +8,7 @@ import { Loader2 } from "lucide-react";
 
 const AdminLoginPage = () => {
   const navigate = useNavigate();
-  const { login } = useAuth();
+  const { isAuthenticated, login } = useAuth();
   const { toast } = useToast();
   const [loading, setLoading] = useState(false);
 
@@ -21,6 +21,12 @@ const AdminLoginPage = () => {
     email: "",
     password: "",
   });
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate("/admin/dashboard");
+    }
+  }, [isAuthenticated, navigate]);
 
   const validateEmail = (email) => {
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;

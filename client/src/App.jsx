@@ -1,5 +1,5 @@
-import React from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import UserLayout from "./layouts/UserLayout";
 import AdminLayout from "./layouts/AdminLayout";
 
@@ -18,33 +18,46 @@ import DashboardPage from "./pages/admin/DashboardPage";
 import BlogManagement from "./pages/admin/BlogManagement";
 import EventManagement from "./pages/admin/EventManagement";
 
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
+
 const App = () => {
   return (
-    <Routes>
-      {/* Public Routes */}
-      <Route element={<UserLayout />}>
-        <Route index element={<HomePage />} />
-        <Route path="about" element={<AboutPage />} />
-        <Route path="products" element={<ProductsPage />} />
-        <Route path="services" element={<ServicesPage />} />
-        <Route path="blogs" element={<BlogsPage />} />
-        <Route path="events" element={<EventsPage />} />
-        <Route path="contact" element={<ContactPage />} />
-      </Route>
-
-      {/* Admin Routes */}
-      <Route path="admin">
-        <Route index element={<AdminLoginPage />} />
-        <Route element={<AdminLayout />}>
-          <Route path="dashboard" element={<DashboardPage />} />
-          <Route path="blogs" element={<BlogManagement />} />
-          <Route path="events" element={<EventManagement />} />
+    <>
+      <ScrollToTop />
+      <Routes>
+        {/* Public Routes */}
+        <Route element={<UserLayout />}>
+          <Route index element={<HomePage />} />
+          <Route path="about" element={<AboutPage />} />
+          <Route path="products" element={<ProductsPage />} />
+          <Route path="services" element={<ServicesPage />} />
+          <Route path="blogs" element={<BlogsPage />} />
+          <Route path="events" element={<EventsPage />} />
+          <Route path="contact" element={<ContactPage />} />
         </Route>
-      </Route>
 
-      {/* 404 Route */}
-      <Route path="*" element={<Navigate to="/" replace />} />
-    </Routes>
+        {/* Admin Routes */}
+        <Route path="admin">
+          <Route index element={<AdminLoginPage />} />
+          <Route element={<AdminLayout />}>
+            <Route path="dashboard" element={<DashboardPage />} />
+            <Route path="blogs" element={<BlogManagement />} />
+            <Route path="events" element={<EventManagement />} />
+          </Route>
+        </Route>
+
+        {/* 404 Route */}
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </>
   );
 };
 

@@ -1,6 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Sun, Moon } from "lucide-react";
+import {
+  Menu,
+  X,
+  Sun,
+  Moon,
+  Info,
+  ShoppingBag,
+  HandPlatter,
+  FileText,
+  Calendar,
+  Phone,
+} from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { images } from "@/assets/Assets";
 
@@ -25,12 +36,12 @@ const Navbar = () => {
   }, [location]);
 
   const navItems = [
-    { name: "About Us", path: "/about" },
-    { name: "Products", path: "/products" },
-    { name: "Services", path: "/services" },
-    { name: "Blogs", path: "/blogs" },
-    { name: "Events", path: "/events" },
-    { name: "Contact Us", path: "/contact" },
+    { name: "About Us", path: "/about", icon: Info },
+    { name: "Products", path: "/products", icon: ShoppingBag },
+    { name: "Services", path: "/services", icon: HandPlatter },
+    { name: "Blogs", path: "/blogs", icon: FileText },
+    { name: "Events", path: "/events", icon: Calendar },
+    { name: "Contact Us", path: "/contact", icon: Phone },
   ];
 
   const isCurrentPath = (path) => {
@@ -58,7 +69,7 @@ const Navbar = () => {
             </motion.div>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex md:items-center md:space-x-8">
+            <div className="hidden md:flex md:items-center md:space-x-6">
               {navItems.map((item) => (
                 <motion.div
                   key={item.name}
@@ -66,11 +77,12 @@ const Navbar = () => {
                   whileTap={{ y: 0 }}>
                   <Link
                     to={item.path}
-                    className={`relative px-3 py-2 text-sm font-medium transition-colors ${
+                    className={`relative flex items-center gap-2 px-3 py-2 text-sm font-medium transition-colors ${
                       isCurrentPath(item.path)
                         ? "text-[#009a8d]"
                         : "text-gray-600 hover:text-[#009a8d]"
                     }`}>
+                    <item.icon className="w-5 h-5" />
                     {item.name}
                     {isCurrentPath(item.path) && (
                       <motion.div
@@ -140,7 +152,10 @@ const Navbar = () => {
                           ? "text-[#009a8d] bg-[#009a8d]/5"
                           : "text-gray-600 hover:bg-gray-50 hover:text-[#009a8d]"
                       }`}>
-                      {item.name}
+                      <div className="flex items-center gap-4">
+                        <item.icon className="w-5 h-5" />
+                        {item.name}
+                      </div>
                     </Link>
                   </motion.div>
                 ))}
