@@ -65,7 +65,7 @@ const Products = () => {
           ))}
         </div>
         <Link
-          to={"/user/products"}
+          to={"/products"}
           className="text-center w-full flex md:justify-center">
           <Button>Explore More -&gt;</Button>
         </Link>

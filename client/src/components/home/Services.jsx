@@ -9,8 +9,7 @@ export function WobbleCardDemo() {
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full">
       <WobbleCard
         containerClassName="col-span-1 lg:col-span-2 h-full bg-pcolor min-h-[500px] lg:min-h-[300px]"
-        className=""
-      >
+        className="">
         <div className="max-w-xs">
           <h2 className="text-left text-balance text-[20px] md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
             Residential Solar Installation
@@ -48,8 +47,7 @@ export function WobbleCardDemo() {
       </WobbleCard>
       <WobbleCard
         containerClassName="col-span-1 lg:col-span-2 h-full bg-pcolor min-h-[500px] lg:min-h-[300px]"
-        className=""
-      >
+        className="">
         <div className="max-w-xs">
           <h2 className="text-left text-balance text-[20px] md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
             Commercial Solar Solutions
@@ -68,7 +66,7 @@ export function WobbleCardDemo() {
         />
       </WobbleCard>
       <div className="col-span-1 lg:col-span-3 flex justify-center">
-        <Link to={"/user/services"} className="text-center">
+        <Link to={"/services"} className="text-center">
           <Button className="items-center"> Explore More -&gt;</Button>
         </Link>
       </div>
