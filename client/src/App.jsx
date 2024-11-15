@@ -5,13 +5,13 @@ import UserLayout from "@/layouts/UserLayout";
 import AdminLayout from "@/layouts/AdminLayout";
 
 // User Pages
-import HomePage from "@/pages/user/HomePage";
-import AboutPage from "@/pages/user/AboutPage";
-import ProductsPage from "@/pages/user/ProductsPage";
-import ServicesPage from "@/pages/user/ServicesPage";
-import BlogsPage from "@/pages/user/BlogsPage";
-import EventsPage from "@/pages/user/EventsPage";
-import ContactPage from "@/pages/user/ContactPage";
+import HomePage from "@/pages/user/HomePage.jsx";
+import AboutPage from "@/pages/user/AboutPage.jsx";
+import ProductsPage from "@/pages/user/ProductsPage.jsx";
+import ServicesPage from "@/pages/user/ServicesPage.jsx";
+import BlogsPage from "@/pages/user/BlogsPage.jsx";
+import EventsPage from "@/pages/user/EventsPage.jsx";
+import ContactPage from "@/pages/user/ContactPage.jsx";
 
 // Admin Pages
 import AdminLoginPage from "@/pages/admin/AdminLoginPage";
