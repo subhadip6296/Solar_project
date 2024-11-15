@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { images } from "../../assets/Assets";
-import { useAuth } from "../../context/AuthContext";
+import { images } from "../assets/Assets";
+import { useAuth } from "../context/AuthContext";
 import { useToast } from "@/components/ui/use-toast";
 import { authAPI } from "@/services/api/api";
 import { Loader2 } from "lucide-react";
