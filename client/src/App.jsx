@@ -1,23 +1,23 @@
 import React, { useEffect } from "react";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import UserLayout from "@/layouts/UserLayout";
-import AdminLayout from "@/layouts/AdminLayout";
+import UserLayout from "./layouts/UserLayout";
+import AdminLayout from "./layouts/AdminLayout";
 
 // User Pages
-import HomePage from "@/pages/user/HomePage";
-import AboutPage from "@/pages/user/AboutPage";
-import ProductsPage from "@/pages/user/ProductsPage";
-import ServicesPage from "@/pages/user/ServicesPage";
-import BlogsPage from "@/pages/user/BlogsPage";
-import EventsPage from "@/pages/user/EventsPage";
-import ContactPage from "@/pages/user/ContactPage";
+import HomePage from "./pages/user/HomePage";
+import AboutPage from "./pages/user/AboutPage";
+import ProductsPage from "./pages/user/ProductsPage";
+import ServicesPage from "./pages/user/ServicesPage";
+import BlogsPage from "./pages/user/BlogsPage";
+import EventsPage from "./pages/user/EventsPage";
+import ContactPage from "./pages/user/ContactPage";
 
 // Admin Pages
-import AdminLoginPage from "@/pages/admin/AdminLoginPage";
-import DashboardPage from "@/pages/admin/DashboardPage";
-import BlogManagement from "@/pages/admin/BlogManagement";
-import EventManagement from "@/pages/admin/EventManagement";
+import AdminLoginPage from "./pages/admin/AdminLoginPage";
+import DashboardPage from "./pages/admin/DashboardPage";
+import BlogManagement from "./pages/admin/BlogManagement";
+import EventManagement from "./pages/admin/EventManagement";
 
 // SEO Metadata for each route
 const routeMetadata = {

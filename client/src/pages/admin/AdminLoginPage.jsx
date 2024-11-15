@@ -71,9 +71,10 @@ const AdminLoginPage = () => {
       setLoading(true);
       const response = await authAPI.login(formData);
 
-      if (response.data.success) {
+      // The response is now directly the data object from the server
+      if (response.token) {
         // Update auth context and localStorage
-        login(response.data.token);
+        login(response.token);
 
         toast({
           title: "Success",
@@ -90,13 +91,13 @@ const AdminLoginPage = () => {
       toast({
         variant: "destructive",
         title: "Error",
-        description: error.response?.data?.message || "Invalid credentials",
+        description: error.message || "Invalid credentials",
         duration: 3000,
       });
 
       setErrors({
-        email: error.response?.data?.errors?.email || "",
-        password: error.response?.data?.errors?.password || "",
+        email: error.errors?.email || "",
+        password: error.errors?.password || "",
       });
     } finally {
       setLoading(false);

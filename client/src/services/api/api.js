@@ -1,7 +1,6 @@
 // src/services/api.js
 import axios from 'axios';
 
-// const API_URL = "http://localhost:4000";
 const API_URL = "https://gwinfra-server.onrender.com";
 
 const api = axios.create({
@@ -20,21 +19,20 @@ api.interceptors.request.use((config) => {
   return config;
 });
 
-// Handle response errors
+// Handle authentication and response transformations in a single interceptor
 api.interceptors.response.use(
-  (response) => response,
+  (response) => {
+    // Successfully return the data property
+    return response.data;
+  },
   (error) => {
+    // Handle 401 unauthorized errors
     if (error.response?.status === 401) {
       localStorage.removeItem('token');
       window.location.href = '/admin';
     }
-    return Promise.reject(error);
-  }
-);
 
-api.interceptors.response.use(
-  (response) => response.data,
-  (error) => {
+    // Log the error and return a rejected promise with the error data
     console.error('API Error:', error.response?.data);
     return Promise.reject(error.response?.data || error);
   }
