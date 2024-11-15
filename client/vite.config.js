@@ -5,19 +5,22 @@ import path from 'path';
 export default defineConfig({
   plugins: [react()],
   resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src'),
-    },
+    alias: [
+      { find: '@', replacement: path.resolve(__dirname, 'src') }
+    ]
   },
   build: {
+    outDir: 'dist',
     sourcemap: true,
     rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, 'index.html')
+      },
       output: {
         manualChunks: {
-          vendor: ['react', 'react-dom', 'react-router-dom'],
-          ui: ['@/components/ui'],
-        },
-      },
-    },
-  },
+          vendor: ['react', 'react-router-dom', 'react-dom'],
+        }
+      }
+    }
+  }
 });
