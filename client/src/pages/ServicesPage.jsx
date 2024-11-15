@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { images } from "../../assets/Assets";
+import { images } from "../assets/Assets";
 import {
   Sun,
   Building2,

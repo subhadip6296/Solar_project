@@ -6,13 +6,13 @@ import UserLayout from "./layouts/UserLayout";
 import AdminLayout from "./layouts/AdminLayout";
 
 // User Pages
-import HomePage from "./pages/user/HomePage";
-import AboutPage from "./pages/user/AboutPage";
-import ProductsPage from "./pages/user/ProductsPage";
-import ServicesPage from "./pages/user/ServicesPage";
-import BlogsPage from "./pages/user/BlogsPage";
-import EventsPage from "./pages/user/EventsPage";
-import ContactPage from "./pages/user/ContactPage";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import ProductsPage from "./pages/ProductsPage";
+import ServicesPage from "./pages/ServicesPage";
+import BlogsPage from "./pages/BlogsPage";
+import EventsPage from "./pages/EventsPage";
+import ContactPage from "./pages/ContactPage";
 
 // Admin Pages
 import AdminLoginPage from "./pages/admin/AdminLoginPage";
