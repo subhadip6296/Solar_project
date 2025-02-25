@@ -10,6 +10,7 @@ import {
   Check,
   Phone,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -100,7 +101,7 @@ const ServicesPage = () => {
       {/* Hero Section */}
       <div className="relative h-[70vh] overflow-hidden">
         <img
-          src="https://neuroject.com/wp-content/uploads/2023/08/Building_Energy_Monitoring_Systems_Guide_to_2023_Neuroject_7.jpg"
+          src="https://www.sembcorp.com/media/cj4fyspz/rtsbanner-1510x450.jpg?width=1510&height=450&quality=100&v=133685230918630000&format=webp"
           alt="Rooftop Solar"
           className="w-full h-full object-cover"
         />
@@ -206,6 +207,7 @@ const ServicesPage = () => {
   and hands-on student projects that drive a sustainable future.
 </p>
 
+            <Link to={"/contact"}>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -213,6 +215,7 @@ const ServicesPage = () => {
               <Phone className="mr-2 h-5 w-5" />
               Contact Us Now
             </motion.button>
+            </Link>
           </motion.div>
         </div>
       </div>

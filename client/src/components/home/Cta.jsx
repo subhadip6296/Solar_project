@@ -10,7 +10,7 @@ const Cta = () => {
             <div>
               <img
                 className="object-cover w-16 h-16 rounded-lg"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfljp0XK6-xbKd0UVa8jtosMtX4kyIO5HhKw&s"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfljp0XK6-xbKd0UVa8jtostX4kyIO5HhKw&s"
                 alt="Evoltriv Logo"
               />
               <blockquote>
@@ -23,7 +23,7 @@ const Cta = () => {
                 </p>
               </blockquote>
               <p className="mt-6 text-base font-semibold text-black">
-                — [Ashi] (Founder & CEO)
+                — [SamiAfrudh] (Founder & CEO)
               </p>
               <p className="mt-1 text-base text-gray-600 pl-5">Evoltriv</p>
             </div>

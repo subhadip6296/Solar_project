@@ -3,30 +3,34 @@ import KeenSlider from "keen-slider";
 import "keen-slider/keen-slider.min.css";
 
 const testimonials = [
-  {
-    name: "Michael Scott",
-    description:
-      "No, Rose, they are not breathing. And they have no arms or legs … Where are they? You know what? If we come across somebody with no arms or legs, do we bother resuscitating them? I mean, what quality of life do we have there?",
-    rating: 5,
-  },
-  {
-    name: "Dwight Schrute",
-    description:
-      "I am ready to be the next assistant regional manager. This is the best testimonial ever!",
-    rating: 4,
-  },
-  {
-    name: "chahat",
-    description:
-      "I am ready to be the next assistant regional manager. This is the best testimonial ever!",
-    rating: 3,
-  },
-  {
-    name: "Bhavesh",
-    description:
-      "I am ready to be the next assistant regional manager. This is the best testimonial ever!",
-    rating: 5,
-  },
+  
+    {
+      "name": "Amit Verma",
+      "description": "Evoltriv’s solar installation transformed my home’s energy efficiency. My electricity bills have reduced significantly, and the installation process was smooth and professional.",
+      "rating": 5
+    },
+    {
+      "name": "Sneha Kapoor",
+      "description": "I recently purchased an e-bike from Evoltriv, and it has been a game-changer! The battery life is great, and it’s perfect for my daily commute. Highly recommend it!",
+      "rating": 4
+    },
+    {
+      "name": "Rohit Sharma",
+      "description": "Their student consulting service helped me and my team with our renewable energy project. The guidance was clear, and we successfully built our prototype on time!",
+      "rating": 5
+    },
+    {
+      "name": "Pooja Reddy",
+      "description": "The off-grid solar system I got from Evoltriv is perfect for my farmhouse. It works efficiently, and I no longer worry about power cuts!",
+      "rating": 5
+    },
+    {
+      "name": "Karthik Mehta",
+      "description": "Evoltriv's team was very helpful in explaining how on-grid solar works. The installation was seamless, and I’m already seeing great savings on my power bill!",
+      "rating": 4
+    }
+  
+  
   // Add more testimonials as needed
 ];
 
@@ -87,10 +91,8 @@ const Testimonial = () => {
               Don't just take our word for it...
             </h2>
             <p className="mt-4 text-gray-700">
-              Hear what our satisfied customers have to say about their
-              experiences with our solar solutions. Your trust and satisfaction
-              drive us to deliver the best!
-            </p>
+  Hear what our satisfied customers have to say about their experiences with our solar solutions, e-bikes, and student consulting services. Your trust and satisfaction drive us to deliver the best!
+</p>
             <div className="hidden lg:mt-8 lg:flex lg:gap-4">
               <button
                 aria-label="Previous slide"

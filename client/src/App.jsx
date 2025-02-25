@@ -10,7 +10,7 @@ import HomePage from "@/pages/HomePage";
 import AboutPage from "@/pages/AboutPage";
 import ProductsPage from "@/pages/ProductsPage";
 import ServicesPage from "@/pages/ServicesPage";
-import BlogsPage from "@/pages/BlogsPage";
+// import BlogsPage from "@/pages/BlogsPage";
 import EventsPage from "@/pages/EventsPage";
 import ContactPage from "@/pages/ContactPage";
 
@@ -99,7 +99,7 @@ const App = () => {
           <Route path="about" element={<><PageHelmet metadata={routeMetadata.about} /><AboutPage /></>} />
           <Route path="products" element={<><PageHelmet metadata={routeMetadata.products} /><ProductsPage /></>} />
           <Route path="services" element={<><PageHelmet metadata={routeMetadata.services} /><ServicesPage /></>} />
-          <Route path="blogs" element={<><PageHelmet metadata={routeMetadata.blogs} /><BlogsPage /></>} />
+          {/* <Route path="blogs" element={<><PageHelmet metadata={routeMetadata.blogs} /><BlogsPage /></>} /> */}
           <Route path="events" element={<><PageHelmet metadata={routeMetadata.events} /><EventsPage /></>} />
           <Route path="contact" element={<><PageHelmet metadata={routeMetadata.contact} /><ContactPage /></>} />
         </Route>

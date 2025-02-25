@@ -6,12 +6,11 @@ const Footer = () => {
   const services = [
     { service: "Residential Installation", link: "/services" },
     { service: "Commercial Installation", link: "/services" },
-    { service: "Service Department", link: "/services" },
-    { service: "Back-Up Power", link: "/services" },
+    { service: "Electric e-Bicycles", link: "/services" },
+    { service: "Student Consulting", link: "/services" },
   ];
   const events = [
     { event: "Latest News", link: "/events" },
-    { event: "Blog and Articles", link: "/blogs" },
     { event: "Upcoming Events", link: "/events" },
     { event: "Media Gallery", link: "/events" },
   ];
@@ -67,9 +66,9 @@ const Footer = () => {
               </svg>
             </div>
           </div>
-          <Button>
+          {/* <Button>
             <Link to={"/admin"}>Admin Access</Link>{" "}
-          </Button>
+          </Button> */}
         </div>
         {/* Services */}
         <div className="flex flex-col gap-2">
@@ -97,6 +96,7 @@ const Footer = () => {
           ))}
         </div>
         {/* Contact Us */}
+        
         <div className="flex flex-col gap-2">
           <h4 className=" text-lg font-medium pb-2">Contact Us</h4>
           {/* Add actual contact information here */}

@@ -15,6 +15,7 @@ import {
   Leaf,
   Zap,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 const milestones = [
   {
     year: "2025",
@@ -437,6 +438,7 @@ const AboutPage = () => {
   to drive innovation and create a greener tomorrow.
 </p>
 
+<Link to={"/contact"}>
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -444,6 +446,7 @@ const AboutPage = () => {
           Contact Us
           <ArrowRight className="ml-2 h-5 w-5" />
         </motion.button>
+        </Link>
       </div>
     </div>
   );

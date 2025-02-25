@@ -19,6 +19,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { Link } from "react-router-dom";
 
 // const products = [
 //   {
@@ -825,12 +826,14 @@ const ProductsPage = () => {
   Explore cutting-edge solutions in renewable energy, e-bikes, and student innovations. Connect with us to power your ideas with sustainable technology.
 </p>
 
+         <Link to={"/contact"}>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="bg-[#009a8d] text-white px-8 py-3 rounded-lg font-medium hover:bg-[#008075] transition-colors">
             Contact Us
           </motion.button>
+          </Link>
         </div>
       </div>
     </div>
