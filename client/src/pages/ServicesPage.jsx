@@ -13,18 +13,18 @@ import {
 
 const services = [
   {
-    title: "Residential Installation",
-    image: images.residentialsolar,
+    title: "Solar Energy Solutions",
+    image: "https://www.soleosenergy.com/wp-content/uploads/2024/09/1650368737-5-environmental-benefits-of-solar-energy.jpg",
     icon: Sun,
     description:
-      "Residential solar services provide homeowners with the opportunity to harness the power of the sun to generate clean, renewable energy.",
+    "Harness the power of the sun with our innovative solar energy solutions for residential, commercial, and industrial applications.",
     benefits: [
       "Reduce electricity bills",
-      "Increase property value",
-      "Environmental impact",
-      "Energy independence",
-      "25+ years of reliability",
-      "Government incentives",
+      "Grid independence",
+      "High-efficiency panels",
+      "Sustainable energy",
+      "Smart monitoring",
+      "25+ years reliability"
     ],
     stats: {
       installations: "500+",
@@ -34,7 +34,7 @@ const services = [
   },
   {
     title: "Commercial Installation",
-    image: images.commercialinst,
+    image: "https://images.theecoexperts.co.uk/wp-content/uploads/2023/06/Securing-solar-panels-onto-roof-1.jpeg?width=744&height=496&format=webply",
     icon: Building2,
     description:
       "Our commercial solar installation services are designed to help businesses reduce energy costs while promoting sustainability.",
@@ -53,18 +53,18 @@ const services = [
     },
   },
   {
-    title: "Backup Power",
-    image: images.backuppower,
+    title: "E-Bike Solutions",
+    image: "https://images.squarespace-cdn.com/content/v1/5abfd225fcf7fd318b9d1fce/d8019050-867b-46ea-89f3-5b6b74506ab0/ciclo-ebikes.com+%7C+2019.09.30+%7C+177.jpg",
     icon: Battery,
     description:
-      "Ensure uninterrupted power supply with our top-of-the-line backup power solutions.",
+    "Experience the future of mobility with our advanced e-bike solutions, offering a perfect blend of efficiency, sustainability, and performance.",
     benefits: [
-      "Uninterrupted power",
-      "Smart integration",
-      "Quick switchover",
-      "Mobile monitoring",
-      "Extended battery life",
-      "Weather resistant",
+      "Eco-friendly transportation",
+      "Long battery life",
+      "Smart riding modes",
+      "Cost-effective commuting",
+      "Low maintenance",
+      "Government subsidies"
     ],
     stats: {
       reliability: "99.9%",
@@ -73,18 +73,18 @@ const services = [
     },
   },
   {
-    title: "Solar Maintenance & Support",
-    image: images.services,
+    title: "Student Project Consulting",
+    image: "https://mariposabicycles.ca/wp-content/uploads/2019/11/coc19-1010-bike-shop-george-harvey02.jpg",
     icon: Wrench,
     description:
-      "Our dedicated service department offers comprehensive maintenance solutions designed to keep your solar energy system operating at peak performance.",
+    "Empowering students with hands-on experience and guidance in renewable energy, e-mobility, and sustainability projects.",
     benefits: [
-      "Regular inspections",
-      "Performance monitoring",
-      "Preventive maintenance",
-      "Emergency support",
-      "System optimization",
-      "Extended warranty",
+      "Expert mentorship",
+      "Industry insights",
+      "Hands-on learning",
+      "Innovative projects",
+      "Prototyping support",
+      "Career guidance"
     ],
     stats: {
       uptime: "99.9%",
@@ -100,7 +100,7 @@ const ServicesPage = () => {
       {/* Hero Section */}
       <div className="relative h-[70vh] overflow-hidden">
         <img
-          src={images.rooftop_solar}
+          src="https://neuroject.com/wp-content/uploads/2023/08/Building_Energy_Monitoring_Systems_Guide_to_2023_Neuroject_7.jpg"
           alt="Rooftop Solar"
           className="w-full h-full object-cover"
         />
@@ -111,13 +111,14 @@ const ServicesPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="max-w-2xl">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-                Powering Your Future with Solar Solutions
-              </h1>
-              <p className="text-lg md:text-xl text-gray-200 mb-8">
-                From residential rooftops to large commercial projects, we
-                deliver efficiency and savings for every property.
-              </p>
+             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+  Innovating Sustainable Mobility & Energy Solutions
+</h1>
+<p className="text-lg md:text-xl text-gray-200 mb-8">
+  From high-performance e-bikes to cutting-edge solar solutions and student-driven innovations, 
+  Evoltriv is shaping a greener, smarter future.
+</p>
+
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -197,13 +198,14 @@ const ServicesPage = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Switch to Solar?
-            </h2>
-            <p className="text-xl text-gray-100 mb-8 max-w-2xl mx-auto">
-              Contact us today for a free consultation and learn how you can
-              start saving with solar energy.
-            </p>
+           <h2 className="text-3xl md:text-4xl font-bold mb-6">
+  Ready to Power Your Journey?
+</h2>
+<p className="text-xl text-gray-100 mb-8 max-w-2xl mx-auto">
+  Get in touch today to explore cutting-edge e-bikes, innovative solar solutions, 
+  and hands-on student projects that drive a sustainable future.
+</p>
+
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

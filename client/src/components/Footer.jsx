@@ -23,9 +23,8 @@ const Footer = () => {
         <div>
           <h4 className="text-lg font-medium pb-1">About Us</h4>
           <p className="text-[16px] leading-[1.15] opacity-95 pb-3">
-            GW Infra Solutions offers innovative solar PV installations for
-            residential, commercial, and industrial clients, ensuring
-            sustainable energy solutions.
+          Evoltriv offers innovative renewable energy solutions, e-bicycle services, and hands-on consulting for students and businesses looking to adopt sustainable practices.
+
           </p>
           <h4 className="text-lg font-medium pb-2">Follow us</h4>
           <div className="flex gap-3 mb-4">
@@ -84,6 +83,7 @@ const Footer = () => {
             </Link>
           ))}
         </div>
+        
         {/* Event and Media */}
         <div className="flex flex-col gap-2">
           <h4 className=" text-lg font-medium pb-2">Event and Media</h4>
@@ -101,16 +101,15 @@ const Footer = () => {
           <h4 className=" text-lg font-medium pb-2">Contact Us</h4>
           {/* Add actual contact information here */}
           <a
-            href="mailto:gwinfrasolutions@gmail.com"
+            href="mailto:samiafrudh45@gmail.com"
             className="text-[16px] opacity-75 hover:opacity-100">
-            Email: gwinfrasolutions@gmail.com
+            Email: samiafrudh45@gmail.com
           </a>
           <p className="text-[16px] opacity-75">
-            Phone: 9967823681, 9137107084
+            Phone: 9705130846
           </p>
           <p className="text-[16px] opacity-75">
-            Address: Office No.9, Azad Singh State, Marol pipe line, Andheri
-            East, Mumbai 400059
+            Address: Office No.9, Vijayawada, Andhra Pradesh, India
           </p>
         </div>
       </div>

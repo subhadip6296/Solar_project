@@ -17,62 +17,62 @@ import {
 } from "lucide-react";
 const milestones = [
   {
-    year: "2018",
-    title: "Company Foundation",
+    year: "2025",
+    title: "Evoltriv Founded",
     description:
-      "Started with a vision to revolutionize India's renewable energy sector",
+      "Started with a mission to revolutionize renewable energy and student-led innovations.",
     icon: Rocket,
     stats: "Initial team of 5 members",
-    tags: ["Startup", "Vision", "Innovation"],
+    tags: ["Startup", "Innovation", "Vision"],
   },
   {
-    year: "2019",
-    title: "First Major Project",
+    year: "2025",
+    title: "Solar Division Launched",
     description:
-      "Successfully completed our first large-scale residential project",
+      "Successfully installed our first solar project for sustainable energy solutions.",
     icon: CheckCircle2,
-    stats: "50kW installation",
-    tags: ["Milestone", "Success", "Growth"],
+    stats: "50kW solar installation",
+    tags: ["Solar", "Sustainability", "Growth"],
   },
   {
-    year: "2020",
-    title: "100+ Installations",
+    year: "2026",
+    title: "E-Bike Development",
     description:
-      "Achieved significant milestone in residential solar installations",
+      "Initiated the development of e-bike prototypes to promote green mobility.",
     icon: Building2,
-    stats: "100+ happy customers",
-    tags: ["Achievement", "Expansion", "Trust"],
+    stats: "3 innovative prototypes developed",
+    tags: ["Electric Mobility", "Innovation", "Green Tech"],
   },
   {
-    year: "2021",
-    title: "Team Expansion",
-    description: "Grew our team and expanded operations across multiple cities",
+    year: "2027",
+    title: "Student Consulting Services Introduced",
+    description: "Expanded to provide hands-on projects and consulting for students.",
     icon: Users,
-    stats: "Team of 50+ experts",
-    tags: ["Growth", "Team", "Expansion"],
+    stats: "100+ students engaged",
+    tags: ["Education", "Consulting", "Hands-on Learning"],
   },
   {
-    year: "2022",
-    title: "Commercial Success",
-    description: "Expanded into commercial and industrial solar solutions",
+    year: "2027",
+    title: "Commercial Solar Projects",
+    description: "Scaled operations to offer solar solutions for businesses and industries.",
     icon: TrendingUp,
-    stats: "5MW+ total installation",
-    tags: ["Business", "Growth", "Scale"],
+    stats: "5MW+ total solar installations",
+    tags: ["Business", "Renewable Energy", "Expansion"],
   },
   {
-    year: "2023",
-    title: "Innovation Award",
-    description: "Recognized nationally for innovative solar solutions",
+    year: "2028",
+    title: "Industry Recognition",
+    description: "Recognized for pioneering efforts in renewable energy and student innovation.",
     icon: Award,
     stats: "95% customer satisfaction",
     tags: ["Award", "Recognition", "Excellence"],
   },
   {
-    year: "2024",
+    year: "2028",
     title: "Future Goals",
-    description: "Setting new benchmarks in renewable energy solutions",
+    description: "Aiming for 20MW+ solar installations and expanding student projects.",
     icon: Target,
-    stats: "Targeting 20MW+ installation",
+    stats: "Targeting 20MW+ installations",
     tags: ["Future", "Goals", "Vision"],
   },
 ];
@@ -177,10 +177,9 @@ const TimelineSection = () => {
           className="text-center mt-16 max-w-2xl mx-auto">
           <h3 className="text-2xl font-bold mb-4">Looking Ahead</h3>
           <p className="text-gray-600">
-            As we continue our journey, we remain committed to innovation and
-            excellence in sustainable energy solutions. Join us in building a
-            greener future for generations to come.
-          </p>
+  As we move forward, we stay dedicated to advancing solar energy solutions, promoting sustainable e-mobility, and empowering students through hands-on consulting. Join us in shaping a cleaner, smarter, and more sustainable future.
+</p>
+
         </motion.div>
       </div>
     </section>
@@ -200,36 +199,36 @@ const AboutPage = () => {
     { number: "50+", label: "Expert Team" },
     { number: "24/7", label: "Support" },
   ];
-
   const values = [
     {
-      icon: Shield,
-      title: "Quality Assurance",
+      icon: Sun,
+      title: "Solar Energy Solutions",
       description:
-        "We maintain the highest standards in solar installations and services.",
+        "Providing high-efficiency solar installations for homes, businesses, and industries.",
     },
     {
-      icon: Target,
-      title: "Innovation",
+      icon: Zap,
+      title: "E-Bike Innovation",
       description:
-        "Continuously adopting cutting-edge solar technologies and solutions.",
+        "Developing cutting-edge electric bicycles for sustainable and smart mobility.",
     },
     {
       icon: Users,
-      title: "Customer Focus",
+      title: "Student Consulting",
       description:
-        "Dedicated to exceeding customer expectations with personalized service.",
+        "Empowering students with hands-on projects and industry-driven learning experiences.",
     },
   ];
-
+  
   const achievements = [
-    "500+ Successful Installations",
-    "95% Customer Satisfaction Rate",
-    "10MW+ Total Power Generated",
-    "50+ Corporate Clients",
-    "ISO 9001:2015 Certified",
-    "Award-Winning Service Team",
+    "500+ Solar Installations for Homes & Businesses",
+    "10MW+ Clean Energy Generated Through Solar Solutions",
+    "200+ E-Bikes Designed for Sustainable Mobility",
+    "1000+ Students Trained in Hands-on Renewable Energy Projects",
+    "50+ Successful Collaborations with Industries & Institutions",
+    "Recognized for Advancing Green Technology & Education",
   ];
+  
 
   return (
     <div className="pb-16">
@@ -265,9 +264,9 @@ const AboutPage = () => {
                 {...fadeInUp}
                 transition={{ delay: 0.2 }}
                 className="text-gray-600 max-w-2xl mx-auto text-lg md:text-xl">
-                GW Infra Solutions is dedicated to revolutionizing energy
-                consumption through innovative solar solutions, making clean
-                energy accessible and affordable for everyone.
+                Evoltriv is committed to driving a sustainable future through advanced solar 
+  solutions, innovative e-bike technology, and hands-on student consulting, making 
+  renewable energy and green mobility accessible to all.
               </motion.p>
             </motion.div>
 
@@ -316,10 +315,11 @@ const AboutPage = () => {
                 <h2 className="text-2xl font-bold">Our Mission</h2>
               </div>
               <p className="text-gray-600 text-lg leading-relaxed">
-                To accelerate India's transition to sustainable energy by
-                providing innovative solar solutions that are efficient,
-                affordable, and reliable.
-              </p>
+  To accelerate India's transition to sustainable energy by providing innovative 
+  solar solutions, advancing e-bike technology, and empowering students through 
+  hands-on consulting, ensuring a greener and smarter future.
+</p>
+
               <div className="mt-6 space-y-3">
                 <div className="flex items-center gap-2">
                   <Leaf className="text-[#009a8d] w-5 h-5" />
@@ -355,9 +355,11 @@ const AboutPage = () => {
                 <h2 className="text-2xl font-bold">Our Vision</h2>
               </div>
               <p className="text-gray-600 text-lg leading-relaxed">
-                To be the leading provider of sustainable energy solutions in
-                India, driving the nation towards a cleaner and greener future.
-              </p>
+  To be the leading provider of sustainable energy solutions in India by pioneering 
+  solar innovations, advancing e-bike technology, and empowering students through 
+  hands-on consulting, driving the nation towards a cleaner and greener future.
+</p>
+
               <div className="mt-6 space-y-3">
                 <div className="flex items-center gap-2">
                   <Leaf className="text-[#009a8d] w-5 h-5" />
@@ -430,9 +432,11 @@ const AboutPage = () => {
       <div className="max-w-3xl mx-auto text-center px-4">
         <h2 className="text-3xl font-bold mb-6">Ready to Go Solar?</h2>
         <p className="text-gray-600 mb-8">
-          Join us in building a sustainable future. Let's discuss how we can
-          help you transition to clean, renewable energy.
-        </p>
+  Join us in building a sustainable future. Whether it's solar energy, 
+  e-bike technology, or hands-on student consulting, let's work together 
+  to drive innovation and create a greener tomorrow.
+</p>
+
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}

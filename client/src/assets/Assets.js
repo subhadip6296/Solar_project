@@ -1,4 +1,4 @@
-import logo from "./Images/gw_logo.png";
+import logo from "./Images/evoltriv.jpg";
 import logo_green from "./Images/logo_green.png";
 import logo_white from "./Images/logo_white.png";
 import hero_image from "./Images/hero_image.png";

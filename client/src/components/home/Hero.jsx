@@ -13,7 +13,7 @@ const Hero = () => {
 
   return (
     <div className="relative bg-white">
-      <div className="absolute inset-0 bg-grid-black/[0.2] bg-center">
+      <div className="absolute inset-0  bg-center">
         <div className="absolute inset-0 bg-white/60" />
       </div>
 
@@ -25,21 +25,21 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="space-y-8">
-              <motion.p
+              {/* <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2 }}
                 className="inline-block px-4 py-1.5 bg-[#009a8d]/10 rounded-full text-base font-semibold tracking-wider text-[#009a8d] uppercase">
                 BETTER SOLUTIONS, GOOD CHOICE
-              </motion.p>
+              </motion.p> */}
 
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="text-5xl font-bold text-gray-900 lg:text-6xl xl:text-7xl">
-                Power Your Future with{" "}
-                <span className="text-[#009a8d]">Sustainable Energy</span>
+                className="text-xl font-bold text-gray-900 lg:text-xl xl:text-5xl">
+               Driving the Future with {" "}
+                <span className="text-[#009a8d]">Clean Energy, Smart Mobility, and Hands-On Learning</span>
               </motion.h1>
 
               <motion.p
@@ -47,8 +47,7 @@ const Hero = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4 }}
                 className="text-lg text-gray-600 lg:text-xl">
-                The future belongs to those who harness the power of the sun.
-                Join the renewable energy revolution today.
+                We aim to Revolutionizing renewable energy, smart mobility and hands-on technical guidance to build a sustainable and innovation-driven future
               </motion.p>
 
               {/* <motion.div
