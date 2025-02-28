@@ -149,7 +149,7 @@ const Testimonial = () => {
                             <svg
                               key={idx}
                               className="size-5"
-                              fill="#009A8D"
+                              fill="#118B50"
                               viewBox="0 0 20 20"
                               xmlns="http://www.w3.org/2000/svg"
                             >

@@ -70,7 +70,7 @@ export function ContactFormComponent() {
         <img className="rounded-md" src={images.contact} alt="" />
       </div>
       <div className="max-w-md w-full mx-auto px-4 bg-card rounded-lg">
-        <h2 className="text-2xl font-bold mb-6 text-center text-pcolor">
+        <h2 className=" text-2xl font-bold mb-6 text-center ">
           Contact Us
         </h2>
         <Form {...form}>
@@ -150,7 +150,7 @@ export function ContactFormComponent() {
             />
             <Button
               type="submit"
-              className="w-full bg-pcolor hover:bg-pcolor/90"
+              className="w-full bg-[#118B50] hover:bg-pcolor/90"
               disabled={isSubmitting}>
               {isSubmitting ? "Sending..." : "Send Message"}
             </Button>

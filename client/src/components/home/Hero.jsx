@@ -39,7 +39,7 @@ const Hero = () => {
                 transition={{ delay: 0.3 }}
                 className="text-xl font-bold text-gray-900 lg:text-xl xl:text-5xl">
                Driving the Future with {" "}
-                <span className="text-[#009a8d]">Clean Energy, Smart Mobility, and Hands-On Learning</span>
+                <span className="text-[#118B50]">Clean Energy, Smart Mobility, and Hands-On Learning</span>
               </motion.h1>
 
               <motion.p
@@ -86,7 +86,7 @@ const Hero = () => {
                     transition={{ delay: index * 0.1 + 0.6 }}
                     className="text-center">
                     <div className="flex justify-center mb-2">
-                      <stat.icon className="w-6 h-6 text-[#009a8d]" />
+                      <stat.icon className="w-6 h-6 text-[#118B50]" />
                     </div>
                     <div className="font-bold text-2xl text-gray-900">
                       {stat.value}

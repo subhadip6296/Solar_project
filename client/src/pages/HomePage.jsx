@@ -11,10 +11,10 @@ const HomePage = () => {
     <main className="w-full">
       <Hero />
       <WobbleCardDemo />
-      <Products />
-      <Testimonial />
-      <Number />
-      <Cta />
+      {/* <Products /> */}
+      {/* <Testimonial /> */}
+      {/* <Number /> */}
+      {/* <Cta /> */}
     </main>
   );
 };

@@ -10,7 +10,11 @@ import {
   HandPlatter,
   FileText,
   Calendar,
-  Phone,
+
+  Contact,
+  Handshake,
+  Home
+  
 } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { images } from "@/assets/Assets";
@@ -36,12 +40,13 @@ const Navbar = () => {
   }, [location]);
 
   const navItems = [
-    { name: "About Us", path: "/about", icon: Info },
+    { name: "Home", path: "/", icon: Home },
+    { name: "Services", path: "/services", icon: Handshake },
     { name: "Products", path: "/products", icon: ShoppingBag },
-    { name: "Services", path: "/services", icon: HandPlatter },
     // { name: "Blogs", path: "/blogs", icon: FileText },
     { name: "Events", path: "/events", icon: Calendar },
-    { name: "Contact Us", path: "/contact", icon: Phone },
+    { name: "About Us", path: "/about", icon: Info },
+    { name: "Contact Us", path: "/contact", icon: Contact },
   ];
 
   const isCurrentPath = (path) => {
@@ -54,7 +59,7 @@ const Navbar = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         className={`fixed w-full z-50 transition-all duration-300 ${
-          isScrolled ? "bg-white shadow-lg" : "bg-white/80 backdrop-blur-md"
+          isScrolled ? "bg-white shadow-lg" : "bg-red/80 backdrop-blur-md"
         }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 md:h-20">
@@ -79,15 +84,15 @@ const Navbar = () => {
                     to={item.path}
                     className={`relative flex items-center gap-2 px-3 py-2 text-sm font-medium transition-colors ${
                       isCurrentPath(item.path)
-                        ? "text-[#009a8d]"
-                        : "text-gray-600 hover:text-[#009a8d]"
+                        ? "text-[#118B50]"
+                        : "text-gray-600 hover:text-[#118B50]"
                     }`}>
                     <item.icon className="w-5 h-5" />
                     {item.name}
                     {isCurrentPath(item.path) && (
                       <motion.div
                         layoutId="navbar-indicator"
-                        className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#009a8d]"
+                        className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#118B50]"
                         initial={false}
                         transition={{
                           type: "spring",
@@ -149,8 +154,8 @@ const Navbar = () => {
                       to={item.path}
                       className={`block px-3 py-4 text-base font-medium rounded-lg transition-colors ${
                         isCurrentPath(item.path)
-                          ? "text-[#009a8d] bg-[#009a8d]/5"
-                          : "text-gray-600 hover:bg-gray-50 hover:text-[#009a8d]"
+                          ? "text-[#118B50] bg-[#118B50]/5"
+                          : "text-gray-600 hover:bg-gray-50 hover:text-[#118B50]"
                       }`}>
                       <div className="flex items-center gap-4">
                         <item.icon className="w-5 h-5" />

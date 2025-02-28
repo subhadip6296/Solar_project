@@ -51,7 +51,7 @@ const EventCard = ({ event, onClick }) => {
       </div>
 
       <div className="p-6">
-        <h3 className="text-xl font-bold mb-2 group-hover:text-[#009a8d] transition-colors">
+        <h3 className="text-xl font-bold mb-2 group-hover:text-[#118B50] transition-colors">
           {event.title}
         </h3>
 
@@ -75,7 +75,7 @@ const EventCard = ({ event, onClick }) => {
         <div className="flex justify-end">
           <Button
             variant="ghost"
-            className="text-[#009a8d] hover:text-[#008075] group">
+            className="text-[#118B50] hover:text-[#008075] group">
             View Details
             <Eye className="w-4 h-4 ml-2 group-hover:animate-pulse" />
           </Button>
@@ -220,7 +220,7 @@ const EventsPage = () => {
   if (loading) {
     return (
       <div className="flex justify-center items-center min-h-screen">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#009a8d]"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#118B50]"></div>
       </div>
     );
   }
@@ -228,20 +228,20 @@ const EventsPage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="bg-[#009a8d] text-white py-16 md:py-24">
+      <div className="bg-[#C1D8C3] text-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-4xl md:text-5xl font-bold mb-6">
+              className="text-4xl text-black md:text-5xl font-bold mb-6">
               Events & Workshops
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="text-xl text-gray-100 max-w-2xl mx-auto">
+              className="text-xl text-black max-w-2xl mx-auto">
               Stay updated with our latest events, workshops, and community
               gatherings focused on sustainable energy solutions.
             </motion.p>

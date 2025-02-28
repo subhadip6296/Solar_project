@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Cta from "@/components/home/Cta";
 import {
   Shield,
   Target,
@@ -97,7 +98,7 @@ const TimelineSection = () => {
 
         <div className="relative">
           {/* Timeline Line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-[#009a8d] to-[#00c4b4] rounded-full hidden md:block" />
+          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-[#118B50] to-[#118B50] rounded-full hidden md:block" />
 
           {milestones.map((milestone, index) => (
             <motion.div
@@ -117,11 +118,11 @@ const TimelineSection = () => {
                     whileHover={{ y: -5 }}
                     className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                     <div className="flex items-center gap-3 mb-4">
-                      <span className="text-[#009a8d] text-xl font-bold">
+                      <span className="text-[#118B50] text-xl font-bold">
                         {milestone.year}
                       </span>
                       <div className="h-6 w-[2px] bg-gray-200 mx-2" />
-                      <milestone.icon className="w-6 h-6 text-[#009a8d]" />
+                      <milestone.icon className="w-6 h-6 text-[#118B50]" />
                     </div>
                     <h3 className="text-xl font-bold mb-2">
                       {milestone.title}
@@ -130,14 +131,14 @@ const TimelineSection = () => {
                       {milestone.description}
                     </p>
                     <div className="flex items-center text-sm text-gray-500 mb-4">
-                      <Medal className="w-4 h-4 mr-2 text-[#009a8d]" />
+                      <Medal className="w-4 h-4 mr-2 text-[#118B50]" />
                       {milestone.stats}
                     </div>
                     <div className="flex flex-wrap gap-2">
                       {milestone.tags.map((tag, tagIndex) => (
                         <span
                           key={tagIndex}
-                          className="px-3 py-1 bg-[#009a8d]/10 text-[#009a8d] rounded-full text-sm">
+                          className="px-3 py-1 bg-[#118B50]/10 text-[#118B50] rounded-full text-sm">
                           {tag}
                         </span>
                       ))}
@@ -151,7 +152,7 @@ const TimelineSection = () => {
                     initial={{ scale: 0 }}
                     whileInView={{ scale: 1 }}
                     viewport={{ once: true }}
-                    className="w-8 h-8 bg-[#009a8d] rounded-full border-4 border-white shadow-lg"
+                    className="w-8 h-8 bg-[#118B50] rounded-full border-4 border-white shadow-lg"
                   />
                 </div>
 
@@ -166,7 +167,7 @@ const TimelineSection = () => {
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
-            className="w-8 h-8 bg-[#00c4b4] rounded-full border-4 border-white shadow-lg absolute left-1/2 transform -translate-x-1/2 bottom-0 hidden md:block"
+            className="w-8 h-8 bg-[#118B50] rounded-full border-4 border-white shadow-lg absolute left-1/2 transform -translate-x-1/2 bottom-0 hidden md:block"
           />
         </div>
 
@@ -234,7 +235,7 @@ const AboutPage = () => {
   return (
     <div className="pb-16">
       {/* Hero Section with Background */}
-      <div className="relative py-20 bg-gradient-to-b from-[#009a8d]/10 to-transparent overflow-hidden">
+      <div className="relative py-20 bg-gradient-to-b from-[#118B50]/10 to-transparent overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-4">
           <motion.div
             initial="initial"
@@ -243,7 +244,7 @@ const AboutPage = () => {
             <motion.div {...fadeInUp} className="space-y-4">
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
                 Powering a{" "}
-                <span className="text-[#009a8d] relative">
+                <span className="text-[#118B50] relative">
                   Sustainable
                   <motion.svg
                     initial={{ pathLength: 0 }}
@@ -254,7 +255,7 @@ const AboutPage = () => {
                     <motion.path
                       d="M0 5 H100"
                       fill="none"
-                      stroke="#009a8d"
+                      stroke="#118B50"
                       strokeWidth="2"
                     />
                   </motion.svg>
@@ -284,7 +285,7 @@ const AboutPage = () => {
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 0.6 + index * 0.1 }}
                   className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-[#009a8d]">
+                  <div className="text-3xl md:text-4xl font-bold text-[#118B50]">
                     {stat.number}
                   </div>
                   <div className="text-sm text-gray-600 mt-1">{stat.label}</div>
@@ -306,12 +307,12 @@ const AboutPage = () => {
             whileHover={{ y: -5 }}
             className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 relative overflow-hidden group">
             {/* Background Decoration */}
-            <div className="absolute top-0 right-0 w-40 h-40 bg-[#009a8d]/5 rounded-full transform translate-x-20 -translate-y-20 group-hover:scale-150 transition-transform duration-500" />
+            <div className="absolute top-0 right-0 w-40 h-40 bg-[#118B50]/5 rounded-full transform translate-x-20 -translate-y-20 group-hover:scale-150 transition-transform duration-500" />
 
             <div className="relative">
               <div className="flex items-center gap-3 mb-4">
-                <div className="p-3 bg-[#009a8d]/10 rounded-xl">
-                  <Sun className="text-[#009a8d] w-6 h-6" />
+                <div className="p-3 bg-[#118B50]/10 rounded-xl">
+                  <Sun className="text-[#118B50] w-6 h-6" />
                 </div>
                 <h2 className="text-2xl font-bold">Our Mission</h2>
               </div>
@@ -323,7 +324,7 @@ const AboutPage = () => {
 
               <div className="mt-6 space-y-3">
                 <div className="flex items-center gap-2">
-                  <Leaf className="text-[#009a8d] w-5 h-5" />
+                  <Leaf className="text-[#118B50] w-5 h-5" />
                   <span className="text-gray-700">
                     Sustainable Energy Solutions
                   </span>
@@ -350,7 +351,7 @@ const AboutPage = () => {
 
             <div className="relative">
               <div className="flex items-center gap-3 mb-4">
-                <div className="p-3 bg-[#009a8d]/10 rounded-xl">
+                <div className="p-3 bg-[#118B50]/10 rounded-xl">
                   <Target className="text-[#009a8d] w-6 h-6" />
                 </div>
                 <h2 className="text-2xl font-bold">Our Vision</h2>
@@ -363,13 +364,13 @@ const AboutPage = () => {
 
               <div className="mt-6 space-y-3">
                 <div className="flex items-center gap-2">
-                  <Leaf className="text-[#009a8d] w-5 h-5" />
+                  <Leaf className="text-[#118B50] w-5 h-5" />
                   <span className="text-gray-700">
                     Sustainable Energy Solutions
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Zap className="text-[#009a8d] w-5 h-5" />
+                  <Zap className="text-[#118B50] w-5 h-5" />
                   <span className="text-gray-700">
                     Efficient Implementation
                   </span>
@@ -381,7 +382,7 @@ const AboutPage = () => {
       </div>
 
       {/* Core Values */}
-      <div className="bg-gradient-to-b to-[#009a8d]/10 from-transparent py-16 mb-20">
+      <div className="bg-gradient-to-b to-[#118B50]/10 from-transparent py-16 mb-20">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">
             Our Core Values
@@ -394,7 +395,7 @@ const AboutPage = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.2 }}
                 className="bg-white p-6 rounded-xl shadow-lg text-center">
-                <value.icon className="w-12 h-12 text-[#009a8d] mx-auto mb-4" />
+                <value.icon className="w-12 h-12 text-[#118B50] mx-auto mb-4" />
                 <h3 className="text-xl font-bold mb-2">{value.title}</h3>
                 <p className="text-gray-600">{value.description}</p>
               </motion.div>
@@ -407,7 +408,7 @@ const AboutPage = () => {
       <TimelineSection />
 
       {/* Achievements */}
-      <div className="bg-[#009a8d] text-white py-16 mb-20">
+      <div className="bg-[#118B50] text-white py-16 mb-20">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">
             Our Achievements
@@ -438,11 +439,13 @@ const AboutPage = () => {
   to drive innovation and create a greener tomorrow.
 </p>
 
+{/* <CompanyAddressComponent/> */}
+
 <Link to={"/contact"}>
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="bg-[#009a8d] text-white px-8 py-3 rounded-lg font-semibold flex items-center mx-auto hover:bg-[#008075] transition-colors">
+          className="bg-[#118B50] text-white px-8 py-3 rounded-lg font-semibold flex items-center mx-auto hover:bg-[#008075] transition-colors">
           Contact Us
           <ArrowRight className="ml-2 h-5 w-5" />
         </motion.button>

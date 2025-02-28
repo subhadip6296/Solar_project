@@ -6,7 +6,7 @@ const ContactPage = () => {
   return (
     <>
       <ContactFormComponent />
-      <CompanyAddressComponent />
+      {/* <CompanyAddressComponent /> */}
     </>
   );
 };
