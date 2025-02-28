@@ -99,8 +99,8 @@ const ServicesPage = () => {
             Driving Sustainable Energy, Smart Mobility Solutions, and
              Student Innovation</h1>
 <p className="text-lg md:text-xl text-gray-200 mb-8">
-  From high-performance e-bikes to cutting-edge solar solutions and student-driven innovations, 
-  Evoltriv is shaping a greener, smarter future.
+Student Driven Innovations, EvolTriv
+promises in shaping a greener and smarter future.  
 </p>
 
               {/* <motion.button

@@ -13,6 +13,8 @@ import ServicesPage from "@/pages/ServicesPage";
 // import BlogsPage from "@/pages/BlogsPage";
 import EventsPage from "@/pages/EventsPage";
 import ContactPage from "@/pages/ContactPage";
+import GalleryPage from "@/pages/GalleryPage";
+
 
 // Admin Pages
 import AdminLoginPage from "@/pages/AdminLoginPage";
@@ -71,6 +73,13 @@ const routeMetadata = {
     keywords:
       "contact EvolTriv, solar consulting, electric mobility inquiries, project guidance",
   },
+  gallery: {
+    title: "Gallery | EvolTriv",
+    description:
+      "Join our workshops and events on renewable energy, electric mobility, and hands-on technical projects.",
+    keywords:
+      "solar workshops, e-bike training, technical learning, clean energy events",
+  },
 };
 
 const PageHelmet = ({ metadata }) => (
@@ -102,6 +111,7 @@ const App = () => {
           {/* <Route path="blogs" element={<><PageHelmet metadata={routeMetadata.blogs} /><BlogsPage /></>} /> */}
           <Route path="events" element={<><PageHelmet metadata={routeMetadata.events} /><EventsPage /></>} />
           <Route path="contact" element={<><PageHelmet metadata={routeMetadata.contact} /><ContactPage /></>} />
+          <Route path="gallery" element={<><PageHelmet metadata={routeMetadata.gallery}/><GalleryPage/></>}/>
         </Route>
 
         <Route path="admin">

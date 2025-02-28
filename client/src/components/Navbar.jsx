@@ -10,7 +10,7 @@ import {
   HandPlatter,
   FileText,
   Calendar,
-
+BookImage,
   Contact,
   Handshake,
   Home
@@ -47,6 +47,8 @@ const Navbar = () => {
     { name: "Events", path: "/events", icon: Calendar },
     { name: "About Us", path: "/about", icon: Info },
     { name: "Contact Us", path: "/contact", icon: Contact },
+    { name: "Gallery", path: "/gallery", icon: BookImage },
+
   ];
 
   const isCurrentPath = (path) => {

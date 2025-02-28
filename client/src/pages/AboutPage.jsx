@@ -78,6 +78,7 @@ const milestones = [
     tags: ["Future", "Goals", "Vision"],
   },
 ];
+
 const TimelineSection = () => {
   return (
     <section className="py-20 bg-gradient-to-b from-white to-gray-50">
