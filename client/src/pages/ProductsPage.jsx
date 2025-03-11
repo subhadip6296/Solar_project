@@ -552,7 +552,7 @@ const ProductsPage = () => {
     );
   };
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white w-full overflow-hidden">
       {/* Hero Section */}
       <div className="bg-[#C1D8C3] text-black py-16">
         <div className="max-w-7xl mx-auto px-4">
@@ -568,7 +568,7 @@ const ProductsPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
               className="text-xl text-black max-w-2xl mx-auto">
-              Discover our comprehensive range of solar products designed for
+              Discover our comprehensive range of solar services designed for
               efficiency, reliability, and sustainability.
             </motion.p>
           </div>
@@ -576,14 +576,15 @@ const ProductsPage = () => {
       </div>
 
       {/* Products Section */}
-      <div className="max-w-7xl mx-auto px-4 py-16">
-        <Tabs defaultValue={selectedCategory} className="space-y-8">
-          <div className="flex justify-center">
-            <TabsList>
-              <TabsTrigger
+      <div className="max-w-7xl mx-auto px-4 py-16 w-full overflow-hidden">
+        <Tabs defaultValue={selectedCategory} className="space-y-8 ">
+        <div className="flex justify-center overflow-hidden bg-black sm:bg-gray-100 w-full sm:w-fit mx-auto">
+        <TabsList className="flex justify-center items-center px-2 flex-nowrap scale-75 sm:scale-100 h-8 bg-gray-600 sm:bg-gray-300 text-white sm:text-black">
+        <TabsTrigger
+
                 value="All"
                 onClick={() => setSelectedCategory("All")}>
-                All Products
+                All Services
               </TabsTrigger>
               {products.map((category) => (
                 <TabsTrigger
@@ -597,8 +598,8 @@ const ProductsPage = () => {
           </div>
 
           <TabsContent value="All">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {getAllProducts().map((product) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {getAllProducts().map((product) => (
                 <ProductCard key={product.name} product={product} />
               ))}
             </div>
@@ -606,8 +607,8 @@ const ProductsPage = () => {
 
           {products.map((category) => (
             <TabsContent key={category.id} value={category.category}>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {category.items.map((product) => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
+            {category.items.map((product) => (
                   <ProductCard key={product.name} product={product} />
                 ))}
               </div>

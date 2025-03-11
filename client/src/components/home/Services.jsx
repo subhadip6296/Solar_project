@@ -78,7 +78,7 @@ import { WobbleCard } from "../ui/wobble-card";
 const products = [
   {
     id: 1,
-    category: "Renewable Products",
+    category: "Renewable Services",
     heading: "Harnessing the Power of the Sun",
     description:
       "Our renewable energy solutions focus on sustainability and efficiency. Whether it's solar street lights, rooftop solar panels, or solar water pumps, we provide cost-effective and long-term energy solutions for residential and commercial use.",
@@ -205,7 +205,7 @@ export function WobbleCardDemo() {
           {/* Products Heading */}
           <div className="col-span-1 lg:col-span-2 text-center mt-10">
             <h4 className="text-3xl font-bold text-gray-900">
-              Products in {product.category}
+              Services in {product.category}
             </h4>
           </div>
 

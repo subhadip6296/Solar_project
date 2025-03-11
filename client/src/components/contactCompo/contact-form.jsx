@@ -233,7 +233,7 @@ export function ContactFormComponent() {
   return (
     <div className="grid md:grid-cols-2 mt-16 mb-16 gap-y-8">
       <div>
-        <img className="rounded-md" src={images.contact} alt="" />
+        <img className="rounded-md" src='https://solariumenergy.in/wp-content/uploads/2022/01/service01-1-1024x1024.jpg' alt="" />
       </div>
       <div className="max-w-md w-full mx-auto px-4 bg-card rounded-lg">
         <h2 className=" text-2xl font-bold mb-6 text-center ">

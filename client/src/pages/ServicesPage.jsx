@@ -57,11 +57,11 @@ const services = [
     },
   },
   {
-    title: "Student Project Consulting",
+    title: "Student Support",
     image: "https://mariposabicycles.ca/wp-content/uploads/2019/11/coc19-1010-bike-shop-george-harvey02.jpg",
     icon: Wrench,
     description:
-    "Empowering students with hands-on experience and guidance in renewable energy, e-mobility, and sustainability projects.",
+    "Empowering students with hands-on experience and guidance in renewable energy, e-mobility, and Internet of Things.",
     benefits: [
       "Expert mentorship",
       "Industry insights",
@@ -156,6 +156,9 @@ promises in shaping a greener and smarter future.
                   ))}
                 </div>
 
+
+
+
                 <div className="grid grid-cols-3 gap-4 pt-6">
                   {Object.entries(service.stats).map(([key, value]) => (
                     <div key={key} className="text-center">
@@ -168,6 +171,19 @@ promises in shaping a greener and smarter future.
                     </div>
                   ))}
                 </div>
+
+
+          <div className="pl-12 pt-8">    
+                <Link to={"/products"}>
+  <motion.button
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+    className="bg-[#118B50] text-white px-6 py-3 rounded-lg flex items-center ">
+    Explore Now
+    <ArrowRight className="ml-2 h-5 w-5" />
+  </motion.button>
+</Link>
+</div>  
               </div>
             </motion.div>
           ))}

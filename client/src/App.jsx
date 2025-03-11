@@ -39,9 +39,9 @@ const routeMetadata = {
       "about EvolTriv, clean energy company, solar expertise, e-mobility, project consulting",
   },
   products: {
-    title: "Our Products | EvolTriv",
+    title: "Our Services | EvolTriv",
     description:
-      "Explore EvolTriv’s advanced solar products and e-mobility solutions, including solar panels, inverters, batteries, and electric bicycles.",
+      "Explore EvolTriv’s advanced solar services and e-mobility solutions, including solar panels, inverters, batteries, and electric bicycles.",
     keywords:
       "solar panels, solar inverters, electric bikes, renewable energy solutions, sustainable transportation",
   },
