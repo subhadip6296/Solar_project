@@ -578,8 +578,8 @@ const ProductsPage = () => {
       {/* Products Section */}
       <div className="max-w-7xl mx-auto px-4 py-16 w-full overflow-hidden">
         <Tabs defaultValue={selectedCategory} className="space-y-8 ">
-        <div className="flex justify-center overflow-hidden bg-black sm:bg-gray-100 w-full sm:w-fit mx-auto">
-        <TabsList className="flex justify-center items-center px-2 flex-nowrap scale-75 sm:scale-100 h-8 bg-gray-600 sm:bg-gray-300 text-white sm:text-black">
+        <div className="flex justify-center overflow-hidden bg-black sm:bg-gray-800 w-full sm:w-fit mx-auto">
+        <TabsList className="flex justify-center items-center px-2 flex-nowrap scale-75 sm:scale-100 h-8 bg-gray-800 sm:bg-gray-300 text-white sm:text-black">
         <TabsTrigger
 
                 value="All"
