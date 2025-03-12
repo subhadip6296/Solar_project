@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { images } from "../assets/Assets";
+import ProductsPage from "../pages/ProductsPage";
 import {
   Sun,
   Building2,
@@ -81,6 +82,9 @@ const services = [
 const ServicesPage = () => {
   return (
     <div className="bg-white">
+    
+
+    {/* <ProductsPage/> */}
       {/* Hero Section */}
       <div className="relative h-[70vh] overflow-hidden">
         <img
@@ -190,7 +194,10 @@ promises in shaping a greener and smarter future.
         </div>
       </div>
 
-      {/* CTA Section */}
+
+<ProductsPage/>
+
+      {/* CTA Section
       <div className="bg-[#C1D8C3] py-20 mt-20">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
@@ -216,8 +223,9 @@ promises in shaping a greener and smarter future.
             </motion.button>
             </Link>
           </motion.div>
-        </div>
-      </div>
+           </div>
+        </div> */}
+     
     </div>
   );
 };

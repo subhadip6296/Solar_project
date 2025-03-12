@@ -241,8 +241,8 @@ const Navbar = () => {
   const navItems = [
     { name: "Home", path: "/", icon: Home },
     { name: "About Us", path: "/about", icon: Info },
-    { name: "Overview", path: "/services", icon: Handshake },
-    { name: "Services", path: "/products", icon: ShoppingBag },
+    { name: "Services", path: "/services", icon: Handshake },
+    // { name: "Products", path: "/products", icon: ShoppingBag },
     { name: "Events", path: "/events", icon: Calendar },
     { name: "Contact Us", path: "/contact", icon: Contact },
   ];
@@ -285,7 +285,7 @@ const Navbar = () => {
 
  
 
-<Link to="/gallery" className="flex items-center gap-2 text-gray-600 hover:text-[#118B50]">
+                <Link to="/gallery" className="flex items-center gap-2 text-gray-600 hover:text-[#118B50]">
 
                   <BookImage className="w-5 h-5" />
                    Gallery
