@@ -240,7 +240,6 @@ const Navbar = () => {
 
   const navItems = [
     { name: "Home", path: "/", icon: Home },
-    { name: "About Us", path: "/about", icon: Info },
     { name: "Services", path: "/services", icon: Handshake },
     // { name: "Products", path: "/products", icon: ShoppingBag },
     { name: "Events", path: "/events", icon: Calendar },

@@ -18,72 +18,74 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 const milestones = [
-  {
-    year: "2025",
-    title: "Evoltriv Founded",
-    description:
-      "Started with a mission to revolutionize renewable energy and student-led innovations.",
-    icon: Rocket,
-    stats: "Initial team of 5 members",
-    tags: ["Startup", "Innovation", "Vision"],
-  },
-  {
-    year: "2025",
-    title: "Solar Division Launched",
-    description:
-      "Successfully installed our first solar project for sustainable energy solutions.",
-    icon: CheckCircle2,
-    stats: "50kW solar installation",
-    tags: ["Solar", "Sustainability", "Growth"],
-  },
-  {
-    year: "2026",
-    title: "E-Bike Development",
-    description:
-      "Initiated the development of e-bike prototypes to promote green mobility.",
-    icon: Building2,
-    stats: "3 innovative prototypes developed",
-    tags: ["Electric Mobility", "Innovation", "Green Tech"],
-  },
-  {
-    year: "2027",
-    title: "Student Consulting Services Introduced",
-    description: "Expanded to provide hands-on projects and consulting for students.",
-    icon: Users,
-    stats: "100+ students engaged",
-    tags: ["Education", "Consulting", "Hands-on Learning"],
-  },
-  {
-    year: "2027",
-    title: "Commercial Solar Projects",
-    description: "Scaled operations to offer solar solutions for businesses and industries.",
-    icon: TrendingUp,
-    stats: "5MW+ total solar installations",
-    tags: ["Business", "Renewable Energy", "Expansion"],
-  },
-  {
-    year: "2028",
-    title: "Industry Recognition",
-    description: "Recognized for pioneering efforts in renewable energy and student innovation.",
-    icon: Award,
-    stats: "95% customer satisfaction",
-    tags: ["Award", "Recognition", "Excellence"],
-  },
-  {
-    year: "2028",
-    title: "Future Goals",
-    description: "Aiming for 20MW+ solar installations and expanding student projects.",
-    icon: Target,
-    stats: "Targeting 20MW+ installations",
-    tags: ["Future", "Goals", "Vision"],
-  },
+  // {
+  //   year: "2025",
+  //   title: "Evoltriv Founded",
+  //   description:
+  //     "Started with a mission to revolutionize renewable energy and student-led innovations.",
+  //   icon: Rocket,
+  //   stats: "Initial team of 5 members",
+  //   tags: ["Startup", "Innovation", "Vision"],
+  // }
+  // {
+  //   year: "2025",
+  //   title: "Solar Division Launched",
+  //   description:
+  //     "Successfully installed our first solar project for sustainable energy solutions.",
+  //   icon: CheckCircle2,
+  //   stats: "50kW solar installation",
+  //   tags: ["Solar", "Sustainability", "Growth"],
+  // },
+  // {
+  //   year: "2026",
+  //   title: "E-Bike Development",
+  //   description:
+  //     "Initiated the development of e-bike prototypes to promote green mobility.",
+  //   icon: Building2,
+  //   stats: "3 innovative prototypes developed",
+  //   tags: ["Electric Mobility", "Innovation", "Green Tech"],
+  // },
+  // {
+  //   year: "2027",
+  //   title: "Student Consulting Services Introduced",
+  //   description: "Expanded to provide hands-on projects and consulting for students.",
+  //   icon: Users,
+  //   stats: "100+ students engaged",
+  //   tags: ["Education", "Consulting", "Hands-on Learning"],
+  // },
+  // {
+  //   year: "2027",
+  //   title: "Commercial Solar Projects",
+  //   description: "Scaled operations to offer solar solutions for businesses and industries.",
+  //   icon: TrendingUp,
+  //   stats: "5MW+ total solar installations",
+  //   tags: ["Business", "Renewable Energy", "Expansion"],
+  // },
+  // {
+  //   year: "2028",
+  //   title: "Industry Recognition",
+  //   description: "Recognized for pioneering efforts in renewable energy and student innovation.",
+  //   icon: Award,
+  //   stats: "95% customer satisfaction",
+  //   tags: ["Award", "Recognition", "Excellence"],
+  // },
+  // {
+  //   year: "2028",
+  //   title: "Future Goals",
+  //   description: "Aiming for 20MW+ solar installations and expanding student projects.",
+  //   icon: Target,
+  //   stats: "Targeting 20MW+ installations",
+  //   tags: ["Future", "Goals", "Vision"],
+  // },
 ];
 
 const TimelineSection = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-gray-50">
-      <div className="max-w-7xl mx-auto px-4">
-        <motion.div
+    <section></section>
+  )}
+    // <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+    //   <div className="max-w-7xl mx-auto px-4">
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -95,10 +97,9 @@ const TimelineSection = () => {
             From humble beginnings to industry leadership, explore our journey
             of innovation and sustainable impact
           </p>
-        </motion.div>
+        </motion.div> */}
 
-        <div className="relative">
-          {/* Timeline Line */}
+        {/* <div className="relative">
           <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-[#118B50] to-[#118B50] rounded-full hidden md:block" />
 
           {milestones.map((milestone, index) => (
@@ -113,7 +114,6 @@ const TimelineSection = () => {
                 className={`flex flex-col md:flex-row items-center ${
                   index % 2 === 0 ? "md:flex-row-reverse" : ""
                 }`}>
-                {/* Content */}
                 <div className="md:w-1/2 p-4">
                   <motion.div
                     whileHover={{ y: -5 }}
@@ -145,35 +145,34 @@ const TimelineSection = () => {
                       ))}
                     </div>
                   </motion.div>
-                </div>
+                </div> */}
 
                 {/* Timeline Node */}
-                <div className="hidden md:flex w-8 h-8 absolute left-1/2 transform -translate-x-1/2">
+                {/* <div className="hidden md:flex w-8 h-8 absolute left-1/2 transform -translate-x-1/2">
                   <motion.div
                     initial={{ scale: 0 }}
                     whileInView={{ scale: 1 }}
                     viewport={{ once: true }}
                     className="w-8 h-8 bg-[#118B50] rounded-full border-4 border-white shadow-lg"
                   />
-                </div>
+                </div> */}
 
                 {/* Spacer for opposite side */}
-                <div className="md:w-1/2" />
+                {/* <div className="md:w-1/2" />
               </div>
             </motion.div>
           ))}
 
-          {/* Final node */}
           <motion.div
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
             className="w-8 h-8 bg-[#118B50] rounded-full border-4 border-white shadow-lg absolute left-1/2 transform -translate-x-1/2 bottom-0 hidden md:block"
           />
-        </div>
+        </div> */}
 
         {/* Future Vision */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -183,11 +182,11 @@ const TimelineSection = () => {
   As we move forward, we stay dedicated to advancing solar energy solutions, promoting sustainable e-mobility, and empowering students through hands-on consulting. Join us in shaping a cleaner, smarter, and more sustainable future.
 </p>
 
-        </motion.div>
-      </div>
-    </section>
-  );
-};
+        </motion.div> */}
+    //   </div>
+    // </section>
+   
+  
 
 const AboutPage = () => {
   const fadeInUp = {

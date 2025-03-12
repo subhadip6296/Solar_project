@@ -5,12 +5,15 @@ import Hero from "@/components/home/Hero";
 import Number from "@/components/home/Number";
 import Products from "@/components/home/Products";
 import Testimonial from "@/components/home/Testimonial";
+import AboutPage from "../pages/AboutPage"
 
 const HomePage = () => {
   return (
     <main className="w-full">
-      <Hero />
-      <WobbleCardDemo />
+      <div><Hero /></div>
+      <div className="pt-8 pb-8"><WobbleCardDemo /></div>
+      <div className="pt-8 pb-8"><AboutPage/></div>
+
       {/* <Products /> */}
       {/* <Testimonial /> */}
       {/* <Number /> */}

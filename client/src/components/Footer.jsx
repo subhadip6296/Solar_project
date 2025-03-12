@@ -4,8 +4,7 @@ import { Button } from "./ui/button";
 
 const Footer = () => {
   const services = [
-    { service: "Residential Installation", link: "/services" },
-    { service: "Commercial Installation", link: "/services" },
+    { service: "Solar system Installation", link: "/services" },
     { service: "Electric e-Bicycles", link: "/services" },
     { service: "Student Consulting", link: "/services" },
   ];
