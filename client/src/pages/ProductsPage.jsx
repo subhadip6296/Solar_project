@@ -554,7 +554,7 @@ const ProductsPage = () => {
   return (
     <div className="min-h-screen bg-white w-full overflow-hidden">
       {/* Hero Section */}
-      <div className="bg-[#C1D8C3] text-black py-16">
+      {/* <div className="bg-[#C1D8C3] text-black py-16">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center">
             <motion.h1
@@ -573,7 +573,7 @@ const ProductsPage = () => {
             </motion.p>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Products Section */}
       <div className="max-w-7xl mx-auto px-4 py-16 w-full overflow-hidden">

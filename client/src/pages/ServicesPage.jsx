@@ -39,7 +39,7 @@ const services = [
   },
   
   {
-    title: "E-Bike Solutions",
+    title: "Electric Mobility Solutions",
     image: "https://images.squarespace-cdn.com/content/v1/5abfd225fcf7fd318b9d1fce/d8019050-867b-46ea-89f3-5b6b74506ab0/ciclo-ebikes.com+%7C+2019.09.30+%7C+177.jpg",
     icon: Battery,
     description:

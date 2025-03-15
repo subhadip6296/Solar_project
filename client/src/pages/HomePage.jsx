@@ -9,9 +9,9 @@ import AboutPage from "../pages/AboutPage"
 
 const HomePage = () => {
   return (
-    <main className="w-full">
-      <div><Hero /></div>
-      <div className="pt-8 pb-8"><WobbleCardDemo /></div>
+    <main >
+      {/* <div><Hero /></div> */}
+      <div ><WobbleCardDemo /></div>
       <div className="pt-8 pb-8"><AboutPage/></div>
 
       {/* <Products /> */}

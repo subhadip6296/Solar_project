@@ -195,32 +195,13 @@ const AboutPage = () => {
     transition: { duration: 0.8 },
   };
 
-  const stats = [
-    { number: "500+", label: "Installations" },
-    { number: "95%", label: "Client Satisfaction" },
-    { number: "50+", label: "Expert Team" },
-    { number: "24/7", label: "Support" },
-  ];
-  const values = [
-    {
-      icon: Sun,
-      title: "Solar Energy Solutions",
-      description:
-        "Providing high-efficiency solar installations for homes, businesses, and industries.",
-    },
-    {
-      icon: Zap,
-      title: "E-Bike Innovation",
-      description:
-        "Developing cutting-edge electric bicycles for sustainable and smart mobility.",
-    },
-    {
-      icon: Users,
-      title: "Student Consulting",
-      description:
-        "Empowering students with hands-on projects and industry-driven learning experiences.",
-    },
-  ];
+  // const stats = [
+  //   { number: "500+", label: "Installations" },
+  //   { number: "95%", label: "Client Satisfaction" },
+  //   { number: "50+", label: "Expert Team" },
+  //   { number: "24/7", label: "Support" },
+  // ];
+ 
   
   const achievements = [
     "500+ Solar Installations for Homes & Businesses",
@@ -235,7 +216,7 @@ const AboutPage = () => {
   return (
     <div className="pb-16">
       {/* Hero Section with Background */}
-      <div className="relative py-20 bg-gradient-to-b from-[#118B50]/10 to-transparent overflow-hidden">
+      {/* <div className="relative py-20 bg-gradient-to-b from-[#118B50]/10 to-transparent overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-4">
           <motion.div
             initial="initial"
@@ -273,7 +254,7 @@ const AboutPage = () => {
             </motion.div>
 
             {/* Stats Section */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
@@ -291,15 +272,16 @@ const AboutPage = () => {
                   <div className="text-sm text-gray-600 mt-1">{stat.label}</div>
                 </motion.div>
               ))}
-            </motion.div>
+            </motion.div> 
           </motion.div>
         </div>
-      </div>
+      </div> */}
 
       {/* Mission & Vision Section */}
-      <div className="max-w-7xl mx-auto px-4 mb-20 mt-[-64px]">
+            {/* Why Section */}
+            <div className="max-w-7xl mx-auto px-4 mb-20 mt-[-64px]">
         <div className="grid md:grid-cols-2 gap-8">
-          {/* Mission Card */}
+          {/* Why Solar Energy Card */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -314,32 +296,26 @@ const AboutPage = () => {
                 <div className="p-3 bg-[#118B50]/10 rounded-xl">
                   <Sun className="text-[#118B50] w-6 h-6" />
                 </div>
-                <h2 className="text-2xl font-bold">Our Mission</h2>
+                <h2 className="text-2xl font-bold">Why Solar Energy?</h2>
               </div>
               <p className="text-gray-600 text-lg leading-relaxed">
-  To accelerate India's transition to sustainable energy by providing innovative 
-  solar solutions, advancing e-bike technology, and empowering students through 
-  hands-on consulting, ensuring a greener and smarter future.
-</p>
+                Solar energy is a key driver in achieving sustainability, reducing carbon footprints, and ensuring energy independence. It provides clean, renewable power for agricultural, residential, commercial, and industrial applications, reducing dependence on fossil fuels and lowering electricity costs.
+              </p>
 
               <div className="mt-6 space-y-3">
                 <div className="flex items-center gap-2">
                   <Leaf className="text-[#118B50] w-5 h-5" />
-                  <span className="text-gray-700">
-                    Sustainable Energy Solutions
-                  </span>
+                  <span className="text-gray-700">Eco-Friendly & Sustainable</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Zap className="text-[#009a8d] w-5 h-5" />
-                  <span className="text-gray-700">
-                    Efficient Implementation
-                  </span>
+                  <span className="text-gray-700">Cost-Effective & Efficient</span>
                 </div>
               </div>
             </div>
           </motion.div>
 
-          {/* Vision Card */}
+          {/* Why EvolTriv Card */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -354,26 +330,20 @@ const AboutPage = () => {
                 <div className="p-3 bg-[#118B50]/10 rounded-xl">
                   <Target className="text-[#009a8d] w-6 h-6" />
                 </div>
-                <h2 className="text-2xl font-bold">Our Vision</h2>
+                <h2 className="text-2xl font-bold">Why EvolTriv?</h2>
               </div>
               <p className="text-gray-600 text-lg leading-relaxed">
-  To be the leading provider of sustainable energy solutions in India by pioneering 
-  solar innovations, advancing e-bike technology, and empowering students through 
-  hands-on consulting, driving the nation towards a cleaner and greener future.
-</p>
+              EvolTriv specializes in solar PV consulting, design, and implementation for agricultural, residential, commercial, and industrial sectors, offering on-grid, off-grid, hybrid, and microgrid solutions. We also develop small-scale electric mobility solutions like e-bikes for sustainable transportation. Additionally, we empower students with hands-on training in renewable energy, e-mobility, and IoT, bridging the gap between theory and practice.              </p>
+             
 
               <div className="mt-6 space-y-3">
                 <div className="flex items-center gap-2">
                   <Leaf className="text-[#118B50] w-5 h-5" />
-                  <span className="text-gray-700">
-                    Sustainable Energy Solutions
-                  </span>
+                  <span className="text-gray-700">Innovative & Sustainable Solutions</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Zap className="text-[#118B50] w-5 h-5" />
-                  <span className="text-gray-700">
-                    Efficient Implementation
-                  </span>
+                  <span className="text-gray-700">Empowering Future Technologies</span>
                 </div>
               </div>
             </div>
@@ -382,7 +352,7 @@ const AboutPage = () => {
       </div>
 
       {/* Core Values */}
-      <div className="bg-gradient-to-b to-[#118B50]/10 from-transparent py-16 mb-20">
+      {/* <div className="bg-gradient-to-b to-[#118B50]/10 from-transparent py-16 mb-20">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">
             Our Core Values
@@ -402,7 +372,7 @@ const AboutPage = () => {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Journey Timeline */}
       <TimelineSection />
