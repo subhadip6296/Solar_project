@@ -31,7 +31,7 @@ const values = [
   },
   {
     icon: Zap,
-    title: "E-Bike Innovation",
+    title: "Electric Mobility Innovation",
     description:
       "Developing cutting-edge electric bicycles for sustainable and smart mobility.",
   },
