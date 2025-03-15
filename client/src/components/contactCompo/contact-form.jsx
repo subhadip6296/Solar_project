@@ -419,7 +419,7 @@ export function ContactFormComponent() {
         emailjs.send(serviceId, templateId, values, publicKey)
             .then(() => {
                 toast({
-                    title: "Message Sent",
+                    title: "Message Sentt",
                     description: "We've received your message and will get back to you soon.",
                 });
                 form.reset();
