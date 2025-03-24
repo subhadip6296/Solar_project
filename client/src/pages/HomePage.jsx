@@ -7,10 +7,14 @@ import Products from "@/components/home/Products";
 import Testimonial from "@/components/home/Testimonial";
 import AboutPage from "../pages/AboutPage"
 import Gif from '../components/home/Gif'
+import FloatingContact from "../components/home/ContactLinks";
 
 const HomePage = () => {
   return (
     <main >
+       <div className="relative">
+       <FloatingContact />
+       </div>
       {/* <div><Hero /></div> */}
       <div ><WobbleCardDemo /></div>
       <div className="pt-1 pb-8"><AboutPage/></div>
