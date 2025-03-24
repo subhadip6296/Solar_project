@@ -399,46 +399,53 @@ export function ContactFormComponent() {
         },
     });
 
-    const onSubmit = (values) => {
-        setIsSubmitting(true);
+    const onSubmit = async (values) => {
+        try {
+            setIsSubmitting(true);
     
-        const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-        const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-        const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+            const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+            const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+            const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
     
-        const templateParams = {
-            from_name: values.name,
-            contact_number: values.contactNo,
-            from_email: values.email,
-            subject: values.subject,
-            message: values.query,
-            category: values.category,
-        };
+            const templateParams = {
+                from_name: values.name,
+                contact_number: values.contactNo,
+                from_email: values.email,
+                subject: values.subject,
+                message: values.query,
+                category: values.category,
+            };
     
-        emailjs.send(serviceId, templateId, templateParams, publicKey)
-            .then(() => {
-                toast({
-                    title: "Message Sent",
-                    description: "We've received your message and will get back to you soon.",
-                });
-                console.log("Toast triggered");
+            await emailjs.send(serviceId, templateId, templateParams, publicKey);
     
-                setTimeout(() => {
-                    form.reset();
-                }, 500);
-            })
-            .catch((error) => {
-                console.error("Email sending error:", error);
-                toast({
-                    title: "Error",
-                    description: "Failed to send message. Please try again.",
-                });
-            })
-            .finally(() => {
-                setIsSubmitting(false);
+            toast({
+                title: "Message Sent",
+                description: "We've received your message and will get back to you soon.",
             });
+    
+            console.log("Toast triggered");
+    
+            form.reset({
+                name: "",
+                contactNo: "",
+                email: "",
+                subject: "",
+                query: "",
+                category: "",
+            });
+    
+        } catch (error) {
+            console.error("Email sending error:", error);
+    
+            toast({
+                title: "Error",
+                description: "Failed to send message. Please try again.",
+            });
+        } finally {
+            setIsSubmitting(false);
+        }
     };
-
+    
     return (
         <div className="grid md:grid-cols-2 mt-16 mb-16 gap-y-8">
                <div>
