@@ -246,7 +246,7 @@ export function WobbleCardDemo() {
         </div>
 
 
-        <Gif/>
+        {/* <Gif/> */}
 
         {/* Mission & Vision Section */}
         <div className="max-w-7xl mx-auto px-4 mb-20">
@@ -301,7 +301,7 @@ export function WobbleCardDemo() {
 
 
 
-       
+        <GridShowCase/>
 
   
         {/* core values */}
