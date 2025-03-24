@@ -5,7 +5,7 @@ const FloatingContact = () => {
     <div className="fixed left-2 top-1/2 -translate-y-1/2 flex flex-col space-y-3 z-50">
       {/* WhatsApp */}
       <a
-        href="https://wa.me/6302287735" // Replace with your WhatsApp number
+        href="https://wa.me/916302287735" // Replace with your WhatsApp number
         target="_blank"
         rel="noopener noreferrer"
         className="bg-green-500 text-white p-2 rounded-full shadow-lg hover:bg-green-600 transition"
