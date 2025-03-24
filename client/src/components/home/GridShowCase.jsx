@@ -49,7 +49,7 @@ const ScrollImage = ({ images }) => {
 };
 const CompactGrid = () => {
   return (
-    <div className="relative flex items-center justify-center min-h-screen bg-gray-900 px-16 py-8">
+    <div className="relative flex items-center justify-center min-h-screen bg-gray-900 px-4 py-8 md:px-16">
 
       {/* Grid Container */}
       <div className="w-[70vw] h-[90vh] grid grid-cols-4 grid-rows-4 gap-0">
