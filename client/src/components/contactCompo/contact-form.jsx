@@ -412,29 +412,30 @@ export function ContactFormComponent() {
     const onSubmit = (values) => {
         setIsSubmitting(true);
 
-        const serviceId = 'service_p39zzgh'; // Replace with your Service ID
-        const templateId = 'template_yshb1bh'; // Replace with your Template ID
-        const publicKey = 'Z62XFgVGkaSYUqmp0'; // Replace with your Public Key
+        const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-        emailjs.send(serviceId, templateId, values, publicKey)
-            .then(() => {
-                toast({
-                    title: "Message Sentt",
-                    description: "We've received your message and will get back to you soon.",
-                });
-                form.reset();
-            })
-            .catch((error) => {
-                console.error('Email sending error:', error);
-                toast({
-                    title: "Error",
-                    description: "Failed to send message. Please try again.",
-                });
-            })
-            .finally(() => {
-                setIsSubmitting(false);
-            });
-    };
+
+    emailjs.send(serviceId, templateId, values, publicKey)
+    .then(() => {
+        toast({
+            title: "Message Sent",
+            description: "We've received your message and will get back to you soon.",
+        });
+        form.reset();
+    })
+    .catch((error) => {
+        console.error('Email sending error:', error);
+        toast({
+            title: "Error",
+            description: "Failed to send message. Please try again.",
+        });
+    })
+    .finally(() => {
+        setIsSubmitting(false);
+    });
+};
 
     return (
         <div className="grid md:grid-cols-2 mt-16 mb-16 gap-y-8">
