@@ -15,7 +15,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="w-[90vw] mx-auto bg-[#000000] my-5 md:my-10 py-6 md:py-12 rounded-lg md:rounded-xl">
+    <footer className="w-[90vw] mx-auto bg-[url('https://i.gifer.com/9hw9.gif')] bg-[#000000] my-5 md:my-10 py-6 md:py-12 rounded-lg md:rounded-xl">
       <div className="w-[80vw] mx-auto grid gap-y-10 gap-x-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 text-white">
         {/* about us */}
         <div>

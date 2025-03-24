@@ -6,14 +6,15 @@ import Number from "@/components/home/Number";
 import Products from "@/components/home/Products";
 import Testimonial from "@/components/home/Testimonial";
 import AboutPage from "../pages/AboutPage"
+import Gif from '../components/home/Gif'
 
 const HomePage = () => {
   return (
     <main >
       {/* <div><Hero /></div> */}
       <div ><WobbleCardDemo /></div>
-      <div className="pt-8 pb-8"><AboutPage/></div>
-
+      <div className="pt-1 pb-8"><AboutPage/></div>
+{/* <Gif/> */}
       {/* <Products /> */}
       {/* <Testimonial /> */}
       {/* <Number /> */}

@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Cta from "@/components/home/Cta";
+import Testimonnial from '../components/home/Testimonial'
+import GridShowCase from '../components/home/GridShowCase'
 import {
   Shield,
   Target,
@@ -214,7 +216,7 @@ const AboutPage = () => {
   
 
   return (
-    <div className="pb-16">
+    <div className="pb-16 pt-24">
       {/* Hero Section with Background */}
       {/* <div className="relative py-20 bg-gradient-to-b from-[#118B50]/10 to-transparent overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-4">
@@ -351,6 +353,9 @@ const AboutPage = () => {
         </div>
       </div>
 
+
+        <GridShowCase />
+
       {/* Core Values */}
       {/* <div className="bg-gradient-to-b to-[#118B50]/10 from-transparent py-16 mb-20">
         <div className="max-w-7xl mx-auto px-4">
@@ -375,7 +380,10 @@ const AboutPage = () => {
       </div> */}
 
       {/* Journey Timeline */}
+
+      <div className="pb-24">
       <TimelineSection />
+      </div>
 
       {/* Achievements */}
       <div className="bg-[#118B50] text-white py-16 mb-20">
@@ -400,8 +408,12 @@ const AboutPage = () => {
         </div>
       </div>
 
+
+<Testimonnial/>
+
+
       {/* Call to Action */}
-      <div className="max-w-3xl mx-auto text-center px-4">
+      <div className="max-w-3xl mx-auto text-center px-4 pt-24">
         <h2 className="text-3xl font-bold mb-6">Ready to Go Solar?</h2>
         <p className="text-gray-600 mb-8">
   Join us in building a sustainable future. Whether it's solar energy, 

@@ -1,184 +1,139 @@
-import React, { useEffect, useRef } from "react";
-import KeenSlider from "keen-slider";
+import React, { useState } from "react";
 import "keen-slider/keen-slider.min.css";
 
-const testimonials = [
-  
-    {
-      "name": "Amit Verma",
-      "description": "Evoltriv’s solar installation transformed my home’s energy efficiency. My electricity bills have reduced significantly, and the installation process was smooth and professional.",
-      "rating": 5
-    },
-    {
-      "name": "Sneha Kapoor",
-      "description": "I recently purchased an e-bike from Evoltriv, and it has been a game-changer! The battery life is great, and it’s perfect for my daily commute. Highly recommend it!",
-      "rating": 4
-    },
-    {
-      "name": "Rohit Sharma",
-      "description": "Their student consulting service helped me and my team with our renewable energy project. The guidance was clear, and we successfully built our prototype on time!",
-      "rating": 5
-    },
-    {
-      "name": "Pooja Reddy",
-      "description": "The off-grid solar system I got from Evoltriv is perfect for my farmhouse. It works efficiently, and I no longer worry about power cuts!",
-      "rating": 5
-    },
-    {
-      "name": "Karthik Mehta",
-      "description": "Evoltriv's team was very helpful in explaining how on-grid solar works. The installation was seamless, and I’m already seeing great savings on my power bill!",
-      "rating": 4
-    }
-  
-  
-  // Add more testimonials as needed
+const testimonialsLeft = [
+  {
+    src: "https://t3.ftcdn.net/jpg/02/70/35/00/360_F_270350073_WO6yQAdptEnAhYKM5GuA9035wbRnVJSr.jpg",
+    title: "Solar Panel Installation",
+    description: "Harness the power of the sun with our efficient solar solutions.",
+    link: "https://example.com/solar",
+  },
+  {
+    src: "https://t4.ftcdn.net/jpg/03/70/45/50/360_F_370455050_fYaeGIDwOoKz5Ul3p0OwCQuysZebQU8a.jpg",
+    title: "Eco-friendly E-Bikes",
+    description: "Experience the future of transportation with our e-bikes.",
+    link: "https://example.com/ebike",
+  },
+  {
+    src: "https://t3.ftcdn.net/jpg/04/70/95/10/360_F_470951051_W1Qe1NvJSdkSj8D1zWcQvuD58VYc3XEP.jpg",
+    title: "Student Consulting",
+    description: "Helping students build innovative renewable energy projects.",
+    link: "https://example.com/consulting",
+  },
 ];
 
-const Testimonial = () => {
-  const sliderRef = useRef(null);
-  const keenSliderRef = useRef(null);
+const testimonialsRight = [
+  {
+    src: "https://t3.ftcdn.net/jpg/05/10/25/20/360_F_510252021_GIkHlT3xErDd9Qu9Ij3uh2zVLSWyFjU5.jpg",
+    title: "Off-Grid Solar System",
+    description: "Stay powered anywhere with our off-grid solar solutions.",
+    link: "https://example.com/offgrid",
+  },
+  {
+    src: "https://t3.ftcdn.net/jpg/06/10/75/30/360_F_610753030_Zt0Rk5fM6wx1J8EIlv92FR3vL5ABX8c6.jpg",
+    title: "On-Grid Solar Solutions",
+    description: "Save on electricity bills with seamless on-grid solar systems.",
+    link: "https://example.com/ongrid",
+  },
+  {
+    src: "https://t4.ftcdn.net/jpg/07/20/85/40/360_F_720854040_kJTbQ7Bxi2hZKMeBSMv9xrsLfHVJJJ9D.jpg",
+    title: "Solar Battery Storage",
+    description: "Store solar energy for uninterrupted power supply.",
+    link: "https://example.com/battery",
+  },
+];
 
-  useEffect(() => {
-    keenSliderRef.current = new KeenSlider(sliderRef.current, {
-      loop: true,
-      slides: {
-        origin: "center",
-        perView: 1.25,
-        spacing: 16,
-      },
-      breakpoints: {
-        "(min-width: 1024px)": {
-          slides: {
-            origin: "auto",
-            perView: 1.5,
-            spacing: 32,
-          },
-        },
-      },
-    });
-
-    const keenSliderPrevious = document.getElementById("keen-slider-previous");
-    const keenSliderNext = document.getElementById("keen-slider-next");
-
-    keenSliderPrevious.addEventListener("click", () =>
-      keenSliderRef.current.prev()
-    );
-    keenSliderNext.addEventListener("click", () =>
-      keenSliderRef.current.next()
-    );
-
-    const autoSlide = setInterval(() => {
-      keenSliderRef.current.next();
-    }, 3000); // Change slide every 2 seconds
-
-    return () => {
-      keenSliderPrevious.removeEventListener("click", () =>
-        keenSliderRef.current.prev()
-      );
-      keenSliderNext.removeEventListener("click", () =>
-        keenSliderRef.current.next()
-      );
-      clearInterval(autoSlide); // Clean up the interval on component unmount
-    };
-  }, []);
+const ImageSlider = () => {
+  const [isPausedLeft, setIsPausedLeft] = useState(false);
+  const [isPausedRight, setIsPausedRight] = useState(false);
 
   return (
-    <section className="bg-white">
-      <div className="px-4 lg:mx-20 py-12 sm:px-6 lg:me-0 lg:py-16 lg:pe-0 lg:ps-8 xl:py-24">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-center lg:gap-16">
-          <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Don't just take our word for it...
-            </h2>
-            <p className="mt-4 text-gray-700">
-  Hear what our satisfied customers have to say about their experiences with our solar solutions, e-bikes, and student consulting services. Your trust and satisfaction drive us to deliver the best!
-</p>
-            <div className="hidden lg:mt-8 lg:flex lg:gap-4">
-              <button
-                aria-label="Previous slide"
-                id="keen-slider-previous"
-                className="rounded-full border border-pcolor p-3 text-pcolor transition hover:bg-pcolor hover:text-white"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="size-5 rtl:rotate-180"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M15.75 19.5L8.25 12l7.5-7.5"
-                  />
-                </svg>
-              </button>
-              <button
-                aria-label="Next slide"
-                id="keen-slider-next"
-                className="rounded-full border border-pcolor p-3 text-pcolor transition hover:bg-pcolor hover:text-white"
-              >
-                <svg
-                  className="size-5 rtl:rotate-180"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M9 5l7 7-7 7"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
-
-          <div className="-mx-6 lg:col-span-2 lg:mx-0">
-            <div ref={sliderRef} className="keen-slider">
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className="keen-slider__slide">
-                  <blockquote className="flex h-full flex-col justify-between bg-emerald-50 p-6 shadow-sm sm:p-8 lg:p-12">
-                    <div>
-                      <div className="flex gap-0.5 text-green-500">
-                        {Array.from({ length: testimonial.rating }).map(
-                          (_, idx) => (
-                            <svg
-                              key={idx}
-                              className="size-5"
-                              fill="#118B50"
-                              viewBox="0 0 20 20"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                            </svg>
-                          )
-                        )}
-                      </div>
-                      <div className="mt-4">
-                        <p className="text-2xl font-bold text-black sm:text-3xl">
-                          {testimonial.name}
-                        </p>
-                        <p className="mt-4 leading-relaxed text-gray-700">
-                          {testimonial.description}
-                        </p>
-                      </div>
-                    </div>
-                    <footer className="mt-4 text-sm font-medium text-gray-700 sm:mt-6">
-                      &mdash; {testimonial.name}
-                    </footer>
-                  </blockquote>
+    <section className="bg-white py-12 space-y-12">
+      {/* Left to Right Infinite Scrolling */}
+      <h2 className="text-3xl font-bold text-center mb-12">
+            Blogs
+          </h2>
+      <div
+        className="overflow-hidden relative group"
+        onMouseEnter={() => setIsPausedLeft(true)}
+        onMouseLeave={() => setIsPausedLeft(false)}
+      >
+        <div
+          className="flex items-center gap-6 cursor-pointer scrolling-container"
+          style={{
+            animation: isPausedLeft ? "none" : "scroll-left 10s linear infinite",
+          }}
+        >
+          {[...testimonialsLeft, ...testimonialsLeft].map((item, index) => (
+            <a key={index} href={item.link} target="_blank" rel="noopener noreferrer">
+              <div className="min-w-[200px] bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+                <img src={item.src} alt={item.title} className="w-full h-40 object-cover" />
+                <div className="p-2 text-center">
+                  <h3 className="text-sm font-bold">{item.title}</h3>
+                  <p className="text-gray-600 mt-1 text-xs">{item.description}</p>
                 </div>
-              ))}
-            </div>
-          </div>
+              </div>
+            </a>
+          ))}
         </div>
       </div>
+
+      {/* Right to Left Infinite Scrolling */}
+      <div
+        className="overflow-hidden relative group"
+        onMouseEnter={() => setIsPausedRight(true)}
+        onMouseLeave={() => setIsPausedRight(false)}
+      >
+        <div
+          className="flex items-center gap-6 cursor-pointer scrolling-container"
+          style={{
+            animation: isPausedRight ? "none" : "scroll-right 10s linear infinite",
+          }}
+        >
+          {[...testimonialsRight, ...testimonialsRight].map((item, index) => (
+            <a key={index} href={item.link} target="_blank" rel="noopener noreferrer">
+              <div className="min-w-[200px] bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+                <img src={item.src} alt={item.title} className="w-full h-40 object-cover" />
+                <div className="p-2 text-center">
+                  <h3 className="text-sm font-bold">{item.title}</h3>
+                  <p className="text-gray-600 mt-1 text-xs">{item.description}</p>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      {/* Inline CSS for smooth infinite animations */}
+      <style>
+        {`
+          @keyframes scroll-left {
+            from {
+              transform: translateX(0);
+            }
+            to {
+              transform: translateX(-50%);
+            }
+          }
+
+          @keyframes scroll-right {
+            from {
+              transform: translateX(-50%);
+            }
+            to {
+              transform: translateX(0);
+            }
+          }
+
+          .scrolling-container {
+            display: flex;
+            white-space: nowrap;
+            width: max-content;
+          }
+        `}
+      </style>
     </section>
   );
 };
 
-export default Testimonial;
+export default ImageSlider;
