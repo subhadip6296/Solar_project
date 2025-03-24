@@ -20,11 +20,6 @@ const items = [
   { type: "image", text: "Bridging theory with practical application.", img: ["https://static.tildacdn.com/tild6362-3266-4730-b938-356131323931/shutterstock_2130028.jpg", "https://media.walkabouts.com/media/v4lmx53u/11-17-23-blog-post.png?anchor=center&mode=crop&width=455&height=290&rnd=133449770751130000", "https://wvutoday.wvu.edu/files/b6e3a0eb-a738-421e-83aa-24a8780af0f1/1200x800?cb=bad360cacee3ebd0f2a7d471f27f578b"] },
 ];
 
-// // Slow Scrolling Text Animation
-// const scrollText = {
-//   animate: { y: ["100%", "-100%"], transition: { repeat: Infinity, duration: 30, ease: "linear" } },
-// };
-
 // Text Box Animation (fade & slide in)
 const textBoxAnimation = {
   initial: { y: 20, opacity: 0 },
@@ -43,8 +38,7 @@ const ScrollImage = ({ images }) => {
 
   return (
     <div className="relative w-full h-full">
-      <img src={images[index]} alt="Scrolling Image" className="w-full h-full object-cover transition-opacity duration-700" />
-      {/* White dots for indication */}
+      <img src={images[index]} alt="Scrolling Image" className="w-full h-full object-contain transition-opacity duration-700" />
       <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-1">
         {images.map((_, i) => (
           <div key={i} className={`w-2 h-2 rounded-full ${i === index ? "bg-white" : "bg-gray-500"}`}></div>
@@ -53,23 +47,9 @@ const ScrollImage = ({ images }) => {
     </div>
   );
 };
-
 const CompactGrid = () => {
   return (
     <div className="relative flex items-center justify-center min-h-screen bg-gray-900 px-16 py-8">
-      {/* Left & Right Scrolling Text */}
-      {/* {["left-12 md:left-20", "right-12 md:right-20"].map((pos, i) => ( */}
-   {/* <motion.div 
-  //   key={i} 
-  //   className={`absolute top-1/2 transform -translate-y-1/2 ${pos} text-white text-4xl font-bold overflow-hidden h-[500px] hidden md:block`}
-  // >
-  //   <motion.div className="flex flex-col" {...scrollText}>
-  //     {["We", "offer ","solar", "e-mobility", "and", "hands-on", "technical", "training", "solutions."].map((letter, index) => (
-  //       <span key={index} className="leading-none">{letter}</span>
-  //     ))}
-  //   </motion.div>
-  // </motion.div>
-// ))} */}
 
       {/* Grid Container */}
       <div className="w-[70vw] h-[90vh] grid grid-cols-4 grid-rows-4 gap-0">
@@ -114,3 +94,5 @@ const CompactGrid = () => {
 };
 
 export default CompactGrid;
+
+
