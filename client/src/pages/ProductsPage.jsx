@@ -177,6 +177,41 @@ const products = [
           }
         ]
       },
+
+      {
+        "name": "Solar Water Heater",
+        "description": "Efficient solar-powered water heating solutions for residential, commercial, and industrial applications.",
+        "image": "https://example.com/solar-water-heater.jpg",
+        "icon": "Sun",
+        "features": [
+          "Uses solar energy to heat water",
+          "Works efficiently in all seasons",
+          "Reduces electricity and gas consumption"
+        ],
+        "specifications": {
+          "Tank Capacity": "100L - 500L",
+          "Heating Efficiency": "80-95%",
+          "Material": "Stainless Steel / Copper",
+          "Lifespan": "15-25 years"
+        },
+        "benefits": [
+          {
+            "title": "Energy Savings",
+            "description": "Lowers electricity and gas bills significantly."
+          },
+          {
+            "title": "Eco-Friendly Heating",
+            "description": "Reduces carbon emissions and reliance on fossil fuels."
+          },
+          {
+            "title": "Reliable Hot Water Supply",
+            "description": "Ensures consistent and efficient heating even in cold climates."
+          }
+        ]
+      },
+      
+
+      
       {
         "name": "Solar PV Cleaning and Maintenance",
         "description": "Professional cleaning and maintenance services to optimize solar panel performance.",
