@@ -8,6 +8,7 @@ import Testimonial from "@/components/home/Testimonial";
 import AboutPage from "../pages/AboutPage"
 import Gif from '../components/home/Gif'
 import FloatingContact from "../components/home/ContactLinks";
+import OurServices from "../components/home/OurServices";
 
 const HomePage = () => {
   return (

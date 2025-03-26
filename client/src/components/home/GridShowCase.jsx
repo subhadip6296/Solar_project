@@ -2,22 +2,22 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
 const items = [
-  { type: "image", text: "EvolTriv", img: ["https://thumbs.dreamstime.com/b/solar-power-consultant-expert-roof-installing-panel-345870488.jpg", "https://media.istockphoto.com/id/525206743/photo/solar-panel-on-a-red-roof.jpg?s=612x612&w=0&k=20&c=xcAkdNj8dFDhu8734FpRDAZDtN2bjr48RKEd9j2FL0U=", "https://arka360.com/ros/content/images/2023/05/pasted-image-0--1---1--compressed.jpg"] },
+  { type: "image", text: "EvolTriv", img: ["/src/assets/Images/b1.jpg", "/src/assets/Images/b11.jpg", "/src/assets/Images/b3.jpeg"] },
   { type: "text", content: "We offer efficient solar solutions." },
   { type: "image", text: "On-grid and off-grid available.", img: "https://i.gifer.com/origin/1f/1fe682b598a97cee3d5093cfa8c92f7f_w200.gif" },
   { type: "text", content: "Hybrid solar systems maximize efficiency." },
   { type: "text", content: "Custom solar solutions for industries." },
-  { type: "image", text: "Our solar systems ensure sustainability.", img: ["https://vancke.com/wp-content/uploads/2023/01/1842065947_1462233368_1600_1200.webp", "https://prelaunch.com/blog/wp-content/uploads/2023/12/electric-bike-manufacturing-process.jpg", "https://media.istockphoto.com/id/2051058317/photo/bike-mechanic-testing-the-rear-gear-shift-and-brakes-of-a-mountain-bike.jpg?s=612x612&w=0&k=20&c=Kt7TqVMeOd_tmYfH4Gsxf_OnMlomOaBjnSA9caC9iYU="] },
+  { type: "image", text: "Our solar systems ensure sustainability.", img: ["/src/assets/Images/c1.jpg", "/src/assets/Images/c2.jpg", "/src/assets/Images/c11.jpg"] },
   { type: "text", content: "We offer advanced e-mobility solutions." },
-  { type: "image", text: "E-bikes provide clean transportation alternatives.", img: "https://senadabikes.com/cdn/shop/files/herald-oleg_-1-1000_665_1080x.jpg?v=1726107969" },
+  { type: "image", text: "E-bikes provide clean transportation alternatives.", img: "https://cdn.shopify.com/s/files/1/0592/3766/2905/files/charge_the_ebike_by_pedaling.gif?v=1691983938" },
   { type: "image", text: "Affordable and efficient electric mobility.", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnSXbJsnv_AkVVc8P-Fa8S0gFmPWz_B6Jglw&s" },
   { type: "text", content: "Reducing fossil fuel dependency daily." },
-  { type: "image", text: "Innovative designs for better performance.", img: ["https://manekancor.com/wp-content/uploads/2024/12/01-3.jpg", "https://static.vecteezy.com/system/resources/thumbnails/000/695/297/small_2x/business-candle-stick-graph-chart-of-stock-market-investment.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROtFH98psLFOiNbj1JOEk5P_qj77UaTkD2q30mv4f822Ror-YiG0irqYNlNNigwTeD67w&usqp=CAU"] },
+  { type: "image", text: "Innovative designs for better performance.", img: ["/src/assets/Images/e1.jpg", "/src/assets/Images/e2.jpg", "/src/assets/Images/e11.jpg"] },
   { type: "text", content: "We offer hands-on technical training." },
   { type: "text", content: "Students gain real-world project experience." },
-  { type: "image", text: "Learn IoT and renewable energy.", img: "https://i.ytimg.com/vi/G8YcFNGauoY/hqdefault.jpg" },
+  { type: "image", text: "Learn IoT and renewable energy.", img: "https://www.boldbusiness.com/wp-content/uploads/2018/05/IoT.gif" },
   { type: "text", content: "Practical skills for future innovation." },
-  { type: "image", text: "Bridging theory with practical application.", img: ["https://static.tildacdn.com/tild6362-3266-4730-b938-356131323931/shutterstock_2130028.jpg", "https://media.walkabouts.com/media/v4lmx53u/11-17-23-blog-post.png?anchor=center&mode=crop&width=455&height=290&rnd=133449770751130000", "https://wvutoday.wvu.edu/files/b6e3a0eb-a738-421e-83aa-24a8780af0f1/1200x800?cb=bad360cacee3ebd0f2a7d471f27f578b"] },
+  { type: "image", text: "Bridging theory with practical application.", img: ["/src/assets/Images/d1.jpg", "/src/assets/Images/d2.jpeg", "/src/assets/Images/d3.jpg"] },
 ];
 
 // Text Box Animation (fade & slide in)
@@ -52,7 +52,7 @@ const CompactGrid = () => {
     <div className="relative flex items-center justify-center min-h-screen bg-gray-900 px-4 py-8 md:px-16">
 
       {/* Grid Container */}
-      <div className="w-[70vw] h-[90vh] grid grid-cols-4 grid-rows-4 gap-0">
+      <div className="w-[90vw] h-[120vh] grid grid-cols-4 grid-rows-4 gap-0">
         {items.map((item, index) => {
           const row = Math.floor(index / 4);
           const col = index % 4;

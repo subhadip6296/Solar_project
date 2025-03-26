@@ -24,65 +24,11 @@ import {
   Zap,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import OurServices from "./OurServices";
 
 
 
 
-const testimonals = [
-  
-    {
-      src: "https://thumbs.dreamstime.com/b/solar-power-consultant-expert-roof-installing-panel-345870488.jpg",
-      title: "Solar PV Consulting",
-      description: "Expert guidance on designing, implementing, and optimizing solar photovoltaic systems."
-    },
-    {
-      src: "https://media.istockphoto.com/id/525206743/photo/solar-panel-on-a-red-roof.jpg?s=612x612&w=0&k=20&c=xcAkdNj8dFDhu8734FpRDAZDtN2bjr48RKEd9j2FL0U=",
-      title: "Solar Rooftop Installation",
-      description: "Solar panel systems installed on rooftops for residential and commercial properties."
-    },
-    {
-      src: "https://arka360.com/ros/content/images/2023/05/pasted-image-0--1---1--compressed.jpg",
-      title: "Ground-Mounted Solar Installation",
-      description: "Large-scale solar panel systems installed on open land for industrial and utility-scale projects."
-    },
-    {
-      src: "https://constructive-voices.com/wp-content/uploads/2023/08/renewable-energy-microgrid.jpg",
-      title: "Solar Microgrid Construction",
-      description: "Self-sustaining solar power grids designed for communities, industries, and remote locations."
-    },
-    {
-      src: "https://kenbrooksolar.com/wp-content/uploads/3HP-solar-water-pump.jpg",
-      title: "Solar Water Pump",
-      description: "Solar-powered water pumping systems for agricultural, industrial, and household use."
-    },
-    {
-      src: "https://5.imimg.com/data5/SELLER/Default/2022/5/MB/GG/YP/28149614/solar-panel-cleaning-services-500x500.jpg",
-      title: "Solar PV Cleaning and Maintenance",
-      description: "Professional cleaning and maintenance services to optimize solar panel performance."
-    },
-    {
-      src: "https://prelaunch.com/blog/wp-content/uploads/2023/12/electric-bike-manufacturing-process.jpg",
-      title: "E-Bike Manufacturing",
-      description: "Design and production of high-performance electric bicycles for urban and off-road use."
-    },
-    {
-      src: "https://media.istockphoto.com/id/2051058317/photo/bike-mechanic-testing-the-rear-gear-shift-and-brakes-of-a-mountain-bike.jpg?s=612x612&w=0&k=20&c=Kt7TqVMeOd_tmYfH4Gsxf_OnMlomOaBjnSA9caC9iYU=",
-      title: "E-Bike Repair",
-      description: "Comprehensive maintenance and repair services for all electric bike models."
-    },
-    {
-      src: "https://fuell.eu/cdn/shop/files/F2-LIFESTLYE-ERIC-_3670080_aac07b60-2490-4a5b-95b1-d02d8a1eb061.webp?v=1689338110",
-      title: "Convert Your Standard Bike into E-Bike",
-      description: "Upgrade your existing bicycle with an electric conversion kit for an enhanced riding experience."
-    },
-    {
-      src: "https://www.mohawkcollege.ca/sites/default/files/inline-images/IoT%20Website%20Cover%20Photo%20High%20resolution.jpg",
-      title: "Workshops",
-      description: "Interactive training sessions providing hands-on experience in various technical domains."
-    }
-
-  
-];
 
 const values = [
   {
@@ -107,20 +53,20 @@ const values = [
 
 const images = [
   {
-    src: "https://media4.giphy.com/media/OnavQV9tvZVks/200.gif?cid=6c09b9521fbqhaqoobuigp10micam6cbko455za8a8i98v2y&ep=v1_internal_gif_by_id&rid=200.gif&ct=g",
+    src: "/src/assets/Images/oneevol.jpg",
     title: "Driving Sustainable Energy, Smart Mobility Solutions, and Student Innovation",
-    description: "Student Driven Innovations, EvolTriv promises in shaping a greener and smarter future."
+    description: "Student Driven Innovations, EvolTriv promises in shaping a greener and smarter future. With advancements in solar energy integration, we harness renewable power to drive sustainable solutions. Our vision is to create efficient and eco-friendly technologies for a better tomorrow."    
   },
   {
-    src: "https://4.bp.blogspot.com/-SJB3OxT3Vq8/W_kxfE1ys6I/AAAAAAAAAAo/DY441gV0D0od7_vzc180kC2SJriui10JACLcBGAs/s1600/how-solar-works.gif",
-    title: "Solar Rooftop Installation",
-    description: "Solar panel systems installed on rooftops for residential and commercial properties."
-  },
+    src: "/src/assets/Images/thirdevol.jpeg",
+    title: "Hands-On Technical Training for Students",
+    description: "Comprehensive educational programs designed to empower students with real-world skills. We focus on interactive learning, mentorship, and hands-on experience. Helping students build a strong foundation for their future careers."    
+      },
   {
-    src: "https://prelaunch.com/blog/wp-content/uploads/2023/12/electric-bike-manufacturing-process.jpg",
+    src: "/src/assets/Images/twoevolll.jpg",
     title: "E-Bike Manufacturing",
-    description: "Design and production of high-performance electric bicycles for urban and off-road use."
-  }
+    description: "Design and production of high-performance electric bicycles for urban and off-road use. Our e-bikes are engineered for efficiency, offering long battery life and powerful motors. Perfect for eco-friendly commuting and adventure enthusiasts alike."  
+   }
 ];
 
 const fadeInUp = {
@@ -130,49 +76,14 @@ const fadeInUp = {
 };
 
 
-
-
-
 export function WobbleCardDemo() {
-
-
-
-  const sliderRef = useRef(null);
-  const keenSliderRef = useRef(null);
-
-  useEffect(() => {
-    keenSliderRef.current = new KeenSlider(sliderRef.current, {
-      loop: true,
-      slides: { perView: 3, spacing: 16 },
-      breakpoints: {
-        "(max-width: 1024px)": {
-          slides: { perView: 2, spacing: 12 },
-        },
-        "(max-width: 768px)": {
-          slides: { perView: 1, spacing: 10 },
-        },
-      },
-    });
-
-    const autoSlide = setInterval(() => {
-      keenSliderRef.current.next();
-    }, 2000);
-
-    return () => clearInterval(autoSlide);
-  }, []);
-
-
-
-
-
-
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 4000);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
@@ -190,7 +101,7 @@ export function WobbleCardDemo() {
 
 {/* banner images */}
       <div className="p-0 m-0">
-        <div className="relative h-[70vh] w-full overflow-hidden ">
+        <div className="relative h-[90vh] w-full overflow-hidden ">
 
           {images.map((image, index) => (
             <motion.div
@@ -201,7 +112,7 @@ export function WobbleCardDemo() {
               className={`absolute inset-0 w-full h-full ${currentIndex === index ? "block" : "hidden"}`}
             >
               <img src={image.src} alt={image.title} className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/40 flex items-center justify-center">
+              <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/40 flex items-center justify-center">
                 <div className="text-center text-white max-w-4xl">
                   <h1 className="text-4xl md:text-5xl font-bold mb-4">{image.title}</h1>
                   <p className="text-lg md:text-xl text-gray-200">{image.description}</p>
@@ -237,7 +148,7 @@ export function WobbleCardDemo() {
               transition={{ duration: 0.5 }}
               className="text-4xl md:text-6xl font-bold tracking-tight"
             >
-              Driving the Future with <span className="text-[#118B50] relative">Clean Energy, Smart Mobility, and Hands-On Learning</span>
+              Driving the Future with <span className="text-[#118B50]  relative">Clean Energy, Smart Mobility, and Hands-On Learning</span>
             </motion.h3>
             <motion.p {...fadeInUp} className="text-gray-600 max-w-2xl mx-auto text-lg md:text-xl">
               We aim to revolutionize renewable energy, smart mobility, and hands-on technical guidance to build a sustainable and innovation-driven future.
@@ -327,49 +238,8 @@ export function WobbleCardDemo() {
           </div>
         </div>
 
-
-
-
-
- {/* scrolling cards */}
- <div className="container mx-auto px-6 lg:px-20 pt-16">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Our Services
-          </h2>
         
-          <div ref={sliderRef} className="keen-slider">
-
-            {testimonals.map((testimonals, index) => (
-              <div key={index} className="keen-slider__slide">
-                <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <Link to={'/services'}>
-
-                  <img src={testimonals.src} alt={testimonals.title} className="w-full h-64 object-cover" />
-                  </Link>
-                  <div className="p-4 text-center">
-                    <h3 className="text-lg font-bold">{testimonals.title}</h3>
-                    <p className="text-gray-600 mt-2">{testimonals.description}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="col-span-1 lg:col-span-2 text-center mt-6 mb-16">
-          <Link to={"/services"}>
-            <Button className="bg-[#118B50] hover:bg-green-900 text-white px-6 py-3 rounded-lg">
-              Explore More
-            </Button>
-          </Link>
-        </div>
-
-
-
-
-
-
-
+<OurServices/>
 
 
       </div>

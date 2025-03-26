@@ -3,6 +3,9 @@ import { motion } from "framer-motion";
 import Cta from "@/components/home/Cta";
 import Testimonnial from '../components/home/Testimonial'
 import GridShowCase from '../components/home/GridShowCase'
+import Gif from '../components/home/Gif'
+import ImageLayout from '../components/home/ImageLayout'
+import Videoo from "../components/home/Videoo";
 import {
   Shield,
   Target,
@@ -278,7 +281,9 @@ const AboutPage = () => {
           </motion.div>
         </div>
       </div> */}
-
+<div className="pb-24 w-full">
+<Videoo/>
+</div>
       {/* Mission & Vision Section */}
             {/* Why Section */}
             <div className="max-w-7xl mx-auto px-4 mb-20 mt-[-64px]">
@@ -354,7 +359,6 @@ const AboutPage = () => {
       </div>
 
 
-        <GridShowCase />
 
       {/* Core Values */}
       {/* <div className="bg-gradient-to-b to-[#118B50]/10 from-transparent py-16 mb-20">
@@ -381,12 +385,18 @@ const AboutPage = () => {
 
       {/* Journey Timeline */}
 
-      <div className="pb-24">
+      <div className="pb-8">
       <TimelineSection />
       </div>
 
+
+      <div className="overflow-hidden">
+
+<ImageLayout/>
+</div>
+
       {/* Achievements */}
-      <div className="bg-[#118B50] text-white py-16 mb-20">
+      <div className="bg-[#118B50] text-white py-16 mb-20 mt-24">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">
             Our Achievements
@@ -412,6 +422,7 @@ const AboutPage = () => {
 <Testimonnial/>
 
 
+
       {/* Call to Action */}
       <div className="max-w-3xl mx-auto text-center px-4 pt-24">
         <h2 className="text-3xl font-bold mb-6">Ready to Go Solar?</h2>
@@ -433,6 +444,10 @@ const AboutPage = () => {
         </motion.button>
         </Link>
       </div>
+
+      <div className="pb-64 pt-24">
+<Gif/>
+</div>
     </div>
   );
 };

@@ -4,6 +4,7 @@ import logo_white from "./Images/logo_white.png";
 import hero_image from "./Images/hero_image.png";
 import Waree_Logo from "./Images/Waaree_Logo.jpg";
 import animation from "./Videos/animation.mp4";
+import evoltriv from "./Videos/evoltriv.mp4";
 import rooftopsolar from "./Images/rooftopsolar.jpg";
 import rooftop_solar from "./Images/rooftop_solar.jpg";
 import residentialsolar from "./Images/residentialsolar.jpg";
@@ -30,4 +31,5 @@ export const images = {
 };
 export const videos = {
   animation,
+  evoltriv,
 };
