@@ -58,15 +58,16 @@ const images = [
     description: "Student Driven Innovations, EvolTriv promises in shaping a greener and smarter future. With advancements in solar energy integration, we harness renewable power to drive sustainable solutions. Our vision is to create efficient and eco-friendly technologies for a better tomorrow."
   },
   {
-    src: "/src/assets/Images/thirdevol.jpeg",
-    title: "Hands-On Technical Training for Students",
-    description: "Comprehensive educational programs designed to empower students with real-world skills. We focus on interactive learning, mentorship, and hands-on experience. Helping students build a strong foundation for their future careers."
-  },
-  {
     src: "/src/assets/Images/twoevolll.jpg",
     title: "E-Bike Manufacturing",
     description: "Design and production of high-performance electric bicycles for urban and off-road use. Our e-bikes are engineered for efficiency, offering long battery life and powerful motors. Perfect for eco-friendly commuting and adventure enthusiasts alike."
+  },
+  {
+    src: "/src/assets/Images/thirdevol.jpeg",
+    title: "Hands-On Technical Training for Students",
+    description: "Comprehensive educational programs designed to empower students with real-world skills. We focus on interactive learning, mentorship, and hands-on experience. Helping students build a strong foundation for their future careers."
   }
+  
 ];
 
 const fadeInUp = {
