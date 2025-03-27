@@ -16,7 +16,7 @@ import { Link } from "react-router-dom";
 const services = [
   {
     title: "Solar Energy Solutions",
-    image: "https://www.soleosenergy.com/wp-content/uploads/2024/09/1650368737-5-environmental-benefits-of-solar-energy.jpg",
+    image: "/src/assets/Images/see5.jpg",
     icon: Sun,
     description:
     "Harnessing Sun’s Energy to Power Residential, Businesses, Industrial, and Agriculture Sector – Delivering Sustainable, Efficient, and Innovative Solar Solutions.",
@@ -40,7 +40,7 @@ const services = [
   
   {
     title: "Electric Mobility Solutions",
-    image: "https://images.squarespace-cdn.com/content/v1/5abfd225fcf7fd318b9d1fce/d8019050-867b-46ea-89f3-5b6b74506ab0/ciclo-ebikes.com+%7C+2019.09.30+%7C+177.jpg",
+    image: "/src/assets/Images/see2.jpg",
     icon: Battery,
     description:
     "Experience the future of mobility with our advanced e-bike solutions, offering a perfect blend of efficiency, Internet of Things, and performance.",
@@ -59,7 +59,7 @@ const services = [
   },
   {
     title: "Student Support",
-    image: "https://mariposabicycles.ca/wp-content/uploads/2019/11/coc19-1010-bike-shop-george-harvey02.jpg",
+    image: "/src/assets/Images/d1.jpg",
     icon: Wrench,
     description:
     "Empowering students with hands-on experience and guidance in renewable energy, e-mobility, and Internet of Things.",
@@ -88,11 +88,11 @@ const ServicesPage = () => {
       {/* Hero Section */}
       <div className="relative h-[70vh] overflow-hidden">
         <img
-          src="https://www.sembcorp.com/media/cj4fyspz/rtsbanner-1510x450.jpg?width=1510&height=450&quality=100&v=133685230918630000&format=webp"
+          src="/src/assets/Images/servicebanner.jpg"
           alt="Rooftop Solar"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/40">
+        <div className="absolute inset-0 bg-gradient-to-r from-black/5 to-black/40">
           <div className="max-w-5xl mx-auto px-4 h-full flex flex-col justify-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -140,7 +140,7 @@ promises in shaping a greener and smarter future.
                     alt={service.title}
                     className="w-full h-[400px] object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
                   <service.icon className="absolute bottom-6 right-6 w-12 h-12 text-white" />
                 </motion.div>
               </div>

@@ -1,13 +1,11 @@
-"use client";
-
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
 const images = [
-  { src: "https://st5.depositphotos.com/23188010/77062/i/450/depositphotos_770624600-stock-photo-green-field-morning-render-illustration.jpg", text: ["Creative Design", "Innovative Ideas"] }, // Top Large Image
-  { slides: ["https://st5.depositphotos.com/23188010/77062/i/450/depositphotos_770624600-stock-photo-green-field-morning-render-illustration.jpg", "https://st5.depositphotos.com/23188010/77062/i/450/depositphotos_770624600-stock-photo-green-field-morning-render-illustration.jpg", "https://st5.depositphotos.com/23188010/77062/i/450/depositphotos_770624600-stock-photo-green-field-morning-render-illustration.jpg"] }, // Right Vertical Scrolling Images
-  { src: "https://st5.depositphotos.com/23188010/77062/i/450/depositphotos_770624600-stock-photo-green-field-morning-render-illustration.jpg", text: ["Explore More", "Limitless Possibilities"] }, // Bottom Left
-  { slides: ["https://st5.depositphotos.com/23188010/77062/i/450/depositphotos_770624600-stock-photo-green-field-morning-render-illustration.jpg", "https://st5.depositphotos.com/23188010/77062/i/450/depositphotos_770624600-stock-photo-green-field-morning-render-illustration.jpg", "https://st5.depositphotos.com/23188010/77062/i/450/depositphotos_770624600-stock-photo-green-field-morning-render-illustration.jpg"] }, // Bottom Right Scrolling Images
+  { src: "/src/assets/Images/banner3.jpg", text: ["Green Energy Solutions for Villages & Farms","Revolutionizing Rural Life with Green Energy","Renewable Energy for Factories"] }, // Top Large Image
+  { slides: ["/src/assets/Images/by1.jpg", "/src/assets/Images/by2.jpg", "/src/assets/Images/by6.jpg"] }, // Bottom Right Scrolling Images
+  { src: "/src/assets/Images/student.jpg", text: ["Hands-On Learning: IoT, EVs & Beyond", "Practical Innovations for Young Engineers","Empowering Students with IoT"] }, // Bottom Left
+  { slides: ["/src/assets/Images/f1.jpg", "/src/assets/Images/f2.jpg", "/src/assets/Images/f3.jpg"] }, // Bottom Right Scrolling Images
 ];
 
 export default function ImageGrid() {
@@ -55,7 +53,7 @@ export default function ImageGrid() {
           animate={{ opacity: 1, filter: "blur(0px)" }}
           exit={{ opacity: 0, filter: "blur(10px)" }}
           transition={{ duration: 1 }}
-          className="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold bg-black/40"
+          className="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold bg-black/30"
         >
           {images[0].text[textIndex]}
         </motion.p>
@@ -76,10 +74,10 @@ export default function ImageGrid() {
         {/* Pagination Dots */}
         <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
           {images[1].slides.map((_, idx) => (
-            <div
-              key={idx}
-              className={`w-3 h-3 rounded-full ${idx === rightIndex ? "bg-white" : "bg-gray-400"}`}
-            ></div>
+           <div
+           key={idx}
+           className={`w-3 h-3 rounded-full ${idx === rightIndex ? "bg-white" : "bg-gray-400"}`}
+         ></div>
           ))}
         </div>
       </div>
@@ -115,13 +113,13 @@ export default function ImageGrid() {
         <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
           {images[3].slides.map((_, idx) => (
             <div
-              key={idx}
-              className={`w-3 h-3 rounded-full ${idx === bottomIndex ? "bg-white" : "bg-gray-400"}`}
-            ></div>
+            key={idx}
+            className={`w-3 h-3 rounded-full ${idx === rightIndex ? "bg-white" : "bg-gray-400"}`}
+          ></div>
           ))}
         </div>
       </div>
     </div>
     </>
   );
-}
+} 
