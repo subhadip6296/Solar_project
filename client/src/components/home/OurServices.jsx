@@ -10,52 +10,52 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const testimonals = [
   
     {
-      src: "https://thumbs.dreamstime.com/b/solar-power-consultant-expert-roof-installing-panel-345870488.jpg",
+      src: "/src/assets/Images/solarpv.jpg",
       title: "Solar PV Consulting",
       description: "Expert guidance on designing, implementing, and optimizing solar photovoltaic systems."
     },
     {
-      src: "https://media.istockphoto.com/id/525206743/photo/solar-panel-on-a-red-roof.jpg?s=612x612&w=0&k=20&c=xcAkdNj8dFDhu8734FpRDAZDtN2bjr48RKEd9j2FL0U=",
+      src: "/src/assets/Images/rooftopmain.jpg",
       title: "Solar Rooftop Installation",
       description: "Solar panel systems installed on rooftops for residential and commercial properties."
     },
     {
-      src: "https://arka360.com/ros/content/images/2023/05/pasted-image-0--1---1--compressed.jpg",
+      src: "/src/assets/Images/groundmounted.jpg",
       title: "Ground-Mounted Solar Installation",
       description: "Large-scale solar panel systems installed on open land for industrial and utility-scale projects."
     },
     {
-      src: "https://constructive-voices.com/wp-content/uploads/2023/08/renewable-energy-microgrid.jpg",
+      src: "/src/assets/Images/microgrid.jpg",
       title: "Solar Microgrid Construction",
       description: "Self-sustaining solar power grids designed for communities, industries, and remote locations."
     },
     {
-      src: "https://kenbrooksolar.com/wp-content/uploads/3HP-solar-water-pump.jpg",
+      src: "/src/assets/Images/waterpump.jpg",
       title: "Solar Water Pump",
       description: "Solar-powered water pumping systems for agricultural, industrial, and household use."
     },
     {
-      src: "https://5.imimg.com/data5/SELLER/Default/2022/5/MB/GG/YP/28149614/solar-panel-cleaning-services-500x500.jpg",
+      src: "/src/assets/Images/cleaning.jpg",
       title: "Solar PV Cleaning and Maintenance",
       description: "Professional cleaning and maintenance services to optimize solar panel performance."
     },
     {
-      src: "https://prelaunch.com/blog/wp-content/uploads/2023/12/electric-bike-manufacturing-process.jpg",
+      src: "/src/assets/Images/b2.jpg",
       title: "E-Bike Manufacturing",
       description: "Design and production of high-performance electric bicycles for urban and off-road use."
     },
     {
-      src: "https://media.istockphoto.com/id/2051058317/photo/bike-mechanic-testing-the-rear-gear-shift-and-brakes-of-a-mountain-bike.jpg?s=612x612&w=0&k=20&c=Kt7TqVMeOd_tmYfH4Gsxf_OnMlomOaBjnSA9caC9iYU=",
+      src: "/src/assets/Images/ebike.png",
       title: "E-Bike Repair",
       description: "Comprehensive maintenance and repair services for all electric bike models."
     },
     {
-      src: "https://fuell.eu/cdn/shop/files/F2-LIFESTLYE-ERIC-_3670080_aac07b60-2490-4a5b-95b1-d02d8a1eb061.webp?v=1689338110",
+      src: "/src/assets/Images/ebike3.jpg",
       title: "Convert Your Standard Bike into E-Bike",
       description: "Upgrade your existing bicycle with an electric conversion kit for an enhanced riding experience."
     },
     {
-      src: "https://www.mohawkcollege.ca/sites/default/files/inline-images/IoT%20Website%20Cover%20Photo%20High%20resolution.jpg",
+      src: "/src/assets/Images/stu1.jpg",
       title: "Workshops",
       description: "Interactive training sessions providing hands-on experience in various technical domains."
     } 

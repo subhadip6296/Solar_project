@@ -30,7 +30,7 @@ const products = [
       {
         "name": "Solar PV Consulting",
         "description": "Expert guidance on designing, implementing, and optimizing solar photovoltaic systems.",
-        "image": "https://thumbs.dreamstime.com/b/solar-power-consultant-expert-roof-installing-panel-345870488.jpg",
+        "image": "/src/assets/Images/solarpv.jpg",
         "icon": "Sun",
         "features": [
           "Customized solar solutions",
@@ -60,7 +60,7 @@ const products = [
       {
         "name": "Solar Rooftop Installation",
         "description": "Solar panel systems installed on rooftops for residential and commercial properties.",
-        "image": "https://media.istockphoto.com/id/525206743/photo/solar-panel-on-a-red-roof.jpg?s=612x612&w=0&k=20&c=xcAkdNj8dFDhu8734FpRDAZDtN2bjr48RKEd9j2FL0U=",
+        "image": "/src/assets/Images/rooftopmain.jpg",
         "icon": "Sun",
         "features": [
           "Space-efficient energy generation",
@@ -90,7 +90,7 @@ const products = [
       {
         "name": "Ground-Mounted Solar Installation",
         "description": "Large-scale solar panel systems installed on open land for industrial and utility-scale projects.",
-        "image": "https://arka360.com/ros/content/images/2023/05/pasted-image-0--1---1--compressed.jpg",
+        "image": "/src/assets/Images/groundmounted.jpg",
         "icon": "Sun",
         "features": [
           "High energy production capacity",
@@ -120,7 +120,7 @@ const products = [
       {
         "name": "Solar Microgrid Construction",
         "description": "Self-sustaining solar power grids designed for communities, industries, and remote locations.",
-        "image": "https://constructive-voices.com/wp-content/uploads/2023/08/renewable-energy-microgrid.jpg",
+        "image": "/src/assets/Images/microgrid.jpg",
         "icon": "Sun",
         "features": [
           "Off-grid and hybrid solutions",
@@ -150,7 +150,7 @@ const products = [
       {
         "name": "Solar Water Pump",
         "description": "Solar-powered water pumping systems for agricultural, industrial, and household use.",
-        "image": "https://kenbrooksolar.com/wp-content/uploads/3HP-solar-water-pump.jpg",
+        "image": "/src/assets/Images/waterpump.jpg",
         "icon": "Sun",
         "features": [
           "Operates entirely on solar energy",
@@ -181,7 +181,7 @@ const products = [
       {
         "name": "Solar Water Heater",
         "description": "Efficient solar-powered water heating solutions for residential, commercial, and industrial applications.",
-        "image": "https://example.com/solar-water-heater.jpg",
+        "image": "/src/assets/Images/waterheater.jpeg",
         "icon": "Sun",
         "features": [
           "Uses solar energy to heat water",
@@ -215,7 +215,7 @@ const products = [
       {
         "name": "Solar PV Cleaning and Maintenance",
         "description": "Professional cleaning and maintenance services to optimize solar panel performance.",
-        "image": "https://5.imimg.com/data5/SELLER/Default/2022/5/MB/GG/YP/28149614/solar-panel-cleaning-services-500x500.jpg",
+        "image": "/src/assets/Images/solarpv.jpg",
         "icon": "Sun",
         "features": [
           "Regular dust and debris removal",
@@ -252,7 +252,7 @@ const products = [
     {
       "name": "E-Bike Manufacturing",
       "description": "Design and production of high-performance electric bicycles for urban and off-road use.",
-      "image": "https://prelaunch.com/blog/wp-content/uploads/2023/12/electric-bike-manufacturing-process.jpg",
+      "image": "/src/assets/Images/ebike.png",
       "icon": "Zap",
       "features": [
         "Custom frame designs",
@@ -287,7 +287,7 @@ const products = [
     {
       "name": "E-Bike Repair",
       "description": "Comprehensive maintenance and repair services for all electric bike models.",
-      "image": "https://media.istockphoto.com/id/2051058317/photo/bike-mechanic-testing-the-rear-gear-shift-and-brakes-of-a-mountain-bike.jpg?s=612x612&w=0&k=20&c=Kt7TqVMeOd_tmYfH4Gsxf_OnMlomOaBjnSA9caC9iYU=",
+      "image": "/src/assets/Images/ebike2.jpg",
       "icon": "Zap",
       "features": [
         "Battery diagnostics and replacement",
@@ -320,7 +320,7 @@ const products = [
     {
       "name": "Convert Your Standard Bike into E-Bike",
       "description": "Upgrade your existing bicycle with an electric conversion kit for an enhanced riding experience.",
-      "image": "https://fuell.eu/cdn/shop/files/F2-LIFESTLYE-ERIC-_3670080_aac07b60-2490-4a5b-95b1-d02d8a1eb061.webp?v=1689338110",
+      "image": "/src/assets/Images/ebike3.jpg",
       "icon": "Zap",
       "features": [
         "Plug-and-play electric motor kits",
@@ -363,7 +363,7 @@ const products = [
     {
       "name": "Workshops",
       "description": "Interactive training sessions providing hands-on experience in various technical domains.",
-      "image": "https://www.mohawkcollege.ca/sites/default/files/inline-images/IoT%20Website%20Cover%20Photo%20High%20resolution.jpg",
+      "image": "/src/assets/Images/stu1.jpg",
       "icon": "Battery",
       "features": [
         "Expert-led sessions",
@@ -393,7 +393,7 @@ const products = [
     {
       "name": "Internships",
       "description": "Hands-on internship programs to gain industry exposure and practical knowledge.",
-      "image": "https://cms-resources.prod.the-internal.cloud/sites/default/files/styles/featured_image/public/2023-08/Teamwork,%20support%20and%20structure%20the%20core%20principles%20of%20rewarding%20student%20internships%20.jpg?itok=bIauL3SE",
+      "image": "/src/assets/Images/stu2.jpg",
       "icon": "Battery",
       "features": [
         "Real-world project involvement",
@@ -417,36 +417,6 @@ const products = [
         {
           "title": "Skill Development",
           "description": "Enhance problem-solving and teamwork skills essential for success."
-        }
-      ]
-    },
-    {
-      "name": "Project Support & Guidance",
-      "description": "Comprehensive guidance for students to develop and execute technical projects successfully.",
-      "image": "https://media.istockphoto.com/id/482007476/photo/architect-explaining-project-plan-to-clients.jpg?s=612x612&w=0&k=20&c=-SNffUzlWyXiq81KiB_3A_EZvHYwJiU7b99TbLs0pfQ=",
-      "icon": "Battery",
-      "features": [
-        "Mentorship from industry professionals",
-        "Access to research materials and resources",
-        "Guidance on project planning and execution"
-      ],
-      "specifications": {
-        "Support Type": "Technical & Research Assistance",
-        "Availability": "Online & Offline",
-        "Project Domains": "IoT, Renewable Energy, Electric Mobility"
-      },
-      "benefits": [
-        {
-          "title": "Innovative Thinking",
-          "description": "Encourages students to develop creative and technical problem-solving skills."
-        },
-        {
-          "title": "End-to-End Support",
-          "description": "Receive guidance at every stage of project development."
-        },
-        {
-          "title": "Industry-Relevant Skills",
-          "description": "Stay updated with the latest advancements and methodologies."
         }
       ]
     }
@@ -613,7 +583,7 @@ const ProductsPage = () => {
       {/* Products Section */}
       <div className="max-w-7xl mx-auto px-4 py-16 w-full overflow-hidden">
         <Tabs defaultValue={selectedCategory} className="space-y-8 ">
-        <div className="flex justify-center overflow-hidden bg-black sm:bg-gray-800 w-full sm:w-fit mx-auto">
+        <div className="flex justify-center overflow-hidden bg-black sm:bg-gray-200 w-full sm:w-fit mx-auto">
         <TabsList className="flex justify-center items-center px-2 flex-nowrap scale-75 sm:scale-100 h-8 bg-gray-800 sm:bg-gray-300 text-white sm:text-black">
         <TabsTrigger
 

@@ -55,18 +55,18 @@ const images = [
   {
     src: "/src/assets/Images/oneevol.jpg",
     title: "Driving Sustainable Energy, Smart Mobility Solutions, and Student Innovation",
-    description: "Student Driven Innovations, EvolTriv promises in shaping a greener and smarter future. With advancements in solar energy integration, we harness renewable power to drive sustainable solutions. Our vision is to create efficient and eco-friendly technologies for a better tomorrow."    
+    description: "Student Driven Innovations, EvolTriv promises in shaping a greener and smarter future. With advancements in solar energy integration, we harness renewable power to drive sustainable solutions. Our vision is to create efficient and eco-friendly technologies for a better tomorrow."
   },
   {
     src: "/src/assets/Images/thirdevol.jpeg",
     title: "Hands-On Technical Training for Students",
-    description: "Comprehensive educational programs designed to empower students with real-world skills. We focus on interactive learning, mentorship, and hands-on experience. Helping students build a strong foundation for their future careers."    
-      },
+    description: "Comprehensive educational programs designed to empower students with real-world skills. We focus on interactive learning, mentorship, and hands-on experience. Helping students build a strong foundation for their future careers."
+  },
   {
     src: "/src/assets/Images/twoevolll.jpg",
     title: "E-Bike Manufacturing",
-    description: "Design and production of high-performance electric bicycles for urban and off-road use. Our e-bikes are engineered for efficiency, offering long battery life and powerful motors. Perfect for eco-friendly commuting and adventure enthusiasts alike."  
-   }
+    description: "Design and production of high-performance electric bicycles for urban and off-road use. Our e-bikes are engineered for efficiency, offering long battery life and powerful motors. Perfect for eco-friendly commuting and adventure enthusiasts alike."
+  }
 ];
 
 const fadeInUp = {
@@ -99,7 +99,7 @@ export function WobbleCardDemo() {
   return (
     <>
 
-{/* banner images */}
+      {/* banner images */}
       <div className="p-0 m-0">
         <div className="relative h-[90vh] w-full overflow-hidden ">
 
@@ -131,7 +131,7 @@ export function WobbleCardDemo() {
 
 
 
-{/* <ThunderEffect/> */}
+      {/* <ThunderEffect/> */}
 
 
       <div className="max-w-7xl mx-auto w-full space-y-8 mt-12 ">
@@ -212,9 +212,9 @@ export function WobbleCardDemo() {
 
 
 
-        <GridShowCase/>
+        <GridShowCase />
 
-  
+
         {/* core values */}
         <div className="bg-gradient-to-b to-[#118B50]/10 from-transparent pb-24">
           <div className="max-w-7xl mx-auto px-4">
@@ -238,8 +238,8 @@ export function WobbleCardDemo() {
           </div>
         </div>
 
-        
-<OurServices/>
+
+        <OurServices />
 
 
       </div>
