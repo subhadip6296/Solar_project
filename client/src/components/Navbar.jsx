@@ -97,9 +97,6 @@ const Navbar = () => {
               </Link>
             </motion.div>
             <div className="flex items-center gap-4">
-           
- 
-
                <motion.button
                  whileHover={{ scale: 1.1 }}
                  whileTap={{ scale: 0.9 }}
@@ -161,11 +158,11 @@ const Navbar = () => {
   )}
 </motion.button>
 
-            <div className="flex items-center gap-4">
+            {/* <div className="flex items-center gap-4">
               <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => setIsOpen(!isOpen)} className="md:hidden p-2 rounded-lg hover:bg-gray-100">
                 {isOpen ? <X className="w-6 h-6 text-gray-600" /> : <Menu className="w-6 h-6 text-gray-600" />}
               </motion.button>
-            </div>
+            </div> */}
           </div>
         </div>
 
