@@ -52,42 +52,41 @@ const CompactGrid = () => {
     <div className="relative flex items-center justify-center min-h-screen bg-gray-900 px-4 py-8 md:px-16">
 
       {/* Grid Container */}
-      <div className="w-[90vw] h-[120vh] grid grid-cols-4 grid-rows-4 gap-0">
-        {items.map((item, index) => {
-          const row = Math.floor(index / 4);
-          const col = index % 4;
-          const shouldBeImage = (row % 2 === 0) ? (col % 2 === 0) : (col % 2 !== 0);
+      <div className="w-full min-h-screen grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+  {items.map((item, index) => {
+    const isImage = item.img !== undefined;
 
-          return shouldBeImage ? (
-            <motion.div key={index} className="relative group w-full h-full">
-              {Array.isArray(item.img) ? (
-                <ScrollImage images={item.img} />
-              ) : (
-                <img
-                  src={item.img}
-                  alt={item.text}
-                  className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0"
-                />
-              )}
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileHover={{ opacity: 1 }}
-                className="absolute inset-0 flex items-center justify-center bg-black/70 p-1"
-              >
-                <p className="text-white text-[12px] text-center">{item.text}</p>
-              </motion.div>
-            </motion.div>
-          ) : (
-            <motion.div
-              key={index}
-              className="flex items-center justify-center p-4 bg-gray-900 text-white text-[12px] text-center rounded-lg shadow-lg"
-              {...textBoxAnimation}
-            >
-              {item.content}
-            </motion.div>
-          );
-        })}
-      </div>
+    return isImage ? (
+      <motion.div key={index} className="relative group w-full h-40 md:h-60 lg:h-full">
+        {Array.isArray(item.img) ? (
+          <ScrollImage images={item.img} />
+        ) : (
+          <img
+            src={item.img}
+            alt={item.text}
+            className="w-full h-full object-contain max-w-full h-auto transition-opacity duration-300"
+          />
+        )}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileHover={{ opacity: 1 }}
+          className="absolute inset-0 flex items-center justify-center bg-black/70 p-2"
+        >
+          <p className="text-white text-sm text-center">{item.text}</p>
+        </motion.div>
+      </motion.div>
+    ) : (
+      <motion.div
+        key={index}
+        className="flex items-center justify-center p-4 bg-gray-900 text-white text-sm text-center rounded-lg shadow-lg"
+        {...textBoxAnimation}
+      >
+        {item.content}
+      </motion.div>
+    );
+  })}
+</div>
+
       
     </div>
   );
