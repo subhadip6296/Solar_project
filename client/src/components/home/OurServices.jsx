@@ -111,8 +111,8 @@ const OurServices = () => {
             <div ref={sliderRef} className="keen-slider">
               {testimonals.map((testimonals, index) => (
                 <div key={index} className="keen-slider__slide">
-                  <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                    <Link to={'/services'}>
+<div className="bg-white rounded-lg shadow-md overflow-hidden h-[420px]">
+<Link to={'/services'}>
                       <img
                         src={testimonals.src}
                         alt={testimonals.title}

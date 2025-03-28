@@ -29,16 +29,24 @@ const FullWidthVideo = () => {
   }, []);
 
   return (
-    <div className="w-full h-[40vh] ">
+    <div className="relative w-full h-[40vh]">
+      {/* Video */}
       <video
         ref={videoRef}
-        src="https://www.w3schools.com/html/mov_bbb.mp4" // Replace with your video URL
+        src="https://www.w3schools.com/html/mov_bbb.mp4"
         className="w-full h-auto max-h-[500px] object-cover"
         controls
-        muted={false} // Sound is enabled
+        muted={false}
       />
+  
+      {/* Overlay Text */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <h1 className="text-white text-3xl font-bold bg-black bg-opacity-50 px-4 py-2 rounded-lg">
+          Introduction Video
+        </h1>
+      </div>
     </div>
   );
-};
+}  
 
 export default FullWidthVideo;
