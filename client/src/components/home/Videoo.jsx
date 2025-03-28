@@ -4,7 +4,7 @@ const Videoo = () => {
   return (
     <div>
 
-      <div className="relative  overflow-hidden">
+      <div className="relative overflow-hidden bg-gradient-to-r from-gray-800 to-gray-900">
         <video
           className="max-w-5xl mx-auto w-full"
           autoPlay

@@ -5,7 +5,7 @@ const images = [
   { src: "/assets/Images/banner3.jpg", text: ["Green Energy Solutions for Villages & Farms","Revolutionizing Rural Life with Green Energy","Renewable Energy for Factories"] }, // Top Large Image
   { slides: ["/assets/Images/by1.jpg", "/assets/Images/by2.jpg", "/assets/Images/by6.jpg"] }, // Bottom Right Scrolling Images
   { src: "/assets/Images/student.jpg", text: ["Hands-On Learning: IoT, EVs & Beyond", "Practical Innovations for Young Engineers","Empowering Students with IoT"] }, // Bottom Left
-  { slides: ["/assets/Images/f1.jpg", "/assets/Images/f2.jpg", "/assets/Images/f3.jpg"] }, // Bottom Right Scrolling Images
+  { slides: ["/assets/Images/f1.jpg", "/assets/Images/f2.jpg", "/assets/Images/factory.jpg"] }, // Bottom Right Scrolling Images
 ];
 
 export default function ImageGrid() {

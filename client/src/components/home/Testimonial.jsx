@@ -3,19 +3,19 @@ import "keen-slider/keen-slider.min.css";
 
 const testimonialsLeft = [
   {
-    src: "https://t3.ftcdn.net/jpg/02/70/35/00/360_F_270350073_WO6yQAdptEnAhYKM5GuA9035wbRnVJSr.jpg",
+    src: "/assets/Images/residentialsolar.jpg",
     title: "Solar Panel Installation",
     description: "Harness the power of the sun with our efficient solar solutions.",
     link: "https://example.com/solar",
   },
   {
-    src: "https://t4.ftcdn.net/jpg/03/70/45/50/360_F_370455050_fYaeGIDwOoKz5Ul3p0OwCQuysZebQU8a.jpg",
+    src: "/assets/Images/blog1-eco.jpg",
     title: "Eco-friendly E-Bikes",
     description: "Experience the future of transportation with our e-bikes.",
     link: "https://example.com/ebike",
   },
   {
-    src: "https://t3.ftcdn.net/jpg/04/70/95/10/360_F_470951051_W1Qe1NvJSdkSj8D1zWcQvuD58VYc3XEP.jpg",
+    src: "/assets/Images/srrumain.jpg",
     title: "Student Consulting",
     description: "Helping students build innovative renewable energy projects.",
     link: "https://example.com/consulting",
@@ -24,19 +24,19 @@ const testimonialsLeft = [
 
 const testimonialsRight = [
   {
-    src: "https://t3.ftcdn.net/jpg/05/10/25/20/360_F_510252021_GIkHlT3xErDd9Qu9Ij3uh2zVLSWyFjU5.jpg",
+    src: "/assets/Images/offgrid.jpg",
     title: "Off-Grid Solar System",
     description: "Stay powered anywhere with our off-grid solar solutions.",
     link: "https://example.com/offgrid",
   },
   {
-    src: "https://t3.ftcdn.net/jpg/06/10/75/30/360_F_610753030_Zt0Rk5fM6wx1J8EIlv92FR3vL5ABX8c6.jpg",
+    src: "/assets/Images/ongrid.jpg",
     title: "On-Grid Solar Solutions",
     description: "Save on electricity bills with seamless on-grid solar systems.",
     link: "https://example.com/ongrid",
   },
   {
-    src: "https://t4.ftcdn.net/jpg/07/20/85/40/360_F_720854040_kJTbQ7Bxi2hZKMeBSMv9xrsLfHVJJJ9D.jpg",
+    src: "/assets/Images/battery.jpeg",
     title: "Solar Battery Storage",
     description: "Store solar energy for uninterrupted power supply.",
     link: "https://example.com/battery",
