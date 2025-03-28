@@ -12,7 +12,7 @@ const Videoo = () => {
           loop
           playsInline
         >
-          <source src={'/Videos/evoltrivt.mp4'} type="video/mp4" />
+          <source src={'/assets/Videos/evoltrivt.mp4'} type="video/mp4" />
         </video>
       </div>
     </div>
