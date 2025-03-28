@@ -10,52 +10,52 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const testimonals = [
   
     {
-      src: "/src/assets/Images/solarpv.jpg",
+      src: "/assets/Images/solarpv.jpg",
       title: "Solar PV Consulting",
       description: "Expert guidance on designing, implementing, and optimizing solar photovoltaic systems."
     },
     {
-      src: "/src/assets/Images/rooftopmain.jpg",
+      src: "/assets/Images/rooftopmain.jpg",
       title: "Solar Rooftop Installation",
       description: "Solar panel systems installed on rooftops for residential and commercial properties."
     },
     {
-      src: "/src/assets/Images/groundmounted.jpg",
+      src: "/assets/Images/groundmounted.jpg",
       title: "Ground-Mounted Solar Installation",
       description: "Large-scale solar panel systems installed on open land for industrial and utility-scale projects."
     },
     {
-      src: "/src/assets/Images/microgrid.jpg",
+      src: "/assets/Images/microgrid.jpg",
       title: "Solar Microgrid Construction",
       description: "Self-sustaining solar power grids designed for communities, industries, and remote locations."
     },
     {
-      src: "/src/assets/Images/waterpump.jpg",
+      src: "/assets/Images/waterpump.jpg",
       title: "Solar Water Pump",
       description: "Solar-powered water pumping systems for agricultural, industrial, and household use."
     },
     {
-      src: "/src/assets/Images/cleaning.jpg",
+      src: "/assets/Images/cleaning.jpg",
       title: "Solar PV Cleaning and Maintenance",
       description: "Professional cleaning and maintenance services to optimize solar panel performance."
     },
     {
-      src: "/src/assets/Images/b2.jpg",
+      src: "/assets/Images/b2.jpg",
       title: "E-Bike Manufacturing",
       description: "Design and production of high-performance electric bicycles for urban and off-road use."
     },
     {
-      src: "/src/assets/Images/ebike.png",
+      src: "/assets/Images/ebike.png",
       title: "E-Bike Repair",
       description: "Comprehensive maintenance and repair services for all electric bike models."
     },
     {
-      src: "/src/assets/Images/ebike3.jpg",
+      src: "/assets/Images/ebike3.jpg",
       title: "Convert Your Standard Bike into E-Bike",
       description: "Upgrade your existing bicycle with an electric conversion kit for an enhanced riding experience."
     },
     {
-      src: "/src/assets/Images/stu1.jpg",
+      src: "/assets/Images/stu1.jpg",
       title: "Workshops",
       description: "Interactive training sessions providing hands-on experience in various technical domains."
     } 

@@ -2,22 +2,22 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
 const items = [
-  { type: "image", text: "EvolTriv", img: ["/src/assets/Images/b1.jpg", "/src/assets/Images/b11.jpg", "/src/assets/Images/b3.jpeg"] },
+  { type: "image", text: "EvolTriv", img: ["/assets/Images/b1.jpg", "/assets/Images/b11.jpg", "/assets/Images/b3.jpeg"] },
   { type: "text", content: "We offer efficient solar solutions." },
   { type: "image", text: "On-grid and off-grid available.", img: "https://i.gifer.com/origin/1f/1fe682b598a97cee3d5093cfa8c92f7f_w200.gif" },
   { type: "text", content: "Hybrid solar systems maximize efficiency." },
   { type: "text", content: "Custom solar solutions for industries." },
-  { type: "image", text: "Our solar systems ensure sustainability.", img: ["/src/assets/Images/c1.jpg", "/src/assets/Images/c2.jpg", "/src/assets/Images/c11.jpg"] },
+  { type: "image", text: "Our solar systems ensure sustainability.", img: ["/assets/Images/c1.jpg", "/assets/Images/c2.jpg", "/assets/Images/c11.jpg"] },
   { type: "text", content: "We offer advanced e-mobility solutions." },
   { type: "image", text: "E-bikes provide clean transportation alternatives.", img: "https://cdn.shopify.com/s/files/1/0592/3766/2905/files/charge_the_ebike_by_pedaling.gif?v=1691983938" },
-  { type: "image", text: "Affordable and efficient electric mobility.", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnSXbJsnv_AkVVc8P-Fa8S0gFmPWz_B6Jglw&s" },
+  { type: "image", text: "Affordable and efficient electric mobility.", img: "https://encrypted-tbn0.gstatic.com/assets/Images?q=tbn:ANd9GcQnSXbJsnv_AkVVc8P-Fa8S0gFmPWz_B6Jglw&s" },
   { type: "text", content: "Reducing fossil fuel dependency daily." },
-  { type: "image", text: "Innovative designs for better performance.", img: ["/src/assets/Images/e1.jpg", "/src/assets/Images/e2.jpg", "/src/assets/Images/e11.jpg"] },
+  { type: "image", text: "Innovative designs for better performance.", img: ["/assets/Images/e1.jpg", "/assets/Images/e2.jpg", "/assets/Images/e11.jpg"] },
   { type: "text", content: "We offer hands-on technical training." },
   { type: "text", content: "Students gain real-world project experience." },
   { type: "image", text: "Learn IoT and renewable energy.", img: "https://www.boldbusiness.com/wp-content/uploads/2018/05/IoT.gif" },
   { type: "text", content: "Practical skills for future innovation." },
-  { type: "image", text: "Bridging theory with practical application.", img: ["/src/assets/Images/d1.jpg", "/src/assets/Images/d2.jpeg", "/src/assets/Images/d3.jpg"] },
+  { type: "image", text: "Bridging theory with practical application.", img: ["/assets/Images/d1.jpg", "/assets/Images/d2.jpeg", "/assets/Images/d3.jpg"] },
 ];
 
 // Text Box Animation (fade & slide in)

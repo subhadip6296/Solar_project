@@ -16,7 +16,7 @@ import { Link } from "react-router-dom";
 const services = [
   {
     title: "Solar Energy Solutions",
-    image: "/src/assets/Images/see5.jpg",
+    image: "/assets/Images/see5.jpg",
     icon: Sun,
     description:
     "Harnessing Sun’s Energy to Power Residential, Businesses, Industrial, and Agriculture Sector – Delivering Sustainable, Efficient, and Innovative Solar Solutions.",
@@ -40,7 +40,7 @@ const services = [
   
   {
     title: "Electric Mobility Solutions",
-    image: "/src/assets/Images/see2.jpg",
+    image: "/assets/Images/see2.jpg",
     icon: Battery,
     description:
     "Experience the future of mobility with our advanced e-bike solutions, offering a perfect blend of efficiency, Internet of Things, and performance.",
@@ -59,7 +59,7 @@ const services = [
   },
   {
     title: "Student Support",
-    image: "/src/assets/Images/d1.jpg",
+    image: "/assets/Images/d1.jpg",
     icon: Wrench,
     description:
     "Empowering students with hands-on experience and guidance in renewable energy, e-mobility, and Internet of Things.",
@@ -88,7 +88,7 @@ const ServicesPage = () => {
       {/* Hero Section */}
       <div className="relative h-[70vh] overflow-hidden">
         <img
-          src="/src/assets/Images/servicebanner.jpg"
+          src="/assets/Images/servicebanner.jpg"
           alt="Rooftop Solar"
           className="w-full h-full object-cover"
         />

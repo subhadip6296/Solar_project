@@ -30,7 +30,7 @@ const products = [
       {
         "name": "Solar PV Consulting",
         "description": "Expert guidance on designing, implementing, and optimizing solar photovoltaic systems.",
-        "image": "/src/assets/Images/solarpv.jpg",
+        "image": "/assets/Images/solarpv.jpg",
         "icon": "Sun",
         "features": [
           "Customized solar solutions",
@@ -60,7 +60,7 @@ const products = [
       {
         "name": "Solar Rooftop Installation",
         "description": "Solar panel systems installed on rooftops for residential and commercial properties.",
-        "image": "/src/assets/Images/rooftopmain.jpg",
+        "image": "/assets/Images/rooftopmain.jpg",
         "icon": "Sun",
         "features": [
           "Space-efficient energy generation",
@@ -90,7 +90,7 @@ const products = [
       {
         "name": "Ground-Mounted Solar Installation",
         "description": "Large-scale solar panel systems installed on open land for industrial and utility-scale projects.",
-        "image": "/src/assets/Images/groundmounted.jpg",
+        "image": "/assets/Images/groundmounted.jpg",
         "icon": "Sun",
         "features": [
           "High energy production capacity",
@@ -120,7 +120,7 @@ const products = [
       {
         "name": "Solar Microgrid Construction",
         "description": "Self-sustaining solar power grids designed for communities, industries, and remote locations.",
-        "image": "/src/assets/Images/microgrid.jpg",
+        "image": "/assets/Images/microgrid.jpg",
         "icon": "Sun",
         "features": [
           "Off-grid and hybrid solutions",
@@ -150,7 +150,7 @@ const products = [
       {
         "name": "Solar Water Pump",
         "description": "Solar-powered water pumping systems for agricultural, industrial, and household use.",
-        "image": "/src/assets/Images/waterpump.jpg",
+        "image": "/assets/Images/waterpump.jpg",
         "icon": "Sun",
         "features": [
           "Operates entirely on solar energy",
@@ -181,7 +181,7 @@ const products = [
       {
         "name": "Solar Water Heater",
         "description": "Efficient solar-powered water heating solutions for residential, commercial, and industrial applications.",
-        "image": "/src/assets/Images/waterheater.jpeg",
+        "image": "/assets/Images/waterheater.jpeg",
         "icon": "Sun",
         "features": [
           "Uses solar energy to heat water",
@@ -215,7 +215,7 @@ const products = [
       {
         "name": "Solar PV Cleaning and Maintenance",
         "description": "Professional cleaning and maintenance services to optimize solar panel performance.",
-        "image": "/src/assets/Images/solarpv.jpg",
+        "image": "/assets/Images/solarpv.jpg",
         "icon": "Sun",
         "features": [
           "Regular dust and debris removal",
@@ -252,7 +252,7 @@ const products = [
     {
       "name": "E-Bike Manufacturing",
       "description": "Design and production of high-performance electric bicycles for urban and off-road use.",
-      "image": "/src/assets/Images/ebike.png",
+      "image": "/assets/Images/ebike.png",
       "icon": "Zap",
       "features": [
         "Custom frame designs",
@@ -287,7 +287,7 @@ const products = [
     {
       "name": "E-Bike Repair",
       "description": "Comprehensive maintenance and repair services for all electric bike models.",
-      "image": "/src/assets/Images/ebike2.jpg",
+      "image": "/assets/Images/ebike2.jpg",
       "icon": "Zap",
       "features": [
         "Battery diagnostics and replacement",
@@ -320,7 +320,7 @@ const products = [
     {
       "name": "Convert Your Standard Bike into E-Bike",
       "description": "Upgrade your existing bicycle with an electric conversion kit for an enhanced riding experience.",
-      "image": "/src/assets/Images/ebike3.jpg",
+      "image": "/assets/Images/ebike3.jpg",
       "icon": "Zap",
       "features": [
         "Plug-and-play electric motor kits",
@@ -363,7 +363,7 @@ const products = [
     {
       "name": "Workshops",
       "description": "Interactive training sessions providing hands-on experience in various technical domains.",
-      "image": "/src/assets/Images/stu1.jpg",
+      "image": "/assets/Images/stu1.jpg",
       "icon": "Battery",
       "features": [
         "Expert-led sessions",
@@ -393,7 +393,7 @@ const products = [
     {
       "name": "Internships",
       "description": "Hands-on internship programs to gain industry exposure and practical knowledge.",
-      "image": "/src/assets/Images/stu2.jpg",
+      "image": "/assets/Images/stu2.jpg",
       "icon": "Battery",
       "features": [
         "Real-world project involvement",

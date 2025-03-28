@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
 const images = [
-  { src: "/src/assets/Images/banner3.jpg", text: ["Green Energy Solutions for Villages & Farms","Revolutionizing Rural Life with Green Energy","Renewable Energy for Factories"] }, // Top Large Image
-  { slides: ["/src/assets/Images/by1.jpg", "/src/assets/Images/by2.jpg", "/src/assets/Images/by6.jpg"] }, // Bottom Right Scrolling Images
-  { src: "/src/assets/Images/student.jpg", text: ["Hands-On Learning: IoT, EVs & Beyond", "Practical Innovations for Young Engineers","Empowering Students with IoT"] }, // Bottom Left
-  { slides: ["/src/assets/Images/f1.jpg", "/src/assets/Images/f2.jpg", "/src/assets/Images/f3.jpg"] }, // Bottom Right Scrolling Images
+  { src: "/assets/Images/banner3.jpg", text: ["Green Energy Solutions for Villages & Farms","Revolutionizing Rural Life with Green Energy","Renewable Energy for Factories"] }, // Top Large Image
+  { slides: ["/assets/Images/by1.jpg", "/assets/Images/by2.jpg", "/assets/Images/by6.jpg"] }, // Bottom Right Scrolling Images
+  { src: "/assets/Images/student.jpg", text: ["Hands-On Learning: IoT, EVs & Beyond", "Practical Innovations for Young Engineers","Empowering Students with IoT"] }, // Bottom Left
+  { slides: ["/assets/Images/f1.jpg", "/assets/Images/f2.jpg", "/assets/Images/f3.jpg"] }, // Bottom Right Scrolling Images
 ];
 
 export default function ImageGrid() {
