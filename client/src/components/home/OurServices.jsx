@@ -40,12 +40,12 @@ const testimonals = [
       description: "Professional cleaning and maintenance services to optimize solar panel performance."
     },
     {
-      src: "/assets/Images/b2.jpg",
+      src: "/assets/Images/ebike.png",
       title: "E-Bike Manufacturing",
       description: "Design and production of high-performance electric bicycles for urban and off-road use."
     },
     {
-      src: "/assets/Images/ebike.png",
+      src: "/assets/Images/repair.jpg",
       title: "E-Bike Repair",
       description: "Comprehensive maintenance and repair services for all electric bike models."
     },
