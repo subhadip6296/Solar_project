@@ -7,7 +7,7 @@ const items = [
   { type: "image", text: "On-grid and off-grid available.", img: "https://i.gifer.com/origin/1f/1fe682b598a97cee3d5093cfa8c92f7f_w200.gif" },
   { type: "text", content: "Hybrid solar systems maximize efficiency." },
   { type: "text", content: "Custom solar solutions for industries." },
-  { type: "image", text: "Our solar systems ensure sustainability.", img: ["/assets/Images/c1.jpg", "/assets/Images/c2.jpg", "/assets/Images/c11.jpg"] },
+  { type: "image", text: "Our solar systems ensure sustainability.", img: ["/assets/Images/ebb.png", "/assets/Images/c2.jpg", "/assets/Images/c11.jpg"] },
   { type: "text", content: "We offer advanced e-mobility solutions." },
   { type: "image", text: "E-bikes provide clean transportation alternatives.", img: "https://cdn.shopify.com/s/files/1/0592/3766/2905/files/charge_the_ebike_by_pedaling.gif?v=1691983938" },
   { type: "image", text: "Affordable and efficient electric mobility.", img: "https://encrypted-tbn0.gstatic.com/assets/Images?q=tbn:ANd9GcQnSXbJsnv_AkVVc8P-Fa8S0gFmPWz_B6Jglw&s" },

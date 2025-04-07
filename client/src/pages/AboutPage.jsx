@@ -281,9 +281,9 @@ const AboutPage = () => {
           </motion.div>
         </div>
       </div> */}
-<div className="pb-24 w-full">
+{/* <div className="pb-24 w-full">
 <Videoo/>
-</div>
+</div> */}
       {/* Mission & Vision Section */}
             {/* Why Section */}
             <div className="max-w-7xl mx-auto px-4 mb-20 mt-[-64px]">
@@ -445,9 +445,9 @@ const AboutPage = () => {
         </Link>
       </div>
 
-      <div className="pb-64 pt-24">
+      {/* <div className="pb-64 pt-24">
 <Gif/>
-</div>
+</div> */}
     </div>
   );
 };
