@@ -136,9 +136,14 @@ const Navbar = () => {
                   className={`flex items-center dark:text-white gap-2 ${isScrolled ? "text-white hover:text-[#00FFAA]" : "text-gray-600 hover:text-[#118B50]"}`}
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                 >
-                  <BookImage className="w-5 h-5" />
-                  Gallery
-                  <ChevronDown className="w-4 h-4" />
+                  <Link
+                    to="/gallery"
+                    className={`flex items-center dark:text-white gap-2 group-hover:text-[#118B50] ${isScrolled ? "text-white hover:text-[#00FFAA]" : "text-gray-600 hover:text-[#118B50]"}`}
+                  >
+                    <BookImage className="w-5 h-5" />
+                    Gallery
+                    <ChevronDown className="w-4 h-4" />
+                  </Link>
                 </button>
                 <div className="absolute left-0 mt-2 w-48 dark:bg-green-800 bg-white shadow-md rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                   <button
@@ -241,10 +246,14 @@ const Navbar = () => {
                     onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                     className="flex w-full items-center dark:hover:bg-green-600  justify-between px-3 py-4 text-base font-medium rounded-lg text-gray-600 hover:bg-gray-50 hover:text-[#118B50]"
                   >
-                    <div className="flex items-center dark:text-white  gap-4">
+                    <Link
+                      to="/gallery"
+                      className={`flex items-center dark:text-white gap-2 group-hover:text-[#118B50] ${isScrolled ? "text-white hover:text-[#00FFAA]" : "text-gray-600 hover:text-[#118B50]"}`}
+                    >
                       <BookImage className="w-5 h-5" />
                       Gallery
-                    </div>
+                      <ChevronDown className="w-4 h-4" />
+                    </Link>
                     <ChevronDown className={`w-5 h-5 hover:bg-gray-50 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
                   </button>
 
