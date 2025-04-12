@@ -64,7 +64,7 @@ const Navbar = () => {
     const link = document.createElement("a");
     link.href = url;
     link.setAttribute("download", filename);
-    link.setAttribute("target", "_blank"); // Optional, opens in new tab
+    // link.setAttribute("target", "_blank"); // Optional, opens in new tab
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -123,15 +123,15 @@ const Navbar = () => {
                 </motion.div>
               ))}
 
-              <div className="relative group">
-                <button className="flex items-center gap-2 text-gray-600 hover:text-[#118B50]">
-                  <Link to="/gallery" className="flex items-center gap-2 text-gray-600 hover:text-[#118B50]">
-                    <BookImage className="w-5 h-5" />
-                    Gallery
-                    <ChevronDown className="w-4 h-4" />
-                  </Link>
-
-                </button>
+<div className="relative group">
+  <button
+    className="flex items-center gap-2 text-gray-600 hover:text-[#118B50]"
+    onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+  >
+    <BookImage className="w-5 h-5" />
+    Gallery
+    <ChevronDown className="w-4 h-4" />
+  </button>
                 <div className="absolute left-0 mt-2 w-48 bg-white shadow-md rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                   <button
                     onClick={() =>
