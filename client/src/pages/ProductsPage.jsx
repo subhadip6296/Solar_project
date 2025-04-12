@@ -443,37 +443,38 @@ const ProductDetailDialog = ({ product }) => {
   };
 
   return (
-    <Dialog>
+    <div >
+    <Dialog >
       <DialogTrigger asChild>
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="text-[#118B50] font-medium flex items-center gap-2">
-          Learn More <ArrowRight className="w-4 h-4" />
+          className="text-[#118B50]  font-medium flex items-center gap-2 ">
+          Learn More <ArrowRight className="w-4 h-4 " />
         </motion.button>
       </DialogTrigger>
 
-      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+      <DialogContent className="max-w-2xl  max-h-[90vh] overflow-y-auto ">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-bold">{product.name}</DialogTitle>
+          <DialogTitle className="text-2xl  font-bold">{product.name}</DialogTitle>
           <DialogDescription>
             Discover the features and benefits of our {product.name}
           </DialogDescription>
         </DialogHeader>
 
-        <div ref={brochureRef} className="mt-4 space-y-6 p-4 bg-white">
+        <div ref={brochureRef} className="mt-4 space-y-6 p-4 bg-white dark:bg-black">
           <img
             src={product.image}
             alt={product.name}
-            className="w-full h-64 object-cover rounded-lg"
+            className="w-full h-64 object-cover rounded-lg dark:text-gray-400"
           />
 
-          <div className="space-y-4">
+          <div className="space-y-4 ">
             <h3 className="font-semibold text-lg">Key Features</h3>
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-2 gap-3 ">
               {product.features.map((feature, index) => (
                 <div key={index} className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-[#118B50]" />
+                  <Check className="w-4 h-4 text-[#118B50] " />
                   <span className="text-sm">{feature}</span>
                 </div>
               ))}
@@ -494,10 +495,10 @@ const ProductDetailDialog = ({ product }) => {
 
           <div className="space-y-4">
             <h3 className="font-semibold text-lg">Benefits</h3>
-            <div className="grid gap-4">
+            <div className="grid gap-4 ">
               {product.benefits.map((benefit, index) => (
-                <div key={index} className="bg-gray-50 p-4 rounded-lg">
-                  <h4 className="font-medium text-[#118B50]">{benefit.title}</h4>
+                <div key={index} className="bg-gray-50 p-4 rounded-lg dark:bg-green-950">
+                  <h4 className="font-medium dark:text-white text-[#118B50]">{benefit.title}</h4>
                   <p className="text-sm text-gray-600">{benefit.description}</p>
                 </div>
               ))}
@@ -509,18 +510,19 @@ const ProductDetailDialog = ({ product }) => {
         <div className="flex justify-between pt-4">
           <button
             onClick={handleDownloadBrochure}
-            className="flex items-center gap-2 text-sm text-gray-600 hover:text-[#118B50]">
-            <Download className="w-4 h-4" />
+            className="flex items-center  dark:text-white gap-2 text-sm text-gray-600 hover:text-[#118B50]">
+            <Download className="w-4 h-4 dark:text-white" />
             Download Brochure
           </button>
 
-          <button className="flex items-center gap-2 text-sm text-gray-600 hover:text-[#118B50]">
-            <FileText className="w-4 h-4" />
+          <button className="flex items-center dark:text-white gap-2 text-sm text-gray-600 hover:text-[#118B50]">
+            <FileText className="w-4 h-4 dark:text-white" />
             Technical Details
           </button>
         </div>
       </DialogContent>
     </Dialog>
+    </div>
   );
 };
 
@@ -530,7 +532,7 @@ const ProductCard = ({ product }) => (
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     exit={{ opacity: 0, y: -20 }}
-    className="bg-white rounded-xl shadow-lg overflow-hidden group">
+    className="bg-white rounded-xl shadow-lg overflow-hidden group dark:bg-black ">
     <div className="relative h-64 overflow-hidden">
       <img
         src={product.image}
@@ -544,16 +546,16 @@ const ProductCard = ({ product }) => (
       <h3 className="text-xl font-bold mb-2 group-hover:text-[#118B50] transition-colors">
         {product.name}
       </h3>
-      <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+      <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-2">
         {product.description}
       </p>
 
-      <div className="space-y-3">
+      <div className="space-y-3 ">
         {product.features.slice(0, 3).map((feature, index) => (
           <div
             key={index}
-            className="flex items-center gap-2 text-sm text-gray-600">
-            <Check className="w-4 h-4 text-[#118B50]" />
+            className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+            <Check className="w-4 h-4 text-[#118B50] " />
             {feature}
           </div>
         ))}
@@ -606,10 +608,10 @@ const ProductsPage = () => {
       </div> */}
 
       {/* Products Section */}
-      <div className="max-w-7xl mx-auto px-4 py-16 w-full overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 py-16 w-full overflow-hidden dark:bg-green-950">
         <Tabs defaultValue={selectedCategory} className="space-y-8 ">
-        <div className="flex justify-center overflow-hidden bg-black sm:bg-gray-200 w-full sm:w-fit mx-auto">
-        <TabsList className="flex justify-center items-center px-2 flex-nowrap scale-75 sm:scale-100 h-8 bg-gray-800 sm:bg-gray-300 text-white sm:text-black">
+        <div className="flex justify-center  overflow-hidden bg-black sm:bg-gray-200 w-full sm:w-fit mx-auto">
+        <TabsList className="flex justify-center  items-center px-2 flex-nowrap scale-75 sm:scale-100 h-8 bg-gray-800 sm:bg-gray-300 text-white sm:text-black">
         <TabsTrigger
 
                 value="All"
@@ -628,7 +630,7 @@ const ProductsPage = () => {
           </div>
 
           <TabsContent value="All">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {getAllProducts().map((product) => (
                 <ProductCard key={product.name} product={product} />
               ))}
@@ -648,8 +650,8 @@ const ProductsPage = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-[#C1D8C3] py-16">
-        <div className="max-w-7xl mx-auto px-4 text-center">
+      <div className="bg-[#C1D8C3]  py-16">
+        <div className="max-w-7xl mx-auto px-4 text-center dark:text-black">
           <h2 className="text-3xl font-bold mb-6">Need Help Choosing?</h2>
           <p className="text-black max-w-2xl mx-auto mb-8">
   Explore cutting-edge solutions in renewable energy, e-bikes, and student innovations. Connect with us to power your ideas with sustainable technology.

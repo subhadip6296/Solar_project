@@ -352,7 +352,7 @@ const EventCard = React.memo(({ event, onClick }) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
-      className="bg-white rounded-xl shadow-lg overflow-hidden group cursor-pointer"
+      className="bg-white  rounded-xl shadow-lg overflow-hidden group cursor-pointer"
       onClick={onClick}
     >
       <div className="relative h-48 overflow-hidden">
@@ -565,7 +565,7 @@ const EventsPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-black">
       {/* Hero Section */}
       <div className="bg-[#C1D8C3] text-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4">

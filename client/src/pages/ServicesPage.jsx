@@ -81,12 +81,12 @@ const services = [
 
 const ServicesPage = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-white dark:bg-black">
     
 
     {/* <ProductsPage/> */}
       {/* Hero Section */}
-      <div className="relative h-[70vh] overflow-hidden">
+      <div className="relative h-[70vh] overflow-hidden ">
         <img
           src="/assets/Images/servicebanner.jpg"
           alt="Rooftop Solar"
@@ -146,16 +146,16 @@ promises in shaping a greener and smarter future.
               </div>
 
               <div className="space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+                <h2 className="text-3xl dark:text-white md:text-4xl font-bold text-gray-900">
                   {service.title}
                 </h2>
-                <p className="text-lg text-gray-600">{service.description}</p>
+                <p className="text-lg  dark:text-gray-200 text-gray-600">{service.description}</p>
 
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-2 gap-4 ">
                   {service.benefits.map((benefit, idx) => (
-                    <div key={idx} className="flex items-center space-x-2">
+                    <div key={idx} className="flex dark:text-white items-center  space-x-2">
                       <Check className="w-5 h-5 text-[#118B50]" />
-                      <span className="text-gray-700">{benefit}</span>
+                      <span className="text-gray-700 dark:text-gray-400">{benefit}</span>
                     </div>
                   ))}
                 </div>
@@ -166,7 +166,7 @@ promises in shaping a greener and smarter future.
                 <div className="grid grid-cols-3 gap-4 pt-6">
                   {Object.entries(service.stats).map(([key, value]) => (
                     <div key={key} className="text-center">
-                      <div className="text-2xl font-bold text-[#118B50]">
+                      <div className="text-2xl font-bold dark:text-white text-[#118B50]">
                         {value}
                       </div>
                       <div className="text-sm text-gray-500 capitalize">
@@ -194,8 +194,9 @@ promises in shaping a greener and smarter future.
         </div>
       </div>
 
-
+<div >
 <ProductsPage/>
+</div>
 
       {/* CTA Section
       <div className="bg-[#C1D8C3] py-20 mt-20">
