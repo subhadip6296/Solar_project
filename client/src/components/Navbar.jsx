@@ -96,16 +96,16 @@ const Navbar = () => {
                 <img className="h-16 max-h-16 md:h-20 md:max-h-20" src={images.logo} alt="" />
               </Link>
             </motion.div>
-            <div className="flex items-center gap-4 ">
+            <div className="flex items-center gap-4  ">
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={() => setIsOpen(!isOpen)}
-                className="md:hidden p-2 rounded-lg hover:bg-gray-100">
+                className="md:hidden p-2  rounded-lg hover:bg-gray-100">
                 {isOpen ? (
-                  <X className="w-6 h-6 text-gray-600" />
+                  <X className="w-6 h-6 text-gray-600 dark:text-white dark:hover:text-black" />
                 ) : (
-                  <Menu className="w-6 h-6 text-gray-600" />
+                  <Menu className="w-6 h-6 text-gray-600 dark:text-white dark:hover:text-black" />
                 )}
               </motion.button>
             </div>
@@ -148,15 +148,15 @@ const Navbar = () => {
                         "Brochure.pdf"
                       )
                     }
-                    className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+                    className="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-black"
                   >
                     📄 Brochure
                   </button>
 
-                  <button onClick={() => handleDownload("flyer.pdf")} className="block w-full text-left px-4 py-2 hover:bg-gray-100">
+                  <button onClick={() => handleDownload("flyer.pdf")} className="block w-full dark:hover:bg-black text-left px-4 py-2 hover:bg-gray-100">
                     📜 Flyer
                   </button>
-                  <button onClick={() => handleDownload("certifications.pdf")} className="block w-full text-left px-4 py-2 hover:bg-gray-100">
+                  <button onClick={() => handleDownload("certifications.pdf")} className="block dark:hover:bg-black w-full text-left px-4 py-2 hover:bg-gray-100">
                     🎓 Certifications
                   </button>
                 </div>
@@ -167,12 +167,12 @@ const Navbar = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={() => setIsDark(!isDark)}
-              className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700"
+              className="p-2 rounded-full  hover:bg-gray-100 dark:hover:bg-gray-700"
             >
               {isDark ? (
-                <Sun className="w-5 h-5 text-gray-600 dark:text-yellow-400" />
+                <Sun className="w-5 h-5 text-gray-600 dark:text-yellow-400 " />
               ) : (
-                <Moon className="w-5 h-5 text-gray-600 dark:text-gray-300" />
+                <Moon className="w-5 h-5 text-gray-600 dark:text-white" />
               )}
             </motion.button>
 
@@ -210,9 +210,9 @@ const Navbar = () => {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden bg-white border-t"
+              className="md:hidden dark:bg-green-950  bg-white border-t"
             >
-              <div className="px-4 py-2 space-y-1">
+              <div className="px-4 py-2 space-y-1 ">
                 {navItems.map((item, index) => (
                   <motion.div
                     key={item.name}
@@ -224,7 +224,7 @@ const Navbar = () => {
                       to={item.path}
                       className={`block px-3 py-4 text-base font-medium rounded-lg transition-colors ${isCurrentPath(item.path)
                         ? "text-[#118B50] bg-[#118B50]/5"
-                        : "text-gray-600 hover:bg-gray-50 hover:text-[#118B50]"
+                        : "text-gray-600 dark:text-white hover:bg-gray-50 dark:hover:bg-green-600 dark:hover:text-black hover:text-[#118B50]"
                         }`}
                     >
                       <div className="flex items-center gap-4">
@@ -239,13 +239,13 @@ const Navbar = () => {
                 <div className="relative">
                   <button
                     onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                    className="flex w-full items-center justify-between px-3 py-4 text-base font-medium rounded-lg text-gray-600 hover:bg-gray-50 hover:text-[#118B50]"
+                    className="flex w-full items-center dark:hover:bg-green-600  justify-between px-3 py-4 text-base font-medium rounded-lg text-gray-600 hover:bg-gray-50 hover:text-[#118B50]"
                   >
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center dark:text-white  gap-4">
                       <BookImage className="w-5 h-5" />
                       Gallery
                     </div>
-                    <ChevronDown className={`w-5 h-5 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
+                    <ChevronDown className={`w-5 h-5 hover:bg-gray-50 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
                   </button>
 
                   {isDropdownOpen && (
@@ -253,7 +253,7 @@ const Navbar = () => {
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: "auto" }}
                       exit={{ opacity: 0, height: 0 }}
-                      className="ml-6 space-y-1"
+                      className="ml-6 space-y-1 "
                     >
                       <button
                         onClick={() =>
@@ -262,20 +262,20 @@ const Navbar = () => {
                             "Brochure.pdf"
                           )
                         }
-                        className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+                        className="block w-full text-left px-4 py-2 dark:hover:bg-black hover:bg-gray-100"
                       >
                         📄 Brochure
                       </button>
 
                       <button
                         onClick={() => handleDownload("flyer.pdf")}
-                        className="block w-full text-left px-4 py-2 text-gray-600 hover:bg-gray-100"
+                        className="block w-full text-left px-4 py-2 dark:hover:bg-black text-black dark:text-white hover:bg-gray-100"
                       >
                         📜 Flyer
                       </button>
                       <button
                         onClick={() => handleDownload("certifications.pdf")}
-                        className="block w-full text-left px-4 py-2 text-gray-600 hover:bg-gray-100"
+                        className="block w-full text-left dark:hover:bg-black dark:text-white px-4 py-2 text-black hover:bg-gray-100"
                       >
                         🎓 Certifications
                       </button>
