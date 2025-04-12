@@ -48,7 +48,7 @@ const ImageSlider = () => {
   const [isPausedRight, setIsPausedRight] = useState(false);
 
   return (
-    <section className="bg-white py-12 space-y-12">
+    <section className="bg-white py-12 space-y-12 dark:bg-black bg-gradient-to-b from-[#118B50]/10 to-transparent">
       {/* Left to Right Infinite Scrolling */}
       <h2 className="text-3xl font-bold text-center mb-12">
             Blogs
@@ -66,11 +66,11 @@ const ImageSlider = () => {
         >
           {[...testimonialsLeft, ...testimonialsLeft].map((item, index) => (
             <a key={index} href={item.link} target="_blank" rel="noopener noreferrer">
-              <div className="min-w-[200px] bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+              <div className="min-w-[200px] bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
                 <img src={item.src} alt={item.title} className="w-full h-40 object-cover" />
                 <div className="p-2 text-center">
                   <h3 className="text-sm font-bold">{item.title}</h3>
-                  <p className="text-gray-600 mt-1 text-xs">{item.description}</p>
+                  <p className="text-gray-600 dark:text-white mt-1 text-xs">{item.description}</p>
                 </div>
               </div>
             </a>
@@ -92,11 +92,11 @@ const ImageSlider = () => {
         >
           {[...testimonialsRight, ...testimonialsRight].map((item, index) => (
             <a key={index} href={item.link} target="_blank" rel="noopener noreferrer">
-              <div className="min-w-[200px] bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+              <div className="min-w-[200px] bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
                 <img src={item.src} alt={item.title} className="w-full h-40 object-cover" />
                 <div className="p-2 text-center">
                   <h3 className="text-sm font-bold">{item.title}</h3>
-                  <p className="text-gray-600 mt-1 text-xs">{item.description}</p>
+                  <p className="text-gray-600 dark:text-white mt-1 text-xs">{item.description}</p>
                 </div>
               </div>
             </a>

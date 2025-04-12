@@ -50,7 +50,7 @@ const ScrollImage = ({ images }) => {
 };
 const CompactGrid = () => {
   return (
-    <div className="relative flex items-center justify-center min-h-screen bg-gray-900 px-4 py-8 md:px-16">
+    <div className="relative  flex items-center justify-center min-h-screen bg-gray-900 px-4 py-8 md:px-16">
 
       {/* Grid Container */}
       <div className="w-full min-h-screen grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
@@ -79,7 +79,7 @@ const CompactGrid = () => {
     ) : (
       <motion.div
         key={index}
-        className="flex items-center justify-center p-4 bg-gray-900 text-white text-sm text-center rounded-lg shadow-lg"
+        className="flex items-center justify-center p-4 bg-gray-900 text-gray-200 text-sm text-center rounded-lg shadow-lg"
         {...textBoxAnimation}
       >
         {item.content}

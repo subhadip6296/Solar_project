@@ -101,7 +101,7 @@ export function WobbleCardDemo() {
     <>
 
       {/* banner images */}
-      <div className="p-0 m-0">
+      <div className="p-0 m-0  ">
         <div className="relative h-[90vh] w-full overflow-hidden ">
 
           {images.map((image, index) => (
@@ -112,8 +112,8 @@ export function WobbleCardDemo() {
               transition={{ duration: 0.8 }}
               className={`absolute inset-0 w-full h-full ${currentIndex === index ? "block" : "hidden"}`}
             >
-              <img src={image.src} alt={image.title} className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/40 flex items-center justify-center">
+              <img src={image.src} alt={image.title} className="w-full  h-full object-cover" />
+              <div className="absolute  inset-0 bg-gradient-to-r from-black/60 to-black/40 flex items-center justify-center">
                 <div className="text-center text-white max-w-4xl">
                   <h1 className="text-4xl md:text-5xl font-bold mb-4">{image.title}</h1>
                   <p className="text-lg md:text-xl text-gray-200">{image.description}</p>
@@ -135,8 +135,8 @@ export function WobbleCardDemo() {
       {/* <ThunderEffect/> */}
 
 
-      <div className="max-w-7xl mx-auto w-full space-y-8 mt-12 ">
-        <div className="relative py-20 bg-gradient-to-b from-[#118B50]/10 to-transparent overflow-hidden">
+      <div className="max-w-7xl mx-auto w-full space-y-8  dark:bg-gray-950 ">
+        <div className="relative  py-20 bg-gradient-to-b from-[#118B50]/10 to-transparent overflow-hidden">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -151,7 +151,7 @@ export function WobbleCardDemo() {
             >
               Driving the Future with <span className="text-[#118B50]  relative">Clean Energy, Smart Mobility, and Hands-On Learning</span>
             </motion.h3>
-            <motion.p {...fadeInUp} className="text-gray-600 max-w-2xl mx-auto text-lg md:text-xl">
+            <motion.p {...fadeInUp} className="text-gray-600 max-w-2xl mx-auto text-lg md:text-xl dark:text-white ">
               We aim to revolutionize renewable energy, smart mobility, and hands-on technical guidance to build a sustainable and innovation-driven future.
             </motion.p>
           </motion.div>
@@ -170,9 +170,9 @@ export function WobbleCardDemo() {
               viewport={{ once: true }}
               whileHover={{ y: -5, scale: 1.02 }}
               transition={{ duration: 0.4 }}
-              className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 relative overflow-hidden group"
+              className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-100 relative overflow-hidden group"
             >
-              <div className="absolute top-0 right-0 w-40 h-40 bg-[#118B50]/5 rounded-full transform translate-x-20 -translate-y-20 group-hover:scale-150 transition-transform duration-500" />
+              <div className="absolute  dark:bg-green-800 top-0 right-0 w-40 h-40 bg-[#118B50]/5 rounded-full transform translate-x-20 -translate-y-20 group-hover:scale-150 transition-transform duration-500" />
               <div className="relative">
                 <div className="flex items-center gap-3 mb-4">
                   <motion.div whileHover={{ rotate: 15 }} className="p-3 bg-[#118B50]/10 rounded-xl">
@@ -180,7 +180,7 @@ export function WobbleCardDemo() {
                   </motion.div>
                   <h2 className="text-2xl font-bold">Our Mission</h2>
                 </div>
-                <p className="text-gray-600 text-lg leading-relaxed">
+                <p className="text-gray-600 dark:text-white text-lg leading-relaxed ">
                   To accelerate India's transition to sustainable energy by providing innovative solar solutions, advancing e-bike technology, and empowering students through hands-on consulting.
                 </p>
               </div>
@@ -193,9 +193,9 @@ export function WobbleCardDemo() {
               viewport={{ once: true }}
               whileHover={{ y: -5, scale: 1.02 }}
               transition={{ duration: 0.4 }}
-              className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 relative overflow-hidden group"
+              className="bg-white dark:bg-gray-800  p-8 rounded-2xl shadow-lg border border-gray-100 relative overflow-hidden group"
             >
-              <div className="absolute top-0 right-0 w-40 h-40 bg-[#009a8d]/5 rounded-full transform translate-x-20 -translate-y-20 group-hover:scale-150 transition-transform duration-500" />
+              <div className="absolute dark:bg-green-800 top-0 right-0 w-40 h-40 bg-[#009a8d]/5 rounded-full transform translate-x-20 -translate-y-20 group-hover:scale-150 transition-transform duration-500" />
               <div className="relative">
                 <div className="flex items-center gap-3 mb-4">
                   <motion.div whileHover={{ rotate: -15 }} className="p-3 bg-[#118B50]/10 rounded-xl">
@@ -203,7 +203,7 @@ export function WobbleCardDemo() {
                   </motion.div>
                   <h2 className="text-2xl font-bold">Our Vision</h2>
                 </div>
-                <p className="text-gray-600 text-lg leading-relaxed">
+                <p className="text-gray-600 text-lg leading-relaxed dark:text-white">
                   To be the leading provider of sustainable energy solutions in India by pioneering solar innovations, advancing e-bike technology, and empowering students through hands-on consulting.
                 </p>
               </div>
@@ -212,13 +212,13 @@ export function WobbleCardDemo() {
         </div>
 
 
-
+<div className="pt-24 ">
         <GridShowCase />
-
+        </div>
 
         {/* core values */}
-        <div className="bg-gradient-to-b to-[#118B50]/10 from-transparent pb-24">
-          <div className="max-w-7xl mx-auto px-4">
+        <div className="bg-gradient-to-b to-[#118B50]/10 from-transparent dark:bg-green-950 pb-24 pt-24">
+          <div className="max-w-7xl mx-auto px-4 ">
             <h2 className="text-3xl font-bold text-center mb-12">
               Our Core Values
             </h2>
@@ -229,10 +229,10 @@ export function WobbleCardDemo() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.2 }}
-                  className="bg-white p-6 rounded-xl shadow-lg text-center">
-                  <value.icon className="w-12 h-12 text-[#118B50] mx-auto mb-1" />
+                  className="bg-white dark:bg-black p-6 rounded-xl shadow-lg text-center">
+                  <value.icon className="w-12 h-12 text-[#118B50]  mx-auto mb-1" />
                   <h3 className="text-xl font-bold mb-2">{value.title}</h3>
-                  <p className="text-gray-600">{value.description}</p>
+                  <p className="text-gray-600 dark:text-gray-200">{value.description}</p>
                 </motion.div>
               ))}
             </div>

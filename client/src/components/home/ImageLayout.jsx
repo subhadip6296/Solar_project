@@ -34,10 +34,10 @@ export default function ImageGrid() {
   }, []);
 
   return (
-    <>
+    <div className="dark:bg-gray-900 pb-12 bg-gradient-to-b from-[#118B50]/10 to-transparent">
 
-    <div className="max-w-7xl mx-auto px-4 overflow-hidden position-relative">
-            <h2 className="text-3xl font-bold text-center mb-12">
+    <div className="max-w-7xl mx-auto px-4 overflow-hidden position-relative ">
+            <h2 className="text-3xl font-bold text-center mb-12 pt-12 ">
               Featured Projects
             </h2>
             </div>
@@ -120,6 +120,6 @@ export default function ImageGrid() {
         </div>
       </div>
     </div>
-    </>
+    </div>
   );
 } 

@@ -99,11 +99,11 @@ const OurServices = () => {
   
     return (
       <div>
-        <div className="container mx-auto px-6 lg:px-20 pt-16 relative overflow-hidden">
+        <div className="container mx-auto px-6 lg:px-20 pt-16 relative overflow-hidden bg-gradient-to-b from-[#118B50]/10">
           <h2 className="text-3xl font-bold text-center mb-12">Our Services</h2>
           <div className="relative">
             <button
-              className="absolute left-0 top-[38%] transform -translate-y-1/2 bg-white shadow-lg p-2  rounded-full z-10"
+              className="absolute left-0 top-[38%] transform -translate-y-1/2 bg-white dark:bg-black shadow-lg p-2  rounded-full z-10"
               onClick={scrollLeft}
             >
               <ChevronLeft size={24} />
@@ -111,7 +111,7 @@ const OurServices = () => {
             <div ref={sliderRef} className="keen-slider">
               {testimonals.map((testimonals, index) => (
                 <div key={index} className="keen-slider__slide">
-<div className="bg-white rounded-lg shadow-md overflow-hidden h-[420px]">
+<div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden h-[420px]">
 <Link to={'/services'}>
                       <img
                         src={testimonals.src}
@@ -121,14 +121,14 @@ const OurServices = () => {
                     </Link>
                     <div className="p-4 text-center">
                       <h3 className="text-lg font-bold">{testimonals.title}</h3>
-                      <p className="text-gray-600 mt-2">{testimonals.description}</p>
+                      <p className="text-gray-600 dark:text-gray-300 mt-2">{testimonals.description}</p>
                     </div>
                   </div>
                 </div>
               ))}
             </div>
             <button
-              className="absolute right-0 top-[38%] transform -translate-y-1/2 bg-white shadow-lg p-2 rounded-full z-10"
+              className="absolute right-0 top-[38%] transform -translate-y-1/2 bg-white dark:bg-black shadow-lg p-2 rounded-full z-10"
               onClick={scrollRight}
             >
               <ChevronRight size={24} />
@@ -137,7 +137,7 @@ const OurServices = () => {
         </div>
         <div className="text-center mt-6 mb-4">
           <Link to={"/services"}>
-            <Button className="bg-[#118B50]  hover:bg-green-900 text-white px-6 py-3 rounded-lg">
+            <Button className="bg-[#118B50] dark:bg-green-950  hover:bg-green-900 text-white px-6 py-3 rounded-lg">
               Explore More
             </Button>
           </Link>
