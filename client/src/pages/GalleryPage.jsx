@@ -16,16 +16,16 @@ const galleryData = [
   //   description: "Engaging with the community through tech education and mentorship programs.",
   //   image: "https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2023/07/teaserbox_903940272.jpg",
   // },
-  {
-    title: "Product Launch Event",
-    description: "A grand launch event for our latest AI-powered product.",
-    image: "https://www.evenesis.com/wp-content/uploads/product-launch-event.jpg",
-  },
-  {
-    title: "Hackathon Victory",
-    description: "Our team secured first place in an international hackathon competition.",
-    image: "https://res.cloudinary.com/devex/image/fetch/c_scale,f_auto,q_auto,w_720/https://lh4.googleusercontent.com/VQyrPPyh-FGdV2BJtlcwDphesnxERD6SLWvGtARygLDVNSsXhFF0kzG_yXvLyiARZbKIG3VYF_CIbF4_B-Wy3Eu7kKhHKKR3pq_2ob2pdZgxt_Wz_uqXjRMrhIBKREQnJo--Ui9b",
-  },
+  // {
+  //   title: "Product Launch Event",
+  //   description: "A grand launch event for our latest AI-powered product.",
+  //   image: "https://www.evenesis.com/wp-content/uploads/product-launch-event.jpg",
+  // },
+  // {
+  //   title: "Hackathon Victory",
+  //   description: "Our team secured first place in an international hackathon competition.",
+  //   image: "https://res.cloudinary.com/devex/image/fetch/c_scale,f_auto,q_auto,w_720/https://lh4.googleusercontent.com/VQyrPPyh-FGdV2BJtlcwDphesnxERD6SLWvGtARygLDVNSsXhFF0kzG_yXvLyiARZbKIG3VYF_CIbF4_B-Wy3Eu7kKhHKKR3pq_2ob2pdZgxt_Wz_uqXjRMrhIBKREQnJo--Ui9b",
+  // },
   // {
   //   title: "Annual Team Meetup",
   //   description: "Celebrating our achievements and planning for the future at our annual retreat.",
