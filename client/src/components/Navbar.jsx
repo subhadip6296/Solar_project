@@ -248,9 +248,9 @@ const Navbar = () => {
                   >
                     <Link
                       to="/gallery"
-                      className={`flex items-center dark:text-white gap-2 group-hover:text-[#118B50] ${isScrolled ? "text-white hover:text-[#00FFAA]" : "text-gray-600 hover:text-[#118B50]"}`}
+                      className={`flex items-center dark:text-white  gap-2 group- hover:text-[#118B50] ${isScrolled ? "text-black hover:text-[#00FFAA]" : "text-gray-600 hover:text-[#118B50]"}`}
                     >
-                      <BookImage className="w-5 h-5" />
+                      <BookImage className="w-5 h-5 " />
                       Gallery
                       <ChevronDown className="w-4 h-4" />
                     </Link>
