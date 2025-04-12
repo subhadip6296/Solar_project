@@ -3,22 +3,23 @@ import { useState, useEffect } from "react";
 
 const items = [
   { type: "image", text: "EvolTriv", img: ["/assets/Images/b1.jpg", "/assets/Images/b11.jpg", "/assets/Images/b3.jpeg"] },
-  { type: "text", content: "We offer efficient solar solutions." },
+  { type: "text", content: "We offer efficient solar solutions. Our systems are tailored for both residential and commercial use. Designed to lower costs and carbon footprints effectively." },
   { type: "image", text: "On-grid and off-grid available.", img: "https://i.gifer.com/origin/1f/1fe682b598a97cee3d5093cfa8c92f7f_w200.gif" },
-  { type: "text", content: "Hybrid solar systems maximize efficiency." },
-  { type: "text", content: "Custom solar solutions for industries." },
+  { type: "text", content: "Hybrid solar systems maximize efficiency. They combine the benefits of both on-grid and off-grid technologies. Perfect for uninterrupted power supply in all conditions." },
+  { type: "text", content: "Custom solar solutions for industries. We analyze your energy needs to provide optimized setups. Boost productivity while being eco-conscious." },
   { type: "image", text: "Our solar systems ensure sustainability.", img: ["/assets/Images/ebb.png", "/assets/Images/c2.jpg", "/assets/Images/c11.jpg"] },
-  { type: "text", content: "We offer advanced e-mobility solutions." },
+  { type: "text", content: "We offer advanced e-mobility solutions. From personal to industrial transport, we’ve got you covered. Transition to green mobility with ease and reliability." },
   { type: "image", text: "E-bikes provide clean transportation alternatives.", img: "https://cdn.shopify.com/s/files/1/0592/3766/2905/files/charge_the_ebike_by_pedaling.gif?v=1691983938" },
   { type: "image", text: "Affordable and efficient electric mobility.", img: "https://encrypted-tbn0.gstatic.com/assets/Images?q=tbn:ANd9GcQnSXbJsnv_AkVVc8P-Fa8S0gFmPWz_B6Jglw&s" },
-  { type: "text", content: "Reducing fossil fuel dependency daily." },
+  { type: "text", content: "Reducing fossil fuel dependency daily. Our mission is to drive sustainable change. Every ride counts toward a greener tomorrow." },
   { type: "image", text: "Innovative designs for better performance.", img: ["/assets/Images/e1.jpg", "/assets/Images/e2.jpg", "/assets/Images/e11.jpg"] },
-  { type: "text", content: "We offer hands-on technical training." },
-  { type: "text", content: "Students gain real-world project experience." },
+  { type: "text", content: "We offer hands-on technical training. Learn by doing in real-world environments. Our labs and mentors guide you every step of the way." },
+  { type: "text", content: "Students gain real-world project experience. Build, test, and deploy with confidence. Our programs empower you to innovate from day one." },
   { type: "image", text: "Learn IoT and renewable energy.", img: "https://www.boldbusiness.com/wp-content/uploads/2018/05/IoT.gif" },
-  { type: "text", content: "Practical skills for future innovation." },
+  { type: "text", content: "Practical skills for future innovation. We focus on cutting-edge tools and platforms. Shape your career in the fast-growing green tech space." },
   { type: "image", text: "Bridging theory with practical application.", img: ["/assets/Images/d1.jpg", "/assets/Images/d2.jpeg", "/assets/Images/d3.jpg"] },
 ];
+
 
 // Text Box Animation (fade & slide in)
 const textBoxAnimation = {

@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState,useRef } from "react";
+import html2pdf from 'html2pdf.js';
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Sun,
@@ -424,81 +425,105 @@ const products = [
 }
 ]
 
-const ProductDetailDialog = ({ product }) => (
-  <Dialog>
-    <DialogTrigger asChild>
-      <motion.button
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        className="text-[#118B50] font-medium flex items-center gap-2">
-        Learn More <ArrowRight className="w-4 h-4" />
-      </motion.button>
-    </DialogTrigger>
-    <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
-      <DialogHeader>
-        <DialogTitle className="text-2xl font-bold">{product.name}</DialogTitle>
-        <DialogDescription>
-          Discover the features and benefits of our {product.name}
-        </DialogDescription>
-      </DialogHeader>
+const ProductDetailDialog = ({ product }) => {
+  const brochureRef = useRef();
 
-      <div className="mt-4 space-y-6">
-        <img
-          src={product.image}
-          alt={product.name}
-          className="w-full h-64 object-cover rounded-lg"
-        />
+  const handleDownloadBrochure = () => {
+    const element = brochureRef.current;
 
-        <div className="space-y-4">
-          <h3 className="font-semibold text-lg">Key Features</h3>
-          <div className="grid grid-cols-2 gap-3">
-            {product.features.map((feature, index) => (
-              <div key={index} className="flex items-center gap-2">
-                <Check className="w-4 h-4 text-[#118B50]" />
-                <span className="text-sm">{feature}</span>
-              </div>
-            ))}
+    const opt = {
+      margin:       0.5,
+      filename:     `${product.name}-brochure.pdf`,
+      image:        { type: 'jpeg', quality: 0.98 },
+      html2canvas:  { scale: 2 },
+      jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' },
+    };
+
+    html2pdf().set(opt).from(element).save();
+  };
+
+  return (
+    <Dialog>
+      <DialogTrigger asChild>
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="text-[#118B50] font-medium flex items-center gap-2">
+          Learn More <ArrowRight className="w-4 h-4" />
+        </motion.button>
+      </DialogTrigger>
+
+      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+        <DialogHeader>
+          <DialogTitle className="text-2xl font-bold">{product.name}</DialogTitle>
+          <DialogDescription>
+            Discover the features and benefits of our {product.name}
+          </DialogDescription>
+        </DialogHeader>
+
+        <div ref={brochureRef} className="mt-4 space-y-6 p-4 bg-white">
+          <img
+            src={product.image}
+            alt={product.name}
+            className="w-full h-64 object-cover rounded-lg"
+          />
+
+          <div className="space-y-4">
+            <h3 className="font-semibold text-lg">Key Features</h3>
+            <div className="grid grid-cols-2 gap-3">
+              {product.features.map((feature, index) => (
+                <div key={index} className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-[#118B50]" />
+                  <span className="text-sm">{feature}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="space-y-4">
+            <h3 className="font-semibold text-lg">Technical Specifications</h3>
+            <div className="grid grid-cols-2 gap-4">
+              {Object.entries(product.specifications).map(([key, value]) => (
+                <div key={key} className="flex flex-col">
+                  <span className="text-sm text-gray-500">{key}</span>
+                  <span className="font-medium">{value}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="space-y-4">
+            <h3 className="font-semibold text-lg">Benefits</h3>
+            <div className="grid gap-4">
+              {product.benefits.map((benefit, index) => (
+                <div key={index} className="bg-gray-50 p-4 rounded-lg">
+                  <h4 className="font-medium text-[#118B50]">{benefit.title}</h4>
+                  <p className="text-sm text-gray-600">{benefit.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
-        <div className="space-y-4">
-          <h3 className="font-semibold text-lg">Technical Specifications</h3>
-          <div className="grid grid-cols-2 gap-4">
-            {Object.entries(product.specifications).map(([key, value]) => (
-              <div key={key} className="flex flex-col">
-                <span className="text-sm text-gray-500">{key}</span>
-                <span className="font-medium">{value}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="space-y-4">
-          <h3 className="font-semibold text-lg">Benefits</h3>
-          <div className="grid gap-4">
-            {product.benefits.map((benefit, index) => (
-              <div key={index} className="bg-gray-50 p-4 rounded-lg">
-                <h4 className="font-medium text-[#118B50]">{benefit.title}</h4>
-                <p className="text-sm text-gray-600">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
+        {/* Download Buttons */}
         <div className="flex justify-between pt-4">
-          <button className="flex items-center gap-2 text-sm text-gray-600 hover:text-[#118B50]">
+          <button
+            onClick={handleDownloadBrochure}
+            className="flex items-center gap-2 text-sm text-gray-600 hover:text-[#118B50]">
             <Download className="w-4 h-4" />
             Download Brochure
           </button>
+
           <button className="flex items-center gap-2 text-sm text-gray-600 hover:text-[#118B50]">
             <FileText className="w-4 h-4" />
             Technical Details
           </button>
         </div>
-      </div>
-    </DialogContent>
-  </Dialog>
-);
+      </DialogContent>
+    </Dialog>
+  );
+};
+
 
 const ProductCard = ({ product }) => (
   <motion.div

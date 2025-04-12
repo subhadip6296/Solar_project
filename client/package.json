@@ -28,6 +28,7 @@
     "date-fns": "^3.6.0",
     "framer-motion": "^11.18.2",
     "gsap": "^3.12.7",
+    "html2pdf.js": "^0.10.3",
     "keen-slider": "^6.8.6",
     "lucide-react": "^0.428.0",
     "mini-svg-data-uri": "^1.4.4",
