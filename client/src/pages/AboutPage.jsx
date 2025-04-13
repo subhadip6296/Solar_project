@@ -219,7 +219,7 @@ const AboutPage = () => {
   
 
   return (
-    <div className=" bg-gradient-to-b from-[#118B50]/10 to-transparent pt-48 dark:bg-green-950">
+    <div className=" bg-gradient-to-b from-[#118B50]/10 to-transparent pt-48 dark:bg-[#0B0B45]">
       {/* Hero Section with Background */}
       {/* <div className="relative py-20 bg-gradient-to-b from-[#118B50]/10 to-transparent overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-4">
@@ -294,14 +294,14 @@ const AboutPage = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             whileHover={{ y: -5 }}
-            className="bg-white p-8 dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 relative overflow-hidden group">
+            className="bg-white p-8 dark:bg-gray-900 rounded-2xl shadow-lg border border-gray-100 relative overflow-hidden group">
             {/* Background Decoration */}
-            <div className="absolute  dark:bg-green-800 top-0 right-0 w-40 h-40 bg-[#118B50]/5 rounded-full transform translate-x-20 -translate-y-20 group-hover:scale-150 transition-transform duration-500" />
+            <div className="absolute  dark:bg-blue-900 top-0 right-0 w-40 h-40 bg-[#118B50]/5 rounded-full transform translate-x-20 -translate-y-20 group-hover:scale-150 transition-transform duration-500" />
 
             <div className="relative">
               <div className="flex items-center gap-3 mb-4">
                 <div className="p-3 bg-[#118B50]/10 rounded-xl">
-                  <Sun className="text-[#118B50] w-6 h-6" />
+                  <Sun className="text-[#118B50] dark:text-blue-700 w-6 h-6" />
                 </div>
                 <h2 className="text-2xl dark:text-gray-200 font-bold">Why Solar Energy?</h2>
               </div>
@@ -311,11 +311,11 @@ const AboutPage = () => {
 
               <div className="mt-6 space-y-3">
                 <div className="flex items-center gap-2">
-                  <Leaf className="text-[#118B50] w-5 h-5" />
+                  <Leaf className="text-[#118B50] dark:text-blue-700 w-5 h-5" />
                   <span className="text-gray-700 dark:text-white">Eco-Friendly & Sustainable</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Zap className="text-[#009a8d] w-5 h-5" />
+                  <Zap className="text-[#009a8d] dark:text-blue-700 w-5 h-5" />
                   <span className="text-gray-700 dark:text-white">Cost-Effective & Efficient</span>
                 </div>
               </div>
@@ -328,14 +328,14 @@ const AboutPage = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             whileHover={{ y: -5 }}
-            className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-100 relative overflow-hidden group">
+            className="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-100 relative overflow-hidden group">
             {/* Background Decoration */}
-            <div className="absolute dark:bg-green-800 top-0 right-0 w-40 h-40 bg-[#009a8d]/5 rounded-full transform translate-x-20 -translate-y-20 group-hover:scale-150 transition-transform duration-500" />
+            <div className="absolute dark:bg-blue-900 top-0 right-0 w-40 h-40 bg-[#009a8d]/5 rounded-full transform translate-x-20 -translate-y-20 group-hover:scale-150 transition-transform duration-500" />
 
             <div className="relative">
               <div className="flex items-center gap-3 mb-4">
                 <div className="p-3 bg-[#118B50]/10 rounded-xl">
-                  <Target className="text-[#009a8d] w-6 h-6" />
+                  <Target className="text-[#009a8d] dark:text-blue-700 w-6 h-6" />
                 </div>
                 <h2 className="text-2xl dark:text-gray-200 font-bold">Why EvolTriv?</h2>
               </div>
@@ -345,11 +345,11 @@ const AboutPage = () => {
 
               <div className="mt-6 space-y-3">
                 <div className="flex items-center gap-2">
-                  <Leaf className="text-[#118B50] w-5 h-5" />
+                  <Leaf className="text-[#118B50] dark:text-blue-700 w-5 h-5" />
                   <span className="text-gray-700 dark:text-white">Innovative & Sustainable Solutions</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Zap className="text-[#118B50] w-5 h-5" />
+                  <Zap className="text-[#118B50] dark:text-blue-700 w-5 h-5" />
                   <span className="text-gray-700 dark:text-white">Empowering Future Technologies</span>
                 </div>
               </div>
@@ -396,7 +396,7 @@ const AboutPage = () => {
 </div>
 
       {/* Achievements */}
-      <div className="bg-[#118B50] text-white py-16 dark:bg-green-950 ">
+      <div className="bg-[#118B50] text-white py-16 dark:bg-[#0B0B45] ">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">
             Our Achievements
@@ -424,7 +424,7 @@ const AboutPage = () => {
 
 
       {/* Call to Action */}
-      <div className=" mx-auto pb-12 text-center px-4 pt-24 bg-gradient-to-b from-[#118B50]/10 to-transparent ">
+      <div className=" mx-auto pb-12 dark:bg-[#00005c] text-center px-4 pt-24 bg-gradient-to-b from-[#118B50]/10 to-transparent ">
         <h2 className="text-3xl font-bold mb-6">Ready to Go Solar?</h2>
         <p className="text-gray-600 dark:text-gray-200 mb-8">
   Join us in building a sustainable future. Whether it's solar energy, 
@@ -438,7 +438,7 @@ const AboutPage = () => {
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="bg-[#118B50]  dark:bg-green-800 text-white px-8 py-3 rounded-lg font-semibold flex items-center mx-auto hover:bg-[#008075] transition-colors">
+          className="bg-[#118B50]  dark:bg-white dark:text-black text-white px-8 py-3 rounded-lg font-semibold flex items-center mx-auto hover:bg-[#008075] transition-colors">
           Contact Us
           <ArrowRight className="ml-2 h-5 w-5" />
         </motion.button>

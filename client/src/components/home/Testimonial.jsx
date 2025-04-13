@@ -66,7 +66,7 @@ const ImageSlider = () => {
         >
           {[...testimonialsLeft, ...testimonialsLeft].map((item, index) => (
             <a key={index} href={item.link} target="_blank" rel="noopener noreferrer">
-              <div className="min-w-[200px] bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+              <div className="min-w-[200px] bg-white dark:bg-blue-950 rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
                 <img src={item.src} alt={item.title} className="w-full h-40 object-cover" />
                 <div className="p-2 text-center">
                   <h3 className="text-sm font-bold">{item.title}</h3>
@@ -92,7 +92,7 @@ const ImageSlider = () => {
         >
           {[...testimonialsRight, ...testimonialsRight].map((item, index) => (
             <a key={index} href={item.link} target="_blank" rel="noopener noreferrer">
-              <div className="min-w-[200px] bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+              <div className="min-w-[200px] bg-white dark:bg-blue-950 rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
                 <img src={item.src} alt={item.title} className="w-full h-40 object-cover" />
                 <div className="p-2 text-center">
                   <h3 className="text-sm font-bold">{item.title}</h3>

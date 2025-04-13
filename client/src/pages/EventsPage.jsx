@@ -567,13 +567,13 @@ const EventsPage = () => {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-black">
       {/* Hero Section */}
-      <div className="bg-[#C1D8C3] text-white py-16 md:py-24">
+      <div className="bg-[#C1D8C3] dark:bg-[#00005c] text-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-4xl text-black md:text-5xl font-bold mb-6"
+              className="text-4xl text-black dark:text-white md:text-5xl font-bold mb-6"
             >
               Events & Workshops
             </motion.h1>
@@ -581,7 +581,7 @@ const EventsPage = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="text-xl text-black max-w-2xl mx-auto"
+              className="text-xl text-black max-w-2xl dark:text-gray-300 mx-auto"
             >
               Stay updated with our latest events, workshops, and community
               gatherings focused on sustainable energy solutions.

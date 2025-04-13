@@ -111,7 +111,7 @@ const OurServices = () => {
             <div ref={sliderRef} className="keen-slider">
               {testimonals.map((testimonals, index) => (
                 <div key={index} className="keen-slider__slide">
-<div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden h-[420px]">
+<div className="bg-white dark:bg-[#00005c] rounded-lg shadow-md overflow-hidden h-[420px]">
 <Link to={'/services'}>
                       <img
                         src={testimonals.src}
@@ -137,7 +137,7 @@ const OurServices = () => {
         </div>
         <div className="text-center mt-6 mb-4">
           <Link to={"/services"}>
-            <Button className="bg-[#118B50] dark:bg-green-950  hover:bg-green-900 text-white px-6 py-3 rounded-lg">
+            <Button className="bg-[#118B50] dark:bg-[#0B0B45]  hover:bg-green-900 text-white px-6 py-3 rounded-lg">
               Explore More
             </Button>
           </Link>

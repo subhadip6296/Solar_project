@@ -92,7 +92,7 @@ const ServicesPage = () => {
           alt="Rooftop Solar"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/5 to-black/40">
+        <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-black/40">
           <div className="max-w-5xl mx-auto px-4 h-full flex flex-col justify-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -154,7 +154,7 @@ promises in shaping a greener and smarter future.
                 <div className="grid grid-cols-2 gap-4 ">
                   {service.benefits.map((benefit, idx) => (
                     <div key={idx} className="flex dark:text-white items-center  space-x-2">
-                      <Check className="w-5 h-5 text-[#118B50]" />
+                      <Check className="w-5 h-5 dark:text-blue-600 text-[#118B50]" />
                       <span className="text-gray-700 dark:text-gray-400">{benefit}</span>
                     </div>
                   ))}
@@ -166,7 +166,7 @@ promises in shaping a greener and smarter future.
                 <div className="grid grid-cols-3 gap-4 pt-6">
                   {Object.entries(service.stats).map(([key, value]) => (
                     <div key={key} className="text-center">
-                      <div className="text-2xl font-bold dark:text-white text-[#118B50]">
+                      <div className="text-2xl font-bold dark:text-blue-600 text-[#118B50]">
                         {value}
                       </div>
                       <div className="text-sm text-gray-500 capitalize">
@@ -182,7 +182,7 @@ promises in shaping a greener and smarter future.
   <motion.button
     whileHover={{ scale: 1.05 }}
     whileTap={{ scale: 0.95 }}
-    className="bg-[#118B50] text-white px-6 py-3 rounded-lg flex items-center ">
+    className="bg-[#118B50] dark:bg-blue-700 text-white px-6 py-3 rounded-lg flex items-center ">
     Explore Now
     <ArrowRight className="ml-2 h-5 w-5" />
   </motion.button>

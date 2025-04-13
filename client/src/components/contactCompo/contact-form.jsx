@@ -561,7 +561,7 @@ export function ContactFormComponent() {
                         {/* ✅ Submit Button */}
                         <Button
                             type="submit"
-                            className="w-full bg-[#118B50] hover:bg-pcolor/90"
+                            className="w-full bg-[#118B50] dark:bg-white hover:bg-pcolor/90"
                             disabled={isSubmitting}
                         >
                             {isSubmitting ? "Sending..." : "Send Message"}

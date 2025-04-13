@@ -449,8 +449,8 @@ const ProductDetailDialog = ({ product }) => {
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="text-[#118B50]  font-medium flex items-center gap-2 ">
-          Learn More <ArrowRight className="w-4 h-4 " />
+          className="text-[#118B50]  dark:text-blue-600 dark:hover:text-white font-medium flex items-center gap-2 ">
+          Learn More <ArrowRight className="w-4 h-4  " />
         </motion.button>
       </DialogTrigger>
 
@@ -462,20 +462,20 @@ const ProductDetailDialog = ({ product }) => {
           </DialogDescription>
         </DialogHeader>
 
-        <div ref={brochureRef} className="mt-4 space-y-6 p-4 bg-white dark:bg-black">
+        <div ref={brochureRef} className="mt-4  space-y-6 p-4 bg-white dark:bg-black">
           <img
             src={product.image}
             alt={product.name}
-            className="w-full h-64 object-cover rounded-lg dark:text-gray-400"
+            className="w-full h-64 object-cover  rounded-lg dark:text-gray-400"
           />
 
           <div className="space-y-4 ">
-            <h3 className="font-semibold text-lg">Key Features</h3>
-            <div className="grid grid-cols-2 gap-3 ">
+            <h3 className="font-semibold  text-lg">Key Features</h3>
+            <div className="grid grid-cols-2  gap-3 ">
               {product.features.map((feature, index) => (
-                <div key={index} className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-[#118B50] " />
-                  <span className="text-sm">{feature}</span>
+                <div key={index} className="flex items-center   gap-2">
+                  <Check className="w-4 h-4 dark:text-blue-600 text-[#118B50] " />
+                  <span className="text-sm ">{feature}</span>
                 </div>
               ))}
             </div>
@@ -486,7 +486,7 @@ const ProductDetailDialog = ({ product }) => {
             <div className="grid grid-cols-2 gap-4">
               {Object.entries(product.specifications).map(([key, value]) => (
                 <div key={key} className="flex flex-col">
-                  <span className="text-sm text-gray-500">{key}</span>
+                  <span className="text-sm text-gray-300">{key}</span>
                   <span className="font-medium">{value}</span>
                 </div>
               ))}
@@ -497,9 +497,9 @@ const ProductDetailDialog = ({ product }) => {
             <h3 className="font-semibold text-lg">Benefits</h3>
             <div className="grid gap-4 ">
               {product.benefits.map((benefit, index) => (
-                <div key={index} className="bg-gray-50 p-4 rounded-lg dark:bg-green-950">
+                <div key={index} className="bg-gray-50 p-4 rounded-lg dark:bg-[#0B0B45]">
                   <h4 className="font-medium dark:text-white text-[#118B50]">{benefit.title}</h4>
-                  <p className="text-sm text-gray-600">{benefit.description}</p>
+                  <p className="text-sm text-gray-300">{benefit.description}</p>
                 </div>
               ))}
             </div>
@@ -510,12 +510,12 @@ const ProductDetailDialog = ({ product }) => {
         <div className="flex justify-between pt-4">
           <button
             onClick={handleDownloadBrochure}
-            className="flex items-center  dark:text-white gap-2 text-sm text-gray-600 hover:text-[#118B50]">
+            className="flex items-center  dark:text-white gap-2 text-sm text-gray-600  dark:hover:text-blue-600 hover:text-[#118B50]">
             <Download className="w-4 h-4 dark:text-white" />
             Download Brochure
           </button>
 
-          <button className="flex items-center dark:text-white gap-2 text-sm text-gray-600 hover:text-[#118B50]">
+          <button className="flex items-center dark:text-white dark:hover:text-blue-600 gap-2 text-sm text-gray-600 hover:text-[#118B50]">
             <FileText className="w-4 h-4 dark:text-white" />
             Technical Details
           </button>
@@ -532,36 +532,36 @@ const ProductCard = ({ product }) => (
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     exit={{ opacity: 0, y: -20 }}
-    className="bg-white rounded-xl shadow-lg overflow-hidden group dark:bg-black ">
-    <div className="relative h-64 overflow-hidden">
+    className="bg-white rounded-xl  shadow-lg overflow-hidden group dark:bg-black ">
+    <div className="relative h-64  overflow-hidden">
       <img
         src={product.image}
         alt={product.name}
-        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+        className="w-full h-full  object-cover group-hover:scale-105 transition-transform duration-500"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+      <div className="absolute  inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
     </div>
 
-    <div className="p-6">
-      <h3 className="text-xl font-bold mb-2 group-hover:text-[#118B50] transition-colors">
+    <div className="p-6 ">
+      <h3 className="text-xl  font-bold mb-2 dark:group-hover:text-blue-600 group-hover:text-[#118B50] transition-colors">
         {product.name}
       </h3>
-      <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-2">
+      <p className="text-gray-500  dark:text-gray-400 text-sm mb-4 line-clamp-2">
         {product.description}
       </p>
 
-      <div className="space-y-3 ">
+      <div className="space-y-3  ">
         {product.features.slice(0, 3).map((feature, index) => (
           <div
             key={index}
-            className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
-            <Check className="w-4 h-4 text-[#118B50] " />
+            className="flex  items-center gap-2 text-sm text-gray-600 dark:text-gray-300">
+            <Check className="w-4 dark:text-blue-600 h-4 text-[#118B50] " />
             {feature}
           </div>
         ))}
       </div>
 
-      <div className="mt-6">
+      <div className="mt-6 ">
         <ProductDetailDialog product={product} />
       </div>
     </div>
@@ -584,7 +584,7 @@ const ProductsPage = () => {
     );
   };
   return (
-    <div className="min-h-screen bg-white w-full overflow-hidden">
+    <div className="min-h-screen  bg-white w-full overflow-hidden">
       {/* Hero Section */}
       {/* <div className="bg-[#C1D8C3] text-black py-16">
         <div className="max-w-7xl mx-auto px-4">
@@ -608,7 +608,7 @@ const ProductsPage = () => {
       </div> */}
 
       {/* Products Section */}
-      <div className="max-w-7xl mx-auto px-4 py-16 w-full overflow-hidden dark:bg-green-950">
+      <div className="max-w-7xl  mx-auto px-4 py-16 w-full overflow-hidden dark:bg-[#0B0B45]">
         <Tabs defaultValue={selectedCategory} className="space-y-8 ">
         <div className="flex justify-center  overflow-hidden bg-black sm:bg-gray-200 w-full sm:w-fit mx-auto">
         <TabsList className="flex justify-center  items-center px-2 flex-nowrap scale-75 sm:scale-100 h-8 bg-gray-800 sm:bg-gray-300 text-white sm:text-black">
@@ -639,7 +639,7 @@ const ProductsPage = () => {
 
           {products.map((category) => (
             <TabsContent key={category.id} value={category.category}>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
+            <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
             {category.items.map((product) => (
                   <ProductCard key={product.name} product={product} />
                 ))}
@@ -650,10 +650,10 @@ const ProductsPage = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-[#C1D8C3]  py-16">
-        <div className="max-w-7xl mx-auto px-4 text-center dark:text-black">
-          <h2 className="text-3xl font-bold mb-6">Need Help Choosing?</h2>
-          <p className="text-black max-w-2xl mx-auto mb-8">
+      <div className="bg-[#C1D8C3]  dark:bg-[#00005c] py-16">
+        <div className="max-w-7xl  mx-auto px-4 text-center dark:text-black">
+          <h2 className="text-3xl  font-bold mb-6 dark:text-white">Need Help Choosing?</h2>
+          <p className="text-black max-w-2xl mx-auto dark:text-white mb-8">
   Explore cutting-edge solutions in renewable energy, e-bikes, and student innovations. Connect with us to power your ideas with sustainable technology.
 </p>
 
@@ -661,7 +661,7 @@ const ProductsPage = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-[#118B50] text-white px-8 py-3 rounded-lg font-medium hover:bg-[#008075] transition-colors">
+            className="bg-[#118B50] dark:bg-white dark:text-black text-white px-8 py-3 rounded-lg font-medium  hover:bg-[#008075] transition-colors">
             Contact Us
           </motion.button>
           </Link>
