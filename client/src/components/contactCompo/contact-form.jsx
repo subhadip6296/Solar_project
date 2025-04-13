@@ -374,14 +374,16 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from ".
 import emailjs from '@emailjs/browser';
 
 // ✅ Zod Schema
+// ✅ Updated Zod Schema with optional email and query
 const formSchema = z.object({
     name: z.string().min(2, { message: "Name must be at least 2 characters." }),
     contactNo: z.string().regex(/^\+?[1-9]\d{1,14}$/, { message: "Enter a valid contact number." }),
-    email: z.string().email({ message: "Enter a valid email address." }),
+    email: z.string().email({ message: "Enter a valid email address." }).optional().or(z.literal("")),
     subject: z.string().min(5, { message: "Subject must be at least 5 characters." }),
-    query: z.string().min(10, { message: "Query must be at least 10 characters." }),
+    query: z.string().min(10, { message: "Query must be at least 10 characters." }).optional().or(z.literal("")),
     category: z.string().nonempty({ message: "Please select a category." }),
 });
+
 
 export function ContactFormComponent() {
     const [isSubmitting, setIsSubmitting] = useState(false);
