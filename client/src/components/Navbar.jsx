@@ -89,7 +89,7 @@ const Navbar = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         className={`fixed w-full z-50 dark:bg-[#0B0B45]  transition-all duration-300 ${isScrolled ? "bg-white shadow-lg" : "bg-white"}`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+        <div className=" mx-auto px-4 sm:px-6 lg:px-8 ">
           <div className="flex items-center justify-between h-16 md:h-20 ">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="flex-shrink-0">
               <Link to="/" className="flex items-center">
