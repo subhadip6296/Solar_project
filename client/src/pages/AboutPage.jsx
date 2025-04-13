@@ -396,7 +396,7 @@ const AboutPage = () => {
 </div>
 
       {/* Achievements */}
-      <div className="bg-[#118B50] text-white py-16 dark:bg-[#0B0B45] ">
+      {/* <div className="bg-[#118B50] text-white py-16 dark:bg-[#0B0B45] ">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">
             Our Achievements
@@ -416,7 +416,7 @@ const AboutPage = () => {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
 
 
 <Testimonnial/>

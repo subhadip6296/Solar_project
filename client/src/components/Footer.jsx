@@ -108,9 +108,9 @@ const Footer = () => {
           <h4 className=" text-lg font-medium pb-2">Contact Us</h4>
           {/* Add actual contact information here */}
           <a
-            href="mailto:samiafrudh45@gmail.com"
+            href="mailto:evoltriv@gmail.com"
             className="text-[16px] opacity-75 hover:opacity-100">
-            Email: samiafrudh45@gmail.com
+            Email: evoltriv@gmail.com
           </a>
           <p className="text-[16px] opacity-75">
             Phone: 9705130846

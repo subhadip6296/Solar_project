@@ -135,7 +135,7 @@ export function WobbleCardDemo() {
       {/* <ThunderEffect/> */}
 
 
-      <div className="max-w-7xl mx-auto w-full space-y-8  dark:bg-black ">
+      <div className=" mx-auto w-full space-y-8  dark:bg-black ">
         <div className="relative  py-20 bg-gradient-to-b from-[#118B50]/10 to-transparent overflow-hidden">
           <motion.div
             initial={{ opacity: 0 }}

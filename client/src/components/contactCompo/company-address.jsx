@@ -9,7 +9,7 @@ export function CompanyAddressComponent() {
     address:
       "Office no. 9, vijayawada, Andhra Pradesh, India",
     phone: "9705130846",
-    email: "samiafrudh45@gmail.com",
+    email: "evoltriv@gmail.com",
     website: "https://www.ution.com",
     mapUrl:
       "https://maps.app.goo.gl/93pDsHgBcPigqiAS7",

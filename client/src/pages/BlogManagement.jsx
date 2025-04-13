@@ -14,7 +14,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { format } from "date-fns";
 import axios from "axios";
 import { useToast } from "@/components/ui/use-toast";
-import { Toaster } from "@/components/ui/toaster";
+
 import {
   Dialog,
   DialogContent,
@@ -249,7 +249,6 @@ const BlogManagement = () => {
 
   return (
     <div className="max-w-7xl mx-auto p-6">
-      <Toaster />
 
       <div className="mb-8 flex justify-between items-center">
         <div>

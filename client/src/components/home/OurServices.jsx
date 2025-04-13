@@ -99,7 +99,7 @@ const OurServices = () => {
   
     return (
       <div>
-        <div className="container mx-auto px-6 lg:px-20 pt-16 relative overflow-hidden bg-gradient-to-b from-[#118B50]/10">
+        <div className=" mx-auto px-6 lg:px-20 pt-16 relative overflow-hidden bg-gradient-to-b from-[#118B50]/10">
           <h2 className="text-3xl font-bold text-center mb-12">Our Services</h2>
           <div className="relative">
             <button

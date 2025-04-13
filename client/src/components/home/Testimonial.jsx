@@ -50,7 +50,7 @@ const ImageSlider = () => {
   return (
     <section className="bg-white py-12 space-y-12 dark:bg-black bg-gradient-to-b from-[#118B50]/10 to-transparent">
       {/* Left to Right Infinite Scrolling */}
-      <h2 className="text-3xl font-bold text-center mb-12">
+      {/* <h2 className="text-3xl font-bold text-center mb-12">
             Blogs
           </h2>
       <div
@@ -78,7 +78,6 @@ const ImageSlider = () => {
         </div>
       </div>
 
-      {/* Right to Left Infinite Scrolling */}
       <div
         className="overflow-hidden relative group"
         onMouseEnter={() => setIsPausedRight(true)}
@@ -104,7 +103,6 @@ const ImageSlider = () => {
         </div>
       </div>
 
-      {/* Inline CSS for smooth infinite animations */}
       <style>
         {`
           @keyframes scroll-left {
@@ -131,7 +129,7 @@ const ImageSlider = () => {
             width: max-content;
           }
         `}
-      </style>
+      </style> */}
     </section>
   );
 };
