@@ -72,7 +72,7 @@ const Navbar = () => {
 
 
   const navItems = [
-    { name: "Home", path: "/", icon: Home },
+    { name: "Homee", path: "/", icon: Home },
     { name: "Services", path: "/services", icon: Handshake },
     // { name: "Products", path: "/products", icon: ShoppingBag },
     { name: "Events", path: "/events", icon: Calendar },
